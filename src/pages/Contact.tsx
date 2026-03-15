@@ -1,0 +1,92 @@
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+
+const Contact = () => {
+  const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setTimeout(() => {
+      toast({ title: "Message envoyé !", description: "Nous vous répondrons dans les plus brefs délais." });
+      setLoading(false);
+      (e.target as HTMLFormElement).reset();
+    }, 1000);
+  };
+
+  return (
+    <section className="pt-32 pb-20">
+      <div className="container">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <span className="font-mono text-xs text-primary tracking-widest uppercase">Contactez-nous</span>
+          <h1 className="text-4xl md:text-5xl font-semibold text-foreground mt-3 mb-4">Parlons de votre projet</h1>
+          <p className="text-lg text-muted-foreground max-w-xl">Nous sommes prêts à vous accompagner dans votre transformation digitale.</p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-12 mt-12">
+          <motion.form onSubmit={handleSubmit} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}
+            className="space-y-5 p-8 rounded-xl border border-border bg-card">
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label className="text-sm font-medium text-foreground mb-1.5 block">Nom complet</label>
+                <Input placeholder="Jean Ndikumana" required />
+              </div>
+              <div>
+                <label className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
+                <Input type="email" placeholder="jean@entreprise.bi" required />
+              </div>
+            </div>
+            <div>
+              <label className="text-sm font-medium text-foreground mb-1.5 block">Sujet</label>
+              <Input placeholder="Demande de devis — Infrastructure réseau" required />
+            </div>
+            <div>
+              <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
+              <Textarea placeholder="Décrivez votre projet ou besoin..." rows={5} required />
+            </div>
+            <Button variant="hero" type="submit" disabled={loading} className="w-full">
+              {loading ? "Envoi..." : "Envoyer le message"} <Send className="ml-2" size={16} />
+            </Button>
+          </motion.form>
+
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="space-y-8">
+            <div>
+              <h3 className="font-semibold text-foreground mb-4">Nos coordonnées</h3>
+              <div className="space-y-4">
+                {[
+                  { icon: Mail, text: "contact@sightafrica.bi", href: "mailto:contact@sightafrica.bi" },
+                  { icon: Phone, text: "+257 61 000 000", href: "tel:+25761000000" },
+                  { icon: MapPin, text: "Gitega, Burundi" },
+                ].map((c) => (
+                  <div key={c.text} className="flex items-center gap-3">
+                    <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <c.icon className="text-primary" size={18} />
+                    </div>
+                    {c.href ? (
+                      <a href={c.href} className="text-muted-foreground hover:text-primary transition-colors">{c.text}</a>
+                    ) : (
+                      <span className="text-muted-foreground">{c.text}</span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="p-6 rounded-xl border border-border bg-card">
+              <h4 className="font-semibold text-foreground mb-2">Horaires d'ouverture</h4>
+              <p className="text-sm text-muted-foreground">Lundi - Vendredi : 8h00 - 17h00</p>
+              <p className="text-sm text-muted-foreground">Samedi : 9h00 - 13h00</p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
