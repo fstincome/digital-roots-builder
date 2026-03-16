@@ -5,16 +5,18 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const { toast } = useToast();
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setTimeout(() => {
-      toast({ title: "Message envoyé !", description: "Nous vous répondrons dans les plus brefs délais." });
+      toast({ title: t("contact.successTitle"), description: t("contact.successDesc") });
       setLoading(false);
       (e.target as HTMLFormElement).reset();
     }, 1000);
@@ -24,9 +26,9 @@ const Contact = () => {
     <section className="pt-32 pb-20">
       <div className="container">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <span className="font-mono text-xs text-primary tracking-widest uppercase">Contactez-nous</span>
-          <h1 className="text-4xl md:text-5xl font-semibold text-foreground mt-3 mb-4">Parlons de votre projet</h1>
-          <p className="text-lg text-muted-foreground max-w-xl">Nous sommes prêts à vous accompagner dans votre transformation digitale.</p>
+          <span className="font-mono text-xs text-primary tracking-widest uppercase">{t("contact.tag")}</span>
+          <h1 className="text-4xl md:text-5xl font-semibold text-foreground mt-3 mb-4">{t("contact.title")}</h1>
+          <p className="text-lg text-muted-foreground max-w-xl">{t("contact.desc")}</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 mt-12">
@@ -34,30 +36,30 @@ const Contact = () => {
             className="space-y-5 p-8 rounded-xl border border-border bg-card">
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Nom complet</label>
+                <label className="text-sm font-medium text-foreground mb-1.5 block">{t("contact.fullName")}</label>
                 <Input placeholder="Jean Ndikumana" required />
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
+                <label className="text-sm font-medium text-foreground mb-1.5 block">{t("contact.email")}</label>
                 <Input type="email" placeholder="jean@entreprise.bi" required />
               </div>
             </div>
             <div>
-              <label className="text-sm font-medium text-foreground mb-1.5 block">Sujet</label>
-              <Input placeholder="Demande de devis — Infrastructure réseau" required />
+              <label className="text-sm font-medium text-foreground mb-1.5 block">{t("contact.subject")}</label>
+              <Input placeholder={t("contact.subjectPlaceholder")} required />
             </div>
             <div>
-              <label className="text-sm font-medium text-foreground mb-1.5 block">Message</label>
-              <Textarea placeholder="Décrivez votre projet ou besoin..." rows={5} required />
+              <label className="text-sm font-medium text-foreground mb-1.5 block">{t("contact.message")}</label>
+              <Textarea placeholder={t("contact.messagePlaceholder")} rows={5} required />
             </div>
             <Button variant="hero" type="submit" disabled={loading} className="w-full">
-              {loading ? "Envoi..." : "Envoyer le message"} <Send className="ml-2" size={16} />
+              {loading ? t("contact.sending") : t("contact.send")} <Send className="ml-2" size={16} />
             </Button>
           </motion.form>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="space-y-8">
             <div>
-              <h3 className="font-semibold text-foreground mb-4">Nos coordonnées</h3>
+              <h3 className="font-semibold text-foreground mb-4">{t("contact.coordinates")}</h3>
               <div className="space-y-4">
                 {[
                   { icon: Mail, text: "contact@sightafrica.bi", href: "mailto:contact@sightafrica.bi" },
@@ -78,9 +80,9 @@ const Contact = () => {
               </div>
             </div>
             <div className="p-6 rounded-xl border border-border bg-card">
-              <h4 className="font-semibold text-foreground mb-2">Horaires d'ouverture</h4>
-              <p className="text-sm text-muted-foreground">Lundi - Vendredi : 8h00 - 17h00</p>
-              <p className="text-sm text-muted-foreground">Samedi : 9h00 - 13h00</p>
+              <h4 className="font-semibold text-foreground mb-2">{t("contact.hours")}</h4>
+              <p className="text-sm text-muted-foreground">{t("contact.weekdays")}</p>
+              <p className="text-sm text-muted-foreground">{t("contact.saturday")}</p>
             </div>
           </motion.div>
         </div>

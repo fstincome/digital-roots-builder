@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
-import { FileText, FolderOpen, Users, Eye } from "lucide-react";
+import { FileText, FolderOpen, Eye } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
+import { useTranslation } from "react-i18next";
 
 const DashboardOverview = () => {
   const { profile } = useAuth();
+  const { t } = useTranslation();
   const [stats, setStats] = useState({ articles: 0, programs: 0, totalViews: 0 });
 
   useEffect(() => {
@@ -23,24 +25,24 @@ const DashboardOverview = () => {
   }, []);
 
   const cards = [
-    { title: "Articles", value: stats.articles, icon: FileText, color: "text-primary" },
-    { title: "Programmes", value: stats.programs, icon: FolderOpen, color: "text-primary" },
-    { title: "Vues totales", value: stats.totalViews, icon: Eye, color: "text-primary" },
+    { title: t("dashboard.articles"), value: stats.articles, icon: FileText },
+    { title: t("dashboard.programs"), value: stats.programs, icon: FolderOpen },
+    { title: t("dashboard.totalViews"), value: stats.totalViews, icon: Eye },
   ];
 
   return (
     <div>
       <h1 className="text-2xl font-semibold text-foreground mb-1">
-        Bonjour{profile?.full_name ? `, ${profile.full_name}` : ""} 👋
+        {t("dashboard.hello")}{profile?.full_name ? `, ${profile.full_name}` : ""} 👋
       </h1>
-      <p className="text-muted-foreground mb-8">Voici un aperçu de votre contenu.</p>
+      <p className="text-muted-foreground mb-8">{t("dashboard.contentOverview")}</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {cards.map((c) => (
           <Card key={c.title}>
             <CardHeader className="flex flex-row items-center justify-between pb-2">
               <CardTitle className="text-sm font-medium text-muted-foreground">{c.title}</CardTitle>
-              <c.icon className={c.color} size={20} />
+              <c.icon className="text-primary" size={20} />
             </CardHeader>
             <CardContent>
               <div className="text-3xl font-bold text-foreground tabular-nums">{c.value}</div>

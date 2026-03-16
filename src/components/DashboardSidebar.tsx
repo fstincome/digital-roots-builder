@@ -1,22 +1,25 @@
-import { LayoutDashboard, FileText, FolderOpen, Users, LogOut, Home, Settings } from "lucide-react";
+import { LayoutDashboard, FileText, FolderOpen, Users, LogOut, Home } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useAuth } from "@/hooks/useAuth";
+import { useTranslation } from "react-i18next";
+import sightLogo from "@/assets/sight-logo.png";
 import {
   Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel,
   SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar,
 } from "@/components/ui/sidebar";
 
-const items = [
-  { title: "Aperçu", url: "/dashboard", icon: LayoutDashboard },
-  { title: "Articles", url: "/dashboard/articles", icon: FileText },
-  { title: "Programmes", url: "/dashboard/programmes", icon: FolderOpen },
-  { title: "Utilisateurs", url: "/dashboard/utilisateurs", icon: Users },
-];
-
 const DashboardSidebar = () => {
   const { state } = useSidebar();
   const collapsed = state === "collapsed";
-  const { signOut, profile, isAdmin } = useAuth();
+  const { signOut, isAdmin } = useAuth();
+  const { t } = useTranslation();
+
+  const items = [
+    { title: t("dashboard.overview"), url: "/dashboard", icon: LayoutDashboard },
+    { title: t("dashboard.articles"), url: "/dashboard/articles", icon: FileText },
+    { title: t("dashboard.programs"), url: "/dashboard/programmes", icon: FolderOpen },
+    { title: t("dashboard.users"), url: "/dashboard/utilisateurs", icon: Users },
+  ];
 
   return (
     <Sidebar collapsible="icon">
@@ -24,10 +27,8 @@ const DashboardSidebar = () => {
         <SidebarGroup>
           <SidebarGroupLabel>
             <div className="flex items-center gap-2">
-              <div className="h-6 w-6 rounded bg-primary flex items-center justify-center">
-                <span className="font-mono text-[10px] font-bold text-primary-foreground">S</span>
-              </div>
-              {!collapsed && <span className="font-semibold text-foreground text-xs">Dashboard</span>}
+              <img src={sightLogo} alt="SIGHT" className="h-6 w-auto" />
+              {!collapsed && <span className="font-semibold text-foreground text-xs">{t("dashboard.title")}</span>}
             </div>
           </SidebarGroupLabel>
           <SidebarGroupContent>
@@ -53,14 +54,14 @@ const DashboardSidebar = () => {
                 <SidebarMenuButton asChild>
                   <NavLink to="/" className="hover:bg-muted/50">
                     <Home className="mr-2 h-4 w-4" />
-                    {!collapsed && <span>Retour au site</span>}
+                    {!collapsed && <span>{t("dashboard.backToSite")}</span>}
                   </NavLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
                 <SidebarMenuButton onClick={signOut} className="hover:bg-muted/50 cursor-pointer">
                   <LogOut className="mr-2 h-4 w-4" />
-                  {!collapsed && <span>Déconnexion</span>}
+                  {!collapsed && <span>{t("dashboard.logout")}</span>}
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>

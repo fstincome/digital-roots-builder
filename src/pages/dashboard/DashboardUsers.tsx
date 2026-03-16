@@ -7,12 +7,9 @@ import { useToast } from "@/hooks/use-toast";
 import { Shield, UserPlus } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useTranslation } from "react-i18next";
 
-interface UserRow {
-  user_id: string;
-  full_name: string | null;
-  roles: string[];
-}
+interface UserRow { user_id: string; full_name: string | null; roles: string[]; }
 
 const DashboardUsers = () => {
   const [users, setUsers] = useState<UserRow[]>([]);
@@ -24,18 +21,16 @@ const DashboardUsers = () => {
   const [newRole, setNewRole] = useState<"admin" | "editor" | "user">("user");
   const [creating, setCreating] = useState(false);
   const { toast } = useToast();
+  const { t } = useTranslation();
 
   const fetchUsers = async () => {
     const { data: profiles } = await supabase.from("profiles").select("user_id, full_name");
     const { data: roles } = await supabase.from("user_roles").select("user_id, role");
-
     if (profiles) {
-      const usersMap = profiles.map((p) => ({
-        user_id: p.user_id,
-        full_name: p.full_name,
+      setUsers(profiles.map((p) => ({
+        user_id: p.user_id, full_name: p.full_name,
         roles: (roles || []).filter((r) => r.user_id === p.user_id).map((r) => r.role),
-      }));
-      setUsers(usersMap);
+      })));
     }
     setLoading(false);
   };
@@ -43,40 +38,32 @@ const DashboardUsers = () => {
   useEffect(() => { fetchUsers(); }, []);
 
   const toggleRole = async (userId: string, role: "admin" | "editor" | "user", hasRole: boolean) => {
-    if (hasRole) {
-      await supabase.from("user_roles").delete().eq("user_id", userId).eq("role", role);
-    } else {
-      await supabase.from("user_roles").insert({ user_id: userId, role });
-    }
-    toast({ title: hasRole ? "Rôle retiré" : "Rôle ajouté" });
+    if (hasRole) await supabase.from("user_roles").delete().eq("user_id", userId).eq("role", role);
+    else await supabase.from("user_roles").insert({ user_id: userId, role });
+    toast({ title: hasRole ? t("dashboard.roleRemoved") : t("dashboard.roleAdded") });
     fetchUsers();
   };
 
   const handleCreateUser = async () => {
     if (!newEmail || !newPassword || !newFullName) {
-      toast({ title: "Erreur", description: "Tous les champs sont requis", variant: "destructive" });
+      toast({ title: "Error", description: t("dashboard.allFieldsRequired"), variant: "destructive" });
       return;
     }
     setCreating(true);
     try {
-      const { data: { session } } = await supabase.auth.getSession();
       const res = await supabase.functions.invoke("create-user", {
         body: { email: newEmail, password: newPassword, full_name: newFullName, role: newRole },
       });
-
       if (res.error || res.data?.error) {
-        toast({ title: "Erreur", description: res.data?.error || res.error?.message, variant: "destructive" });
+        toast({ title: "Error", description: res.data?.error || res.error?.message, variant: "destructive" });
       } else {
-        toast({ title: "Utilisateur créé !" });
+        toast({ title: t("dashboard.userCreated") });
         setDialogOpen(false);
-        setNewEmail("");
-        setNewPassword("");
-        setNewFullName("");
-        setNewRole("user");
+        setNewEmail(""); setNewPassword(""); setNewFullName(""); setNewRole("user");
         fetchUsers();
       }
     } catch (err: any) {
-      toast({ title: "Erreur", description: err.message, variant: "destructive" });
+      toast({ title: "Error", description: err.message, variant: "destructive" });
     }
     setCreating(false);
   };
@@ -84,41 +71,39 @@ const DashboardUsers = () => {
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-semibold text-foreground">Utilisateurs</h1>
+        <h1 className="text-2xl font-semibold text-foreground">{t("dashboard.users")}</h1>
         <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
           <DialogTrigger asChild>
-            <Button><UserPlus size={16} className="mr-2" /> Nouvel utilisateur</Button>
+            <Button><UserPlus size={16} className="mr-2" /> {t("dashboard.createUser")}</Button>
           </DialogTrigger>
           <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Créer un utilisateur</DialogTitle>
-            </DialogHeader>
+            <DialogHeader><DialogTitle>{t("dashboard.createUserTitle")}</DialogTitle></DialogHeader>
             <div className="space-y-4 mt-4">
               <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Nom complet</label>
+                <label className="text-sm font-medium text-foreground mb-1.5 block">{t("dashboard.fullName")}</label>
                 <Input value={newFullName} onChange={(e) => setNewFullName(e.target.value)} placeholder="Jean Ndikumana" />
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Email</label>
+                <label className="text-sm font-medium text-foreground mb-1.5 block">{t("dashboard.email")}</label>
                 <Input type="email" value={newEmail} onChange={(e) => setNewEmail(e.target.value)} placeholder="email@exemple.com" />
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Mot de passe</label>
+                <label className="text-sm font-medium text-foreground mb-1.5 block">{t("dashboard.password")}</label>
                 <Input type="password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} placeholder="••••••••" minLength={6} />
               </div>
               <div>
-                <label className="text-sm font-medium text-foreground mb-1.5 block">Rôle</label>
+                <label className="text-sm font-medium text-foreground mb-1.5 block">{t("dashboard.role")}</label>
                 <Select value={newRole} onValueChange={(v) => setNewRole(v as any)}>
                   <SelectTrigger><SelectValue /></SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="user">Utilisateur</SelectItem>
-                    <SelectItem value="editor">Éditeur</SelectItem>
-                    <SelectItem value="admin">Administrateur</SelectItem>
+                    <SelectItem value="user">{t("dashboard.userRole")}</SelectItem>
+                    <SelectItem value="editor">{t("dashboard.editorRole")}</SelectItem>
+                    <SelectItem value="admin">{t("dashboard.adminRole")}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
               <Button onClick={handleCreateUser} disabled={creating} className="w-full">
-                {creating ? "Création..." : "Créer l'utilisateur"}
+                {creating ? t("dashboard.creating") : t("dashboard.create")}
               </Button>
             </div>
           </DialogContent>
@@ -128,21 +113,20 @@ const DashboardUsers = () => {
       {loading ? (
         <div className="space-y-3">{[1,2,3].map(i => <div key={i} className="h-16 bg-card border border-border rounded-lg animate-pulse" />)}</div>
       ) : users.length === 0 ? (
-        <p className="text-muted-foreground text-center py-12">Aucun utilisateur enregistré.</p>
+        <p className="text-muted-foreground text-center py-12">{t("dashboard.noUsers")}</p>
       ) : (
         <div className="space-y-3">
           {users.map((u) => (
             <div key={u.user_id} className="flex items-center justify-between p-4 rounded-lg border border-border bg-card">
               <div>
-                <p className="font-medium text-foreground">{u.full_name || "Sans nom"}</p>
+                <p className="font-medium text-foreground">{u.full_name || t("dashboard.noName")}</p>
                 <p className="text-xs text-muted-foreground font-mono">{u.user_id.slice(0, 8)}...</p>
               </div>
               <div className="flex items-center gap-2">
                 {(["admin", "editor", "user"] as const).map((role) => {
                   const has = u.roles.includes(role);
                   return (
-                    <Button key={role} variant={has ? "default" : "outline"} size="sm" onClick={() => toggleRole(u.user_id, role, has)}
-                      className="text-xs">
+                    <Button key={role} variant={has ? "default" : "outline"} size="sm" onClick={() => toggleRole(u.user_id, role, has)} className="text-xs">
                       {role === "admin" && <Shield size={12} className="mr-1" />}
                       {role}
                     </Button>
