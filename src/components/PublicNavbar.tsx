@@ -4,21 +4,25 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
-
-const navItems = [
-  { label: "Accueil", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Programmes", href: "/programmes" },
-  { label: "Académie", href: "/academie" },
-  { label: "Blog", href: "/blog" },
-  { label: "À propos", href: "/a-propos" },
-  { label: "Contact", href: "/contact" },
-];
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
+import sightLogo from "@/assets/sight-logo.png";
 
 const PublicNavbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { user, isAdmin, isEditor } = useAuth();
   const location = useLocation();
+  const { t } = useTranslation();
+
+  const navItems = [
+    { label: t("nav.home"), href: "/" },
+    { label: t("nav.services"), href: "/services" },
+    { label: t("nav.programs"), href: "/programmes" },
+    { label: t("nav.academy"), href: "/academie" },
+    { label: t("nav.blog"), href: "/blog" },
+    { label: t("nav.about"), href: "/a-propos" },
+    { label: t("nav.contact"), href: "/contact" },
+  ];
 
   return (
     <motion.nav
@@ -29,12 +33,7 @@ const PublicNavbar = () => {
     >
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-            <span className="font-mono text-sm font-bold text-primary-foreground">S</span>
-          </div>
-          <span className="text-lg font-semibold text-foreground tracking-tight">
-            SIGHT<span className="text-muted-foreground font-normal ml-1 text-sm">Africa</span>
-          </span>
+          <img src={sightLogo} alt="SIGHT Africa" className="h-10 w-auto" />
         </Link>
 
         <div className="hidden lg:flex items-center gap-6">
@@ -53,28 +52,32 @@ const PublicNavbar = () => {
           ))}
         </div>
 
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="hidden sm:flex items-center gap-2">
+          <LanguageSwitcher />
           {user ? (
             <>
               {(isAdmin || isEditor) && (
                 <Button variant="outline" size="sm" asChild>
-                  <Link to="/dashboard">Dashboard</Link>
+                  <Link to="/dashboard">{t("nav.dashboard")}</Link>
                 </Button>
               )}
               <Button variant="hero" size="sm" asChild>
-                <Link to="/dashboard">Mon compte</Link>
+                <Link to="/dashboard">{t("nav.myAccount")}</Link>
               </Button>
             </>
           ) : (
             <Button variant="hero" size="sm" asChild>
-              <Link to="/login">Se connecter</Link>
+              <Link to="/login">{t("nav.login")}</Link>
             </Button>
           )}
         </div>
 
-        <button className="lg:hidden text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <LanguageSwitcher />
+          <button className="text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -101,11 +104,11 @@ const PublicNavbar = () => {
               <div className="pt-2 border-t border-border">
                 {user ? (
                   <Button variant="hero" size="sm" className="w-full" asChild>
-                    <Link to="/dashboard" onClick={() => setMobileOpen(false)}>Dashboard</Link>
+                    <Link to="/dashboard" onClick={() => setMobileOpen(false)}>{t("nav.dashboard")}</Link>
                   </Button>
                 ) : (
                   <Button variant="hero" size="sm" className="w-full" asChild>
-                    <Link to="/login" onClick={() => setMobileOpen(false)}>Se connecter</Link>
+                    <Link to="/login" onClick={() => setMobileOpen(false)}>{t("nav.login")}</Link>
                   </Button>
                 )}
               </div>

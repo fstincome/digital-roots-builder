@@ -4,10 +4,12 @@ import { motion } from "framer-motion";
 import { Calendar, ArrowRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "react-i18next";
 
 const Programs = () => {
   const [programs, setPrograms] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const fetch = async () => {
@@ -18,13 +20,15 @@ const Programs = () => {
     fetch();
   }, []);
 
+  const locale = i18n.language === "de" ? "de-DE" : i18n.language === "sw" ? "sw-KE" : i18n.language === "en" ? "en-US" : "fr-FR";
+
   return (
     <section className="pt-32 pb-20">
       <div className="container">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <span className="font-mono text-xs text-primary tracking-widest uppercase">Nos initiatives</span>
-          <h1 className="text-4xl md:text-5xl font-semibold text-foreground mt-3 mb-4">Programmes & Projets</h1>
-          <p className="text-lg text-muted-foreground max-w-xl">Découvrez nos programmes d'innovation, de formation et de transformation digitale.</p>
+          <span className="font-mono text-xs text-primary tracking-widest uppercase">{t("programs.tag")}</span>
+          <h1 className="text-4xl md:text-5xl font-semibold text-foreground mt-3 mb-4">{t("programs.title")}</h1>
+          <p className="text-lg text-muted-foreground max-w-xl">{t("programs.desc")}</p>
         </motion.div>
 
         {loading ? (
@@ -33,7 +37,7 @@ const Programs = () => {
           </div>
         ) : programs.length === 0 ? (
           <div className="text-center py-20">
-            <p className="text-muted-foreground">Aucun programme actif pour le moment.</p>
+            <p className="text-muted-foreground">{t("programs.noPrograms")}</p>
           </div>
         ) : (
           <div className="grid md:grid-cols-2 gap-8 mt-12">
@@ -50,18 +54,18 @@ const Programs = () => {
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3">
                       <Badge variant={p.status === "active" ? "default" : "secondary"}>
-                        {p.status === "active" ? "En cours" : "Terminé"}
+                        {p.status === "active" ? t("programs.active") : t("programs.completed")}
                       </Badge>
                       {p.start_date && (
                         <span className="flex items-center gap-1 text-xs text-muted-foreground">
-                          <Calendar size={12} /> {new Date(p.start_date).toLocaleDateString("fr-FR")}
+                          <Calendar size={12} /> {new Date(p.start_date).toLocaleDateString(locale)}
                         </span>
                       )}
                     </div>
                     <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">{p.title}</h3>
                     {p.description && <p className="text-sm text-muted-foreground mt-2 line-clamp-3">{p.description}</p>}
                     <span className="inline-flex items-center gap-1 text-sm text-primary mt-4 font-medium">
-                      En savoir plus <ArrowRight size={14} />
+                      {t("programs.learnMore")} <ArrowRight size={14} />
                     </span>
                   </div>
                 </Link>
