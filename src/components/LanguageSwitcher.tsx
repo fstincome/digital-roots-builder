@@ -24,9 +24,8 @@ const LanguageSwitcher = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="gap-1.5 text-muted-foreground hover:text-foreground">
-          <Globe size={16} />
-          <span className="hidden sm:inline text-xs">{current.flag}</span>
+        <Button variant="ghost" size="sm" className="gap-1.5 text-muted-foreground hover:text-foreground text-lg">
+          <span>{current.flag}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
