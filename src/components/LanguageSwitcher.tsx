@@ -9,10 +9,12 @@ import {
 import { Button } from "@/components/ui/button";
 
 const languages = [
-  { code: "fr", label: "Français", flag: "🇫🇷" },
   { code: "en", label: "English", flag: "🇬🇧" },
-  { code: "de", label: "Deutsch", flag: "🇩🇪" },
+  { code: "fr", label: "Français", flag: "🇫🇷" },
   { code: "sw", label: "Kiswahili", flag: "🇹🇿" },
+  { code: "de", label: "Deutsch", flag: "🇩🇪" },
+  { code: "es", label: "Español", flag: "🇪🇸" },
+  { code: "it", label: "Italiano", flag: "🇮🇹" },
 ];
 
 const LanguageSwitcher = () => {
