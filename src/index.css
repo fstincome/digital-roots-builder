@@ -57,12 +57,15 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Open Sans', system-ui, sans-serif;
+    line-height: 1.7;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    letter-spacing: -0.04em;
-    font-weight: 600;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    line-height: 1.15;
   }
 
   .font-mono {
