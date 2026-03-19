@@ -7,6 +7,8 @@
     "blog": "Blog",
     "about": "Über uns",
     "contact": "Kontakt",
+    "portfolio": "Portfolio",
+    "bitcoin": "Bitcoin",
     "login": "Anmelden",
     "dashboard": "Dashboard",
     "myAccount": "Mein Konto"
@@ -41,6 +43,17 @@
     "consultingDesc": "Strategische Begleitung bei Ihrer digitalen Transformation.",
     "maintenance": "Wartung & Support",
     "maintenanceDesc": "Kontinuierlicher technischer Support und vorbeugende Wartung."
+  },
+  "home": {
+    "articlesTag": "Neueste Veröffentlichungen",
+    "articlesTitle": "Aktuelle Artikel",
+    "allArticles": "Alle Artikel anzeigen",
+    "programsTag": "Hervorgehobene Programme",
+    "programsTitle": "Unsere Vorzeigeprogramme",
+    "allPrograms": "Alle Programme anzeigen",
+    "portfolioTag": "Neueste Lieferungen",
+    "portfolioTitle": "Unsere neuesten Leistungen",
+    "allPortfolio": "Alle Projekte anzeigen"
   },
   "cta": {
     "title": "Bereit, Ihr Unternehmen zu digitalisieren?",
@@ -83,8 +96,7 @@
     "sovereignty": "Souveränität",
     "sovereigntyDesc": "Entwicklung lokaler Lösungen zur Reduzierung der technologischen Abhängigkeit.",
     "excellence": "Exzellenz",
-    "excellenceDesc": "Internationale Standards in jedem Service, den wir anbieten.",
-    "roadmapTitle": "Fahrplan 2026–2030"
+    "excellenceDesc": "Internationale Standards in jedem Service, den wir anbieten."
   },
   "contact": {
     "tag": "Kontaktieren Sie uns",
@@ -126,6 +138,44 @@
     "learnMore": "Mehr erfahren",
     "back": "Zurück zu Programmen",
     "notFound": "Programm nicht gefunden"
+  },
+  "portfolio": {
+    "tag": "Unsere Leistungen",
+    "title": "Portfolio",
+    "desc": "Entdecken Sie unsere neuesten gelieferten Projekte und Leistungen.",
+    "noItems": "Noch keine Projekte anzuzeigen.",
+    "viewProject": "Projekt ansehen"
+  },
+  "bitcoin": {
+    "tag": "// Dezentralisierung & Souveränität",
+    "title": "Bitcoin &",
+    "titleHighlight": "Dezentralisierung",
+    "desc": "SIGHT Africa erforscht dezentrale Technologien zur Stärkung der finanziellen Souveränität und digitalen Inklusion in Burundi und Ostafrika.",
+    "solutionsTag": "Unsere Lösungen",
+    "solutionsTitle": "Lokale Projekte & Lösungen",
+    "custody": "Self-Custody-Lösungen",
+    "custodyDesc": "Bildung und Werkzeuge für sichere Bitcoin-Selbstverwahrung. Schützen Sie Ihre digitalen Vermögenswerte ohne Vermittler.",
+    "lightning": "Lightning Network",
+    "lightningDesc": "Implementierung von Lightning-Zahlungslösungen für schnelle, kostengünstige Transaktionen.",
+    "node": "Full-Node-Infrastruktur",
+    "nodeDesc": "Bereitstellung und Verwaltung von Bitcoin-Full-Nodes zur Stärkung des dezentralen Netzwerks in Ostafrika.",
+    "education": "Bitcoin-Bildung",
+    "educationDesc": "Schulungsprogramme zu monetären Grundlagen, Dezentralisierung und dem Bitcoin-Protokoll.",
+    "remittance": "Grenzüberschreitende Überweisungen",
+    "remittanceDesc": "Dezentrale Lösungen für kostengünstige Überweisungen zwischen der Diaspora und Ostafrika.",
+    "mining": "Nachhaltiges Mining",
+    "miningDesc": "Erforschung umweltfreundlicher Bitcoin-Mining-Lösungen mit lokaler erneuerbarer Energie.",
+    "ctaTitle": "Interessiert an dezentralen Lösungen?",
+    "ctaDesc": "Kontaktieren Sie uns, um zu entdecken, wie Bitcoin und dezentrale Technologien Ihr Unternehmen transformieren können.",
+    "ctaButton": "Kontaktieren Sie uns"
+  },
+  "social": {
+    "comments": "Kommentare",
+    "writeComment": "Einen Kommentar schreiben...",
+    "loginToComment": "Melden Sie sich an, um einen Kommentar zu hinterlassen.",
+    "loginToLike": "Melden Sie sich an, um zu liken.",
+    "share": "Teilen",
+    "linkCopied": "Link kopiert!"
   },
   "academy": {
     "tag": "Ausbildung & Zertifizierung",
@@ -188,6 +238,8 @@
     "overview": "Übersicht",
     "articles": "Artikel",
     "programs": "Programme",
+    "portfolio": "Portfolio",
+    "categories": "Kategorien",
     "users": "Benutzer",
     "backToSite": "Zurück zur Seite",
     "logout": "Abmelden",
@@ -207,6 +259,17 @@
     "completed": "Abgeschlossen",
     "deleteProgram": "Dieses Programm löschen?",
     "programDeleted": "Programm gelöscht",
+    "newPortfolio": "Neues Projekt",
+    "noPortfolio": "Keine Projekte. Erstellen Sie das erste!",
+    "deletePortfolio": "Dieses Projekt löschen?",
+    "portfolioDeleted": "Projekt gelöscht",
+    "newCategory": "Neue Kategorie",
+    "noCategories": "Keine Kategorien. Erstellen Sie die erste!",
+    "categoryName": "Name",
+    "categoryCreated": "Kategorie erstellt",
+    "categoryUpdated": "Kategorie aktualisiert",
+    "categoryDeleted": "Kategorie gelöscht",
+    "deleteCategory": "Diese Kategorie löschen?",
     "createUser": "Neuer Benutzer",
     "createUserTitle": "Benutzer erstellen",
     "fullName": "Vollständiger Name",

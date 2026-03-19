@@ -97,6 +97,120 @@ export type Database = {
         }
         Relationships: []
       }
+      comments: {
+        Row: {
+          article_id: string | null
+          content: string
+          created_at: string
+          id: string
+          program_id: string | null
+          user_id: string
+        }
+        Insert: {
+          article_id?: string | null
+          content: string
+          created_at?: string
+          id?: string
+          program_id?: string | null
+          user_id: string
+        }
+        Update: {
+          article_id?: string | null
+          content?: string
+          created_at?: string
+          id?: string
+          program_id?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "comments_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "articles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "comments_program_id_fkey"
+            columns: ["program_id"]
+            isOneToOne: false
+            referencedRelation: "programs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      likes: {
+        Row: {
+          article_id: string | null
+          created_at: string
+          id: string
+          program_id: string | null
+          user_id: string
+        }
+        Insert: {
+          article_id?: string | null
+          created_at?: string
+          id?: string
+          program_id?: string | null
+          user_id: string
+        }
+        Update: {
+          article_id?: string | null
+          created_at?: string
+          id?: string
+          program_id?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "likes_article_id_fkey"
+            columns: ["article_id"]
+            isOneToOne: false
+            referencedRelation: "articles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "likes_program_id_fkey"
+            columns: ["program_id"]
+            isOneToOne: false
+            referencedRelation: "programs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      portfolios: {
+        Row: {
+          created_at: string
+          created_by: string
+          description: string | null
+          id: string
+          image: string | null
+          link: string | null
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          created_by: string
+          description?: string | null
+          id?: string
+          image?: string | null
+          link?: string | null
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          created_by?: string
+          description?: string | null
+          id?: string
+          image?: string | null
+          link?: string | null
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           avatar_url: string | null

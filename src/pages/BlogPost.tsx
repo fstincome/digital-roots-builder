@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Eye } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useTranslation } from "react-i18next";
+import CommentsSection from "@/components/CommentsSection";
+import LikesShareBar from "@/components/LikesShareBar";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -41,8 +43,10 @@ const BlogPost = () => {
             <span className="flex items-center gap-1"><Calendar size={14} /> {new Date(article.published_at || article.created_at).toLocaleDateString(locale)}</span>
             <span className="flex items-center gap-1"><Eye size={14} /> {article.views} {t("blog.views")}</span>
           </div>
-          <h1 className="text-3xl md:text-4xl font-semibold text-foreground mb-8">{article.title}</h1>
+          <h1 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">{article.title}</h1>
+          <LikesShareBar articleId={article.id} title={article.title} />
           <div className="prose prose-invert max-w-none text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: article.content || "" }} />
+          <CommentsSection articleId={article.id} />
         </motion.div>
       </div>
     </section>

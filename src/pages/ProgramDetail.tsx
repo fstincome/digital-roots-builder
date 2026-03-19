@@ -5,6 +5,8 @@ import { ArrowLeft, Calendar } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
+import CommentsSection from "@/components/CommentsSection";
+import LikesShareBar from "@/components/LikesShareBar";
 
 const ProgramDetail = () => {
   const { slug } = useParams();
@@ -40,8 +42,10 @@ const ProgramDetail = () => {
             {program.start_date && <span className="flex items-center gap-1 text-sm text-muted-foreground"><Calendar size={14} /> {new Date(program.start_date).toLocaleDateString(locale)}</span>}
           </div>
           <h1 className="text-3xl md:text-4xl font-semibold text-foreground mb-4">{program.title}</h1>
+          <LikesShareBar programId={program.id} title={program.title} />
           {program.description && <p className="text-lg text-muted-foreground mb-8">{program.description}</p>}
           <div className="prose prose-invert max-w-none text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: program.content || "" }} />
+          <CommentsSection programId={program.id} />
         </motion.div>
       </div>
     </section>
