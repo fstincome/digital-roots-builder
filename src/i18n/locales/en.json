@@ -7,6 +7,8 @@
     "blog": "Blog",
     "about": "About",
     "contact": "Contact",
+    "portfolio": "Portfolio",
+    "bitcoin": "Bitcoin",
     "login": "Sign in",
     "dashboard": "Dashboard",
     "myAccount": "My account"
@@ -41,6 +43,17 @@
     "consultingDesc": "Strategic support for your digital transformation.",
     "maintenance": "Maintenance & Support",
     "maintenanceDesc": "Continuous technical support and preventive maintenance."
+  },
+  "home": {
+    "articlesTag": "Latest publications",
+    "articlesTitle": "Recent articles",
+    "allArticles": "View all articles",
+    "programsTag": "Featured programs",
+    "programsTitle": "Our flagship programs",
+    "allPrograms": "View all programs",
+    "portfolioTag": "Recent deliveries",
+    "portfolioTitle": "Our latest achievements",
+    "allPortfolio": "View all projects"
   },
   "cta": {
     "title": "Ready to digitize your business?",
@@ -83,8 +96,7 @@
     "sovereignty": "Sovereignty",
     "sovereigntyDesc": "Development of local solutions to reduce technological dependence.",
     "excellence": "Excellence",
-    "excellenceDesc": "International standards in every service we offer.",
-    "roadmapTitle": "Roadmap 2026–2030"
+    "excellenceDesc": "International standards in every service we offer."
   },
   "contact": {
     "tag": "Contact us",
@@ -126,6 +138,44 @@
     "learnMore": "Learn more",
     "back": "Back to programs",
     "notFound": "Program not found"
+  },
+  "portfolio": {
+    "tag": "Our achievements",
+    "title": "Portfolio",
+    "desc": "Discover our latest delivered projects and achievements.",
+    "noItems": "No projects to display yet.",
+    "viewProject": "View project"
+  },
+  "bitcoin": {
+    "tag": "// Decentralization & Sovereignty",
+    "title": "Bitcoin &",
+    "titleHighlight": "Decentralization",
+    "desc": "SIGHT Africa explores decentralized technologies to strengthen financial sovereignty and digital inclusion in Burundi and East Africa.",
+    "solutionsTag": "Our solutions",
+    "solutionsTitle": "Local projects & solutions",
+    "custody": "Self-custody Solutions",
+    "custodyDesc": "Education and tools for secure Bitcoin self-custody. Protect your digital assets without intermediaries.",
+    "lightning": "Lightning Network",
+    "lightningDesc": "Implementation of Lightning payment solutions for fast, low-cost transactions adapted to the local market.",
+    "node": "Full Node Infrastructure",
+    "nodeDesc": "Deployment and management of Bitcoin full nodes to strengthen the decentralized network in East Africa.",
+    "education": "Bitcoin Education",
+    "educationDesc": "Training programs on monetary fundamentals, decentralization and the Bitcoin protocol.",
+    "remittance": "Cross-border Remittances",
+    "remittanceDesc": "Decentralized solutions for low-cost remittances between the diaspora and East Africa.",
+    "mining": "Sustainable Mining",
+    "miningDesc": "Exploration of eco-friendly Bitcoin mining solutions using local renewable energy.",
+    "ctaTitle": "Interested in decentralized solutions?",
+    "ctaDesc": "Contact us to discover how Bitcoin and decentralized technologies can transform your business.",
+    "ctaButton": "Contact us"
+  },
+  "social": {
+    "comments": "Comments",
+    "writeComment": "Write a comment...",
+    "loginToComment": "Sign in to leave a comment.",
+    "loginToLike": "Sign in to like.",
+    "share": "Share",
+    "linkCopied": "Link copied!"
   },
   "academy": {
     "tag": "Training & certification",
@@ -188,6 +238,8 @@
     "overview": "Overview",
     "articles": "Articles",
     "programs": "Programs",
+    "portfolio": "Portfolio",
+    "categories": "Categories",
     "users": "Users",
     "backToSite": "Back to site",
     "logout": "Logout",
@@ -207,6 +259,17 @@
     "completed": "Completed",
     "deleteProgram": "Delete this program?",
     "programDeleted": "Program deleted",
+    "newPortfolio": "New project",
+    "noPortfolio": "No projects. Create the first one!",
+    "deletePortfolio": "Delete this project?",
+    "portfolioDeleted": "Project deleted",
+    "newCategory": "New category",
+    "noCategories": "No categories. Create the first one!",
+    "categoryName": "Name",
+    "categoryCreated": "Category created",
+    "categoryUpdated": "Category updated",
+    "categoryDeleted": "Category deleted",
+    "deleteCategory": "Delete this category?",
     "createUser": "New user",
     "createUserTitle": "Create a user",
     "fullName": "Full name",

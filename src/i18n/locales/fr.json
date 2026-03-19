@@ -7,6 +7,8 @@
     "blog": "Blog",
     "about": "À propos",
     "contact": "Contact",
+    "portfolio": "Portfolio",
+    "bitcoin": "Bitcoin",
     "login": "Se connecter",
     "dashboard": "Dashboard",
     "myAccount": "Mon compte"
@@ -41,6 +43,17 @@
     "consultingDesc": "Accompagnement stratégique dans votre transformation digitale.",
     "maintenance": "Maintenance & SAV",
     "maintenanceDesc": "Support technique continu et maintenance préventive."
+  },
+  "home": {
+    "articlesTag": "Dernières publications",
+    "articlesTitle": "Articles récents",
+    "allArticles": "Voir tous les articles",
+    "programsTag": "Programmes phares",
+    "programsTitle": "Nos programmes en vedette",
+    "allPrograms": "Voir tous les programmes",
+    "portfolioTag": "Livraisons récentes",
+    "portfolioTitle": "Nos dernières réalisations",
+    "allPortfolio": "Voir tous les projets"
   },
   "cta": {
     "title": "Prêt à digitaliser votre entreprise ?",
@@ -83,8 +96,7 @@
     "sovereignty": "Souveraineté",
     "sovereigntyDesc": "Développement de solutions locales pour réduire la dépendance technologique.",
     "excellence": "Excellence",
-    "excellenceDesc": "Standards internationaux dans chaque service que nous offrons.",
-    "roadmapTitle": "Feuille de Route 2026–2030"
+    "excellenceDesc": "Standards internationaux dans chaque service que nous offrons."
   },
   "contact": {
     "tag": "Contactez-nous",
@@ -126,6 +138,44 @@
     "learnMore": "En savoir plus",
     "back": "Retour aux programmes",
     "notFound": "Programme non trouvé"
+  },
+  "portfolio": {
+    "tag": "Nos réalisations",
+    "title": "Portfolio",
+    "desc": "Découvrez nos derniers projets livrés et réalisations.",
+    "noItems": "Aucun projet à afficher pour le moment.",
+    "viewProject": "Voir le projet"
+  },
+  "bitcoin": {
+    "tag": "// Décentralisation & Souveraineté",
+    "title": "Bitcoin &",
+    "titleHighlight": "Décentralisation",
+    "desc": "SIGHT Africa explore les technologies décentralisées pour renforcer la souveraineté financière et l'inclusion numérique au Burundi et en Afrique de l'Est.",
+    "solutionsTag": "Nos solutions",
+    "solutionsTitle": "Projets & solutions locales",
+    "custody": "Solutions d'auto-custody",
+    "custodyDesc": "Éducation et outils pour la garde sécurisée de Bitcoin. Protégez vos actifs numériques sans intermédiaires.",
+    "lightning": "Lightning Network",
+    "lightningDesc": "Mise en place de solutions de paiement Lightning pour des transactions rapides et à faible coût adaptées au marché local.",
+    "node": "Infrastructure Full Node",
+    "nodeDesc": "Déploiement et gestion de nœuds Bitcoin complets pour renforcer le réseau décentralisé en Afrique de l'Est.",
+    "education": "Éducation Bitcoin",
+    "educationDesc": "Programmes de formation sur les fondamentaux monétaires, la décentralisation et le protocole Bitcoin.",
+    "remittance": "Transferts transfrontaliers",
+    "remittanceDesc": "Solutions décentralisées pour des transferts de fonds à faible coût entre la diaspora et l'Afrique de l'Est.",
+    "mining": "Mining durable",
+    "miningDesc": "Exploration de solutions de minage Bitcoin éco-responsables utilisant les énergies renouvelables locales.",
+    "ctaTitle": "Intéressé par les solutions décentralisées ?",
+    "ctaDesc": "Contactez-nous pour découvrir comment Bitcoin et les technologies décentralisées peuvent transformer votre activité.",
+    "ctaButton": "Nous contacter"
+  },
+  "social": {
+    "comments": "Commentaires",
+    "writeComment": "Écrire un commentaire...",
+    "loginToComment": "Connectez-vous pour laisser un commentaire.",
+    "loginToLike": "Connectez-vous pour aimer.",
+    "share": "Partager",
+    "linkCopied": "Lien copié !"
   },
   "academy": {
     "tag": "Formation & certification",
@@ -188,6 +238,8 @@
     "overview": "Aperçu",
     "articles": "Articles",
     "programs": "Programmes",
+    "portfolio": "Portfolio",
+    "categories": "Catégories",
     "users": "Utilisateurs",
     "backToSite": "Retour au site",
     "logout": "Déconnexion",
@@ -207,6 +259,17 @@
     "completed": "Terminé",
     "deleteProgram": "Supprimer ce programme ?",
     "programDeleted": "Programme supprimé",
+    "newPortfolio": "Nouveau projet",
+    "noPortfolio": "Aucun projet. Créez le premier !",
+    "deletePortfolio": "Supprimer ce projet ?",
+    "portfolioDeleted": "Projet supprimé",
+    "newCategory": "Nouvelle catégorie",
+    "noCategories": "Aucune catégorie. Créez la première !",
+    "categoryName": "Nom",
+    "categoryCreated": "Catégorie créée",
+    "categoryUpdated": "Catégorie mise à jour",
+    "categoryDeleted": "Catégorie supprimée",
+    "deleteCategory": "Supprimer cette catégorie ?",
     "createUser": "Nouvel utilisateur",
     "createUserTitle": "Créer un utilisateur",
     "fullName": "Nom complet",
