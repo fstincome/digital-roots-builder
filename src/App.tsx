@@ -19,6 +19,8 @@ import BlogPost from "@/pages/BlogPost";
 import Programs from "@/pages/Programs";
 import ProgramDetail from "@/pages/ProgramDetail";
 import Academy from "@/pages/Academy";
+import Portfolio from "@/pages/Portfolio";
+import Bitcoin from "@/pages/Bitcoin";
 import Login from "@/pages/Login";
 import ResetPassword from "@/pages/ResetPassword";
 import NotFound from "@/pages/NotFound";
@@ -30,6 +32,9 @@ import ArticleEditor from "@/pages/dashboard/ArticleEditor";
 import DashboardPrograms from "@/pages/dashboard/DashboardPrograms";
 import ProgramEditor from "@/pages/dashboard/ProgramEditor";
 import DashboardUsers from "@/pages/dashboard/DashboardUsers";
+import DashboardPortfolio from "@/pages/dashboard/DashboardPortfolio";
+import PortfolioEditor from "@/pages/dashboard/PortfolioEditor";
+import DashboardCategories from "@/pages/dashboard/DashboardCategories";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +57,8 @@ const App = () => (
               <Route path="/programmes" element={<Programs />} />
               <Route path="/programmes/:slug" element={<ProgramDetail />} />
               <Route path="/academie" element={<Academy />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/bitcoin" element={<Bitcoin />} />
             </Route>
 
             {/* Auth pages (no layout) */}
@@ -65,6 +72,9 @@ const App = () => (
               <Route path="articles/:id" element={<ArticleEditor />} />
               <Route path="programmes" element={<DashboardPrograms />} />
               <Route path="programmes/:id" element={<ProgramEditor />} />
+              <Route path="portfolio" element={<DashboardPortfolio />} />
+              <Route path="portfolio/:id" element={<PortfolioEditor />} />
+              <Route path="categories" element={<DashboardCategories />} />
               <Route path="utilisateurs" element={<DashboardUsers />} />
             </Route>
 

@@ -19,6 +19,8 @@ const PublicNavbar = () => {
     { label: t("nav.services"), href: "/services" },
     { label: t("nav.programs"), href: "/programmes" },
     { label: t("nav.academy"), href: "/academie" },
+    { label: t("nav.portfolio"), href: "/portfolio" },
+    { label: t("nav.bitcoin"), href: "/bitcoin" },
     { label: t("nav.blog"), href: "/blog" },
     { label: t("nav.about"), href: "/a-propos" },
     { label: t("nav.contact"), href: "/contact" },
