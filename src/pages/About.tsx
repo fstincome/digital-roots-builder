@@ -64,31 +64,6 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="container max-w-3xl">
-          <h2 className="text-3xl font-semibold text-foreground mb-12 text-center">{t("about.roadmapTitle")}</h2>
-          <div className="space-y-8">
-            {timeline.map((item, i) => (
-              <motion.div key={item.year} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                className="flex gap-6">
-                <div className="flex flex-col items-center">
-                  <div className="h-10 w-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-mono text-xs font-bold shrink-0">
-                    {item.year.slice(2)}
-                  </div>
-                  {i < timeline.length - 1 && <div className="w-px flex-1 bg-border mt-2" />}
-                </div>
-                <div className="pb-8">
-                  <div className="flex items-baseline gap-3">
-                    <span className="font-mono text-primary text-sm">{item.year}</span>
-                    <h3 className="font-semibold text-foreground">{item.titleKey}</h3>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-1">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 };
