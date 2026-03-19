@@ -7,6 +7,8 @@
     "blog": "Blogu",
     "about": "Kuhusu",
     "contact": "Wasiliana",
+    "portfolio": "Kazi zetu",
+    "bitcoin": "Bitcoin",
     "login": "Ingia",
     "dashboard": "Dashibodi",
     "myAccount": "Akaunti yangu"
@@ -41,6 +43,17 @@
     "consultingDesc": "Msaada wa kimkakati katika mabadiliko yako ya kidijitali.",
     "maintenance": "Matengenezo na Msaada",
     "maintenanceDesc": "Msaada wa kiufundi unaoendelea na matengenezo ya kuzuia."
+  },
+  "home": {
+    "articlesTag": "Machapisho ya hivi karibuni",
+    "articlesTitle": "Makala ya hivi karibuni",
+    "allArticles": "Tazama makala yote",
+    "programsTag": "Programu zilizoangaziwa",
+    "programsTitle": "Programu zetu za kuonyesha",
+    "allPrograms": "Tazama programu zote",
+    "portfolioTag": "Utoaji wa hivi karibuni",
+    "portfolioTitle": "Mafanikio yetu ya hivi karibuni",
+    "allPortfolio": "Tazama miradi yote"
   },
   "cta": {
     "title": "Uko tayari kudijitisha biashara yako?",
@@ -83,8 +96,7 @@
     "sovereignty": "Uhuru",
     "sovereigntyDesc": "Kuendeleza suluhisho za ndani kupunguza utegemezi wa kiteknolojia.",
     "excellence": "Ubora",
-    "excellenceDesc": "Viwango vya kimataifa katika kila huduma tunayotoa.",
-    "roadmapTitle": "Ramani ya Njia 2026–2030"
+    "excellenceDesc": "Viwango vya kimataifa katika kila huduma tunayotoa."
   },
   "contact": {
     "tag": "Wasiliana nasi",
@@ -126,6 +138,44 @@
     "learnMore": "Jifunze zaidi",
     "back": "Rudi kwenye programu",
     "notFound": "Programu haijapatikana"
+  },
+  "portfolio": {
+    "tag": "Mafanikio yetu",
+    "title": "Kazi zetu",
+    "desc": "Gundua miradi yetu ya hivi karibuni iliyotolewa na mafanikio.",
+    "noItems": "Hakuna miradi ya kuonyesha kwa sasa.",
+    "viewProject": "Tazama mradi"
+  },
+  "bitcoin": {
+    "tag": "// Ugatuzi na Uhuru",
+    "title": "Bitcoin na",
+    "titleHighlight": "Ugatuzi",
+    "desc": "SIGHT Africa inachunguza teknolojia za ugatuzi ili kuimarisha uhuru wa kifedha na ujumuishaji wa kidijitali nchini Burundi na Afrika ya Mashariki.",
+    "solutionsTag": "Suluhisho zetu",
+    "solutionsTitle": "Miradi na suluhisho za ndani",
+    "custody": "Suluhisho za Uhifadhi Binafsi",
+    "custodyDesc": "Elimu na zana za uhifadhi salama wa Bitcoin. Linda mali zako za kidijitali bila wasuluhishi.",
+    "lightning": "Lightning Network",
+    "lightningDesc": "Utekelezaji wa suluhisho za malipo ya Lightning kwa miamala ya haraka na ya gharama nafuu.",
+    "node": "Miundombinu ya Full Node",
+    "nodeDesc": "Kupeleka na kusimamia nodi kamili za Bitcoin ili kuimarisha mtandao wa ugatuzi katika Afrika ya Mashariki.",
+    "education": "Elimu ya Bitcoin",
+    "educationDesc": "Programu za mafunzo kuhusu misingi ya fedha, ugatuzi na itifaki ya Bitcoin.",
+    "remittance": "Uhamisho wa Fedha za Kimataifa",
+    "remittanceDesc": "Suluhisho za ugatuzi kwa uhamisho wa fedha za gharama nafuu kati ya diaspora na Afrika ya Mashariki.",
+    "mining": "Uchimbaji Endelevu",
+    "miningDesc": "Uchunguzi wa suluhisho za uchimbaji Bitcoin za kirafiki kwa mazingira kwa kutumia nishati mbadala za ndani.",
+    "ctaTitle": "Unavutiwa na suluhisho za ugatuzi?",
+    "ctaDesc": "Wasiliana nasi kugundua jinsi Bitcoin na teknolojia za ugatuzi zinavyoweza kubadilisha biashara yako.",
+    "ctaButton": "Wasiliana nasi"
+  },
+  "social": {
+    "comments": "Maoni",
+    "writeComment": "Andika maoni...",
+    "loginToComment": "Ingia ili kuacha maoni.",
+    "loginToLike": "Ingia ili kupenda.",
+    "share": "Shiriki",
+    "linkCopied": "Kiungo kimekopwa!"
   },
   "academy": {
     "tag": "Mafunzo na uthibitisho",
@@ -188,6 +238,8 @@
     "overview": "Muhtasari",
     "articles": "Makala",
     "programs": "Programu",
+    "portfolio": "Kazi zetu",
+    "categories": "Kategoria",
     "users": "Watumiaji",
     "backToSite": "Rudi kwenye tovuti",
     "logout": "Toka",
@@ -207,6 +259,17 @@
     "completed": "Imekamilika",
     "deleteProgram": "Futa programu hii?",
     "programDeleted": "Programu imefutwa",
+    "newPortfolio": "Mradi mpya",
+    "noPortfolio": "Hakuna miradi. Unda ya kwanza!",
+    "deletePortfolio": "Futa mradi huu?",
+    "portfolioDeleted": "Mradi umefutwa",
+    "newCategory": "Kategoria mpya",
+    "noCategories": "Hakuna kategoria. Unda ya kwanza!",
+    "categoryName": "Jina",
+    "categoryCreated": "Kategoria imeundwa",
+    "categoryUpdated": "Kategoria imesasishwa",
+    "categoryDeleted": "Kategoria imefutwa",
+    "deleteCategory": "Futa kategoria hii?",
     "createUser": "Mtumiaji mpya",
     "createUserTitle": "Unda mtumiaji",
     "fullName": "Jina kamili",

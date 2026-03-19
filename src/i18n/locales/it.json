@@ -7,6 +7,8 @@
     "blog": "Blog",
     "about": "Chi siamo",
     "contact": "Contatti",
+    "portfolio": "Portfolio",
+    "bitcoin": "Bitcoin",
     "login": "Accedi",
     "dashboard": "Dashboard",
     "myAccount": "Il mio account"
@@ -42,6 +44,17 @@
     "maintenance": "Manutenzione e Supporto",
     "maintenanceDesc": "Supporto tecnico continuo e manutenzione preventiva."
   },
+  "home": {
+    "articlesTag": "Ultime pubblicazioni",
+    "articlesTitle": "Articoli recenti",
+    "allArticles": "Vedi tutti gli articoli",
+    "programsTag": "Programmi in evidenza",
+    "programsTitle": "I nostri programmi di punta",
+    "allPrograms": "Vedi tutti i programmi",
+    "portfolioTag": "Consegne recenti",
+    "portfolioTitle": "Le nostre ultime realizzazioni",
+    "allPortfolio": "Vedi tutti i progetti"
+  },
   "cta": {
     "title": "Pronti a digitalizzare la vostra azienda?",
     "desc": "Contattateci per un audit gratuito della vostra infrastruttura IT e scoprite come SIGHT può accelerare la vostra crescita.",
@@ -52,29 +65,29 @@
     "title": "I Nostri Servizi",
     "desc": "Una gamma completa di servizi IT per accompagnare la vostra azienda nella sua trasformazione digitale.",
     "s1": "Importazione e Distribuzione Hardware",
-    "s1d": "Importazione diretta dai nostri partner Dell, HP e Cisco. Apparecchiature certificate con garanzia ufficiale, eliminando intermediari per prezzi competitivi.",
+    "s1d": "Importazione diretta dai nostri partner Dell, HP e Cisco.",
     "s2": "Sviluppo Software",
-    "s2d": "Soluzioni software su misura adattate al mercato del Burundi. ERP, gestione scolastica, sanità — strumenti Made in Burundi.",
+    "s2d": "Soluzioni software su misura adattate al mercato del Burundi.",
     "s3": "Cybersicurezza e Audit",
-    "s3d": "Protezione completa dei vostri sistemi informativi. Audit di sicurezza, conformità e formazione dei vostri team sulle buone pratiche.",
+    "s3d": "Protezione completa dei vostri sistemi informativi.",
     "s4": "Accademia SIGHT",
-    "s4d": "Centro di certificazione tecnica per laureati e professionisti sulle tecnologie all'avanguardia.",
+    "s4d": "Centro di certificazione tecnica per laureati e professionisti.",
     "s5": "Consulenza in Trasformazione Digitale",
-    "s5d": "Accompagnamento strategico di aziende e istituzioni nel loro percorso di digitalizzazione.",
+    "s5d": "Accompagnamento strategico di aziende e istituzioni.",
     "s6": "Manutenzione e Supporto",
-    "s6d": "Supporto tecnico continuo con intervento rapido. Manutenzione preventiva e correttiva per garantire la disponibilità dei vostri sistemi.",
+    "s6d": "Supporto tecnico continuo con intervento rapido.",
     "s7": "Infrastruttura e Reti",
-    "s7d": "Progettazione, distribuzione e gestione della vostra infrastruttura di rete e data center.",
+    "s7d": "Progettazione, distribuzione e gestione della vostra infrastruttura di rete.",
     "s8": "Soluzioni Cloud",
-    "s8d": "Migrazione e gestione delle vostre applicazioni nel cloud per più flessibilità e resilienza."
+    "s8d": "Migrazione e gestione delle vostre applicazioni nel cloud."
   },
   "about": {
     "tag": "Chi siamo",
     "title": "A proposito di SIGHT Africa",
     "visionTitle": "La Nostra Visione",
-    "visionDesc": "Diventare il leader dell'integrazione tecnologica in Burundi entro il 2030, promuovendo l'autonomia digitale nazionale e contribuendo attivamente alla Visione Burundi 2040-2060.",
+    "visionDesc": "Diventare il leader dell'integrazione tecnologica in Burundi entro il 2030.",
     "missionTitle": "La Nostra Missione",
-    "missionDesc": "Fornire apparecchiature all'avanguardia, sviluppare soluzioni software sicure e rafforzare le capacità locali per accelerare la trasformazione digitale del Burundi e dell'Africa Orientale.",
+    "missionDesc": "Fornire apparecchiature all'avanguardia, sviluppare soluzioni software sicure e rafforzare le capacità locali.",
     "valuesTitle": "I Nostri Valori",
     "integrity": "Integrità",
     "integrityDesc": "Lotta alla contraffazione, prodotti certificati e garantiti.",
@@ -83,8 +96,7 @@
     "sovereignty": "Sovranità",
     "sovereigntyDesc": "Sviluppo di soluzioni locali per ridurre la dipendenza tecnologica.",
     "excellence": "Eccellenza",
-    "excellenceDesc": "Standard internazionali in ogni servizio che offriamo.",
-    "roadmapTitle": "Roadmap 2026–2030"
+    "excellenceDesc": "Standard internazionali in ogni servizio che offriamo."
   },
   "contact": {
     "tag": "Contattaci",
@@ -127,10 +139,48 @@
     "back": "Torna ai programmi",
     "notFound": "Programma non trovato"
   },
+  "portfolio": {
+    "tag": "Le nostre realizzazioni",
+    "title": "Portfolio",
+    "desc": "Scoprite i nostri ultimi progetti consegnati e realizzazioni.",
+    "noItems": "Nessun progetto da mostrare al momento.",
+    "viewProject": "Vedi progetto"
+  },
+  "bitcoin": {
+    "tag": "// Decentralizzazione e Sovranità",
+    "title": "Bitcoin e",
+    "titleHighlight": "Decentralizzazione",
+    "desc": "SIGHT Africa esplora le tecnologie decentralizzate per rafforzare la sovranità finanziaria e l'inclusione digitale in Burundi e Africa Orientale.",
+    "solutionsTag": "Le nostre soluzioni",
+    "solutionsTitle": "Progetti e soluzioni locali",
+    "custody": "Soluzioni di Auto-custodia",
+    "custodyDesc": "Educazione e strumenti per la custodia sicura di Bitcoin. Proteggete i vostri asset digitali senza intermediari.",
+    "lightning": "Lightning Network",
+    "lightningDesc": "Implementazione di soluzioni di pagamento Lightning per transazioni rapide e a basso costo.",
+    "node": "Infrastruttura Full Node",
+    "nodeDesc": "Distribuzione e gestione di nodi Bitcoin completi per rafforzare la rete decentralizzata.",
+    "education": "Educazione Bitcoin",
+    "educationDesc": "Programmi di formazione sui fondamenti monetari, la decentralizzazione e il protocollo Bitcoin.",
+    "remittance": "Rimesse Transfrontaliere",
+    "remittanceDesc": "Soluzioni decentralizzate per rimesse a basso costo tra la diaspora e l'Africa Orientale.",
+    "mining": "Mining Sostenibile",
+    "miningDesc": "Esplorazione di soluzioni di mining Bitcoin eco-responsabili utilizzando energie rinnovabili locali.",
+    "ctaTitle": "Interessati alle soluzioni decentralizzate?",
+    "ctaDesc": "Contattateci per scoprire come Bitcoin e le tecnologie decentralizzate possono trasformare la vostra attività.",
+    "ctaButton": "Contattaci"
+  },
+  "social": {
+    "comments": "Commenti",
+    "writeComment": "Scrivi un commento...",
+    "loginToComment": "Accedi per lasciare un commento.",
+    "loginToLike": "Accedi per mettere like.",
+    "share": "Condividi",
+    "linkCopied": "Link copiato!"
+  },
   "academy": {
     "tag": "Formazione e certificazione",
     "title": "Accademia SIGHT",
-    "desc": "Centro di certificazione tecnica per laureati e professionisti. Rafforzate le vostre competenze sulle tecnologie all'avanguardia.",
+    "desc": "Centro di certificazione tecnica per laureati e professionisti.",
     "enroll": "Iscriversi a una formazione",
     "cloud": "Cloud Computing",
     "cloudDesc": "Padroneggiare le piattaforme cloud (AWS, Azure, GCP) e le architetture moderne.",
@@ -141,9 +191,9 @@
     "webdev": "Sviluppo Web",
     "webdevDesc": "Tecnologie front-end e back-end per creare applicazioni moderne.",
     "digital": "Trasformazione Digitale",
-    "digitalDesc": "Strategie e strumenti per guidare la digitalizzazione delle organizzazioni.",
+    "digitalDesc": "Strategie e strumenti per guidare la digitalizzazione.",
     "cert": "Certificazione IT",
-    "certDesc": "Preparazione alle certificazioni internazionali riconosciute (CompTIA, Cisco, Microsoft)."
+    "certDesc": "Preparazione alle certificazioni internazionali (CompTIA, Cisco, Microsoft)."
   },
   "login": {
     "title": "Accedi",
@@ -158,7 +208,7 @@
     "forgotLink": "Password dimenticata?",
     "backToLogin": "Torna al login",
     "emailSentTitle": "Email inviata",
-    "emailSentDesc": "Controlla la tua casella di posta per reimpostare la password."
+    "emailSentDesc": "Controlla la tua casella di posta."
   },
   "resetPassword": {
     "title": "Nuova password",
@@ -169,10 +219,10 @@
     "success": "Password aggiornata!",
     "successDesc": "Ora puoi accedere.",
     "invalidLink": "Link non valido",
-    "invalidLinkDesc": "Questo link di reimpostazione non è valido."
+    "invalidLinkDesc": "Questo link non è valido."
   },
   "footer": {
-    "tagline": "L'architetto della sovranità digitale del Burundi. Hardware certificato, Software sovrano, Formazione d'eccellenza.",
+    "tagline": "L'architetto della sovranità digitale del Burundi.",
     "navigation": "Navigazione",
     "servicesTitle": "Servizi",
     "hardwareSvc": "Hardware e Infrastruttura",
@@ -188,6 +238,8 @@
     "overview": "Panoramica",
     "articles": "Articoli",
     "programs": "Programmi",
+    "portfolio": "Portfolio",
+    "categories": "Categorie",
     "users": "Utenti",
     "backToSite": "Torna al sito",
     "logout": "Disconnetti",
@@ -195,7 +247,7 @@
     "contentOverview": "Ecco una panoramica dei vostri contenuti.",
     "totalViews": "Visualizzazioni totali",
     "newArticle": "Nuovo articolo",
-    "noArticles": "Nessun articolo. Create il vostro primo articolo!",
+    "noArticles": "Nessun articolo. Create il vostro primo!",
     "published": "Pubblicato",
     "draft": "Bozza",
     "archived": "Archiviato",
@@ -207,6 +259,17 @@
     "completed": "Completato",
     "deleteProgram": "Eliminare questo programma?",
     "programDeleted": "Programma eliminato",
+    "newPortfolio": "Nuovo progetto",
+    "noPortfolio": "Nessun progetto. Create il primo!",
+    "deletePortfolio": "Eliminare questo progetto?",
+    "portfolioDeleted": "Progetto eliminato",
+    "newCategory": "Nuova categoria",
+    "noCategories": "Nessuna categoria. Create la prima!",
+    "categoryName": "Nome",
+    "categoryCreated": "Categoria creata",
+    "categoryUpdated": "Categoria aggiornata",
+    "categoryDeleted": "Categoria eliminata",
+    "deleteCategory": "Eliminare questa categoria?",
     "createUser": "Nuovo utente",
     "createUserTitle": "Creare un utente",
     "fullName": "Nome completo",
