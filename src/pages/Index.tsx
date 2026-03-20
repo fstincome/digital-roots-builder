@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
 import heroImg from "@/assets/hero-africa-tech.jpg";
+import HeroSlideshow from "@/components/HeroSlideshow";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
