@@ -177,6 +177,11 @@
     "share": "Partager",
     "linkCopied": "Lien copié !"
   },
+  "payment": {
+    "title": "Moyens de paiement",
+    "desc": "Nous acceptons les paiements dans les devises suivantes :",
+    "btcWallet": "Portefeuille Bitcoin Lightning"
+  },
   "academy": {
     "tag": "Formation & certification",
     "title": "Académie SIGHT",
