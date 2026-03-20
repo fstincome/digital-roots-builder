@@ -303,5 +303,18 @@
     "title": "404",
     "desc": "Samahani! Ukurasa haujapatikana",
     "back": "Rudi nyumbani"
+  },
+  "hosting": {
+    "tag": "// Hosting ya Wavuti & VPS",
+    "title": "Hosting",
+    "titleHighlight": "yenye nguvu",
+    "desc": "Hosting ya wavuti inayotegemeka na seva za VPS kwa miradi yako. Bei shindani, hifadhi za kila siku na msaada kutoka Burundi.",
+    "webHosting": "Hosting ya Wavuti",
+    "vps": "Seva za VPS",
+    "whyTag": "Faida zetu",
+    "whyTitle": "Kwa nini uchague hosting yetu?",
+    "ctaTitle": "Uko tayari kuzindua mradi wako?",
+    "ctaDesc": "Wasiliana nasi kuchagua mpango unaofaa mahitaji yako.",
+    "ctaButton": "Wasiliana nasi"
   }
 }
