@@ -21,6 +21,7 @@ import ProgramDetail from "@/pages/ProgramDetail";
 import Academy from "@/pages/Academy";
 import Portfolio from "@/pages/Portfolio";
 import Bitcoin from "@/pages/Bitcoin";
+import Hosting from "@/pages/Hosting";
 import Login from "@/pages/Login";
 import ResetPassword from "@/pages/ResetPassword";
 import NotFound from "@/pages/NotFound";
