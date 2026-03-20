@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import ThemeToggle from "./ThemeToggle";
 import sightLogo from "@/assets/sight-logo.png";
 
 const PublicNavbar = () => {
@@ -55,6 +56,7 @@ const PublicNavbar = () => {
         </div>
 
         <div className="hidden sm:flex items-center gap-2">
+          <ThemeToggle />
           <LanguageSwitcher />
           {user ? (
             <>
@@ -75,6 +77,7 @@ const PublicNavbar = () => {
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
+          <ThemeToggle />
           <LanguageSwitcher />
           <button className="text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}

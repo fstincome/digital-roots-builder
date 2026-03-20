@@ -177,6 +177,11 @@
     "share": "Shiriki",
     "linkCopied": "Kiungo kimekopwa!"
   },
+  "payment": {
+    "title": "Njia za Malipo",
+    "desc": "Tunakubali malipo katika sarafu zifuatazo:",
+    "btcWallet": "Mkoba wa Bitcoin Lightning"
+  },
   "academy": {
     "tag": "Mafunzo na uthibitisho",
     "title": "Chuo cha SIGHT",

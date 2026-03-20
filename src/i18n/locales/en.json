@@ -177,6 +177,11 @@
     "share": "Share",
     "linkCopied": "Link copied!"
   },
+  "payment": {
+    "title": "Payment Methods",
+    "desc": "We accept payments in the following currencies:",
+    "btcWallet": "Bitcoin Lightning Wallet"
+  },
   "academy": {
     "tag": "Training & certification",
     "title": "SIGHT Academy",
