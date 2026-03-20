@@ -50,6 +50,9 @@ const Index = () => {
 
   return (
     <>
+      {/* Slideshow */}
+      <HeroSlideshow />
+
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         <div className="absolute inset-0">
