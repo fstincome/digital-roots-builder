@@ -85,6 +85,8 @@ const Contact = () => {
               <p className="text-sm text-muted-foreground">{t("contact.weekdays")}</p>
               <p className="text-sm text-muted-foreground">{t("contact.saturday")}</p>
             </div>
+
+            <PaymentSection />
           </motion.div>
         </div>
       </div>
