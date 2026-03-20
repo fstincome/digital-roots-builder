@@ -303,5 +303,18 @@
     "title": "404",
     "desc": "Oups ! Page non trouvée",
     "back": "Retour à l'accueil"
+  },
+  "hosting": {
+    "tag": "// Hébergement Web & VPS",
+    "title": "Hébergement",
+    "titleHighlight": "performant",
+    "desc": "Hébergement web fiable et serveurs VPS pour vos projets. Prix compétitifs, sauvegardes journalières et support réactif depuis le Burundi.",
+    "webHosting": "Hébergement Web",
+    "vps": "Serveurs VPS",
+    "whyTag": "Nos avantages",
+    "whyTitle": "Pourquoi choisir notre hébergement ?",
+    "ctaTitle": "Prêt à lancer votre projet ?",
+    "ctaDesc": "Contactez-nous pour choisir le plan qui correspond à vos besoins. Migration et accompagnement personnalisé inclus.",
+    "ctaButton": "Nous contacter"
   }
 }
