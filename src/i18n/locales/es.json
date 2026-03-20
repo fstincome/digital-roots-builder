@@ -177,6 +177,11 @@
     "share": "Compartir",
     "linkCopied": "¡Enlace copiado!"
   },
+  "payment": {
+    "title": "Métodos de pago",
+    "desc": "Aceptamos pagos en las siguientes monedas:",
+    "btcWallet": "Cartera Bitcoin Lightning"
+  },
   "academy": {
     "tag": "Formación y certificación",
     "title": "Academia SIGHT",
