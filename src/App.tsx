@@ -21,6 +21,7 @@ import ProgramDetail from "@/pages/ProgramDetail";
 import Academy from "@/pages/Academy";
 import Portfolio from "@/pages/Portfolio";
 import Bitcoin from "@/pages/Bitcoin";
+import Hosting from "@/pages/Hosting";
 import Login from "@/pages/Login";
 import ResetPassword from "@/pages/ResetPassword";
 import NotFound from "@/pages/NotFound";
@@ -59,6 +60,7 @@ const App = () => (
               <Route path="/academie" element={<Academy />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/bitcoin" element={<Bitcoin />} />
+              <Route path="/hebergement" element={<Hosting />} />
             </Route>
 
             {/* Auth pages (no layout) */}

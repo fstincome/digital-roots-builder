@@ -9,6 +9,7 @@
     "contact": "Contact",
     "portfolio": "Portfolio",
     "bitcoin": "Bitcoin",
+    "hosting": "Hosting",
     "login": "Sign in",
     "dashboard": "Dashboard",
     "myAccount": "My account"
@@ -302,5 +303,18 @@
     "title": "404",
     "desc": "Oops! Page not found",
     "back": "Return to home"
+  },
+  "hosting": {
+    "tag": "// Web Hosting & VPS",
+    "title": "High-performance",
+    "titleHighlight": "Hosting",
+    "desc": "Reliable web hosting and VPS servers for your projects. Competitive prices, daily backups, and responsive support from Burundi.",
+    "webHosting": "Web Hosting",
+    "vps": "VPS Servers",
+    "whyTag": "Our advantages",
+    "whyTitle": "Why choose our hosting?",
+    "ctaTitle": "Ready to launch your project?",
+    "ctaDesc": "Contact us to choose the plan that fits your needs. Migration and personalized support included.",
+    "ctaButton": "Contact us"
   }
 }
