@@ -303,5 +303,18 @@
     "title": "404",
     "desc": "¡Ups! Página no encontrada",
     "back": "Volver al inicio"
+  },
+  "hosting": {
+    "tag": "// Alojamiento Web & VPS",
+    "title": "Alojamiento",
+    "titleHighlight": "de alto rendimiento",
+    "desc": "Alojamiento web fiable y servidores VPS para sus proyectos. Precios competitivos, copias de seguridad diarias y soporte desde Burundi.",
+    "webHosting": "Alojamiento Web",
+    "vps": "Servidores VPS",
+    "whyTag": "Nuestras ventajas",
+    "whyTitle": "¿Por qué elegir nuestro alojamiento?",
+    "ctaTitle": "¿Listo para lanzar su proyecto?",
+    "ctaDesc": "Contáctenos para elegir el plan que se adapte a sus necesidades.",
+    "ctaButton": "Contáctenos"
   }
 }
