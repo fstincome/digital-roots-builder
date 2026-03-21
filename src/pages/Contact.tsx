@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import PaymentSection from "@/components/PaymentSection";
 import { useTranslation } from "react-i18next";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const Contact = () => {
   const { toast } = useToast();
