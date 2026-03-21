@@ -1,14 +1,7 @@
 import { motion } from "framer-motion";
 import { Target, Eye, Heart, Award } from "lucide-react";
 import { useTranslation } from "react-i18next";
-
-const timeline = [
-  { year: "2026", titleKey: "Fondation", desc: "Installation du siège à Gitega, premiers partenariats fournisseurs." },
-  { year: "2027", titleKey: "Croissance", desc: "Lancement de l'Académie SIGHT, premiers contrats gouvernementaux." },
-  { year: "2028", titleKey: "Expansion", desc: "Ouverture du bureau de Bujumbura et Ngozi." },
-  { year: "2029", titleKey: "Consolidation", desc: "50 PME digitalisées, leader sur les marchés publics IT." },
-  { year: "2030", titleKey: "Rayonnement", desc: "Exportation vers la zone EAC, hub d'innovation certifié." },
-];
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const About = () => {
   const { t } = useTranslation();
@@ -22,22 +15,22 @@ const About = () => {
 
   return (
     <>
-      <section className="pt-32 pb-20">
-        <div className="container">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <span className="font-mono text-xs text-primary tracking-widest uppercase">{t("about.tag")}</span>
-            <h1 className="text-4xl md:text-5xl font-semibold text-foreground mt-3 mb-6">{t("about.title")}</h1>
-          </motion.div>
+      <PageBreadcrumb
+        title={t("about.title")}
+        items={[{ label: t("nav.about") }]}
+      />
 
-          <div className="grid md:grid-cols-2 gap-12 mt-8">
-            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
-              <h2 className="text-2xl font-semibold text-foreground mb-4 flex items-center gap-2">
+      <section className="py-20">
+        <div className="container">
+          <div className="grid md:grid-cols-2 gap-12">
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <h2 className="text-2xl font-heading font-semibold text-foreground mb-4 flex items-center gap-2">
                 <Eye className="text-primary" size={24} /> {t("about.visionTitle")}
               </h2>
               <p className="text-muted-foreground leading-relaxed">{t("about.visionDesc")}</p>
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}>
-              <h2 className="text-2xl font-semibold text-foreground mb-4 flex items-center gap-2">
+            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}>
+              <h2 className="text-2xl font-heading font-semibold text-foreground mb-4 flex items-center gap-2">
                 <Target className="text-primary" size={24} /> {t("about.missionTitle")}
               </h2>
               <p className="text-muted-foreground leading-relaxed">{t("about.missionDesc")}</p>
@@ -48,7 +41,7 @@ const About = () => {
 
       <section className="py-20 border-y border-border bg-card/30">
         <div className="container">
-          <h2 className="text-3xl font-semibold text-foreground mb-12 text-center">{t("about.valuesTitle")}</h2>
+          <h2 className="text-3xl font-heading font-semibold text-foreground mb-12 text-center">{t("about.valuesTitle")}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v, i) => (
               <motion.div key={v.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
@@ -63,7 +56,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
     </>
   );
 };

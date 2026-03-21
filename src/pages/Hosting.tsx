@@ -4,6 +4,7 @@ import { Check, Server, Globe, Mail, Database, Shield, Zap, HardDrive, ArrowRigh
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -181,19 +182,11 @@ const Hosting = () => {
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative pt-32 pb-16 overflow-hidden">
-        <div className="absolute inset-0 gradient-mesh" />
-        <div className="container relative z-10">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <span className="font-mono text-xs text-primary tracking-widest uppercase">{t("hosting.tag")}</span>
-            <h1 className="text-4xl md:text-5xl font-semibold text-foreground mt-3 mb-4">
-              {t("hosting.title")} <span className="text-primary">{t("hosting.titleHighlight")}</span>
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl">{t("hosting.desc")}</p>
-          </motion.div>
-        </div>
-      </section>
+      <PageBreadcrumb
+        title={`${t("hosting.title")} ${t("hosting.titleHighlight")}`}
+        subtitle={t("hosting.desc")}
+        items={[{ label: t("nav.hosting") }]}
+      />
 
       {/* Tabs */}
       <section className="py-16">
