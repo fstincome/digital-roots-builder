@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Server, Code, Shield, GraduationCap, Globe, Zap, Wrench, Database, Cloud } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import servicesBg from "@/assets/services-bg.jpg";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.5 } }) };
 
@@ -21,19 +21,11 @@ const Services = () => {
 
   return (
     <>
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={servicesBg} alt="" className="w-full h-full object-cover opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/60 to-background" />
-        </div>
-        <div className="container relative z-10">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <span className="font-mono text-xs text-primary tracking-widest uppercase">{t("services.tag")}</span>
-            <h1 className="text-4xl md:text-5xl font-semibold text-foreground mt-3 mb-4">{t("services.title")}</h1>
-            <p className="text-lg text-muted-foreground max-w-2xl">{t("services.desc")}</p>
-          </motion.div>
-        </div>
-      </section>
+      <PageBreadcrumb
+        title={t("services.title")}
+        subtitle={t("services.desc")}
+        items={[{ label: t("nav.services") }]}
+      />
 
       <section className="py-20">
         <div className="container">

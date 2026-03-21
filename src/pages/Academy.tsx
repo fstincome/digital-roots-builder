@@ -3,6 +3,7 @@ import { GraduationCap, Cloud, Shield, Globe, Code, Network, ArrowRight } from "
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const Academy = () => {
   const { t } = useTranslation();
@@ -18,15 +19,11 @@ const Academy = () => {
 
   return (
     <>
-      <section className="pt-32 pb-20 gradient-mesh">
-        <div className="container">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <span className="font-mono text-xs text-primary tracking-widest uppercase">{t("academy.tag")}</span>
-            <h1 className="text-4xl md:text-5xl font-semibold text-foreground mt-3 mb-4">{t("academy.title")}</h1>
-            <p className="text-lg text-muted-foreground max-w-2xl">{t("academy.desc")}</p>
-          </motion.div>
-        </div>
-      </section>
+      <PageBreadcrumb
+        title={t("academy.title")}
+        subtitle={t("academy.desc")}
+        items={[{ label: t("nav.academy") }]}
+      />
 
       <section className="py-20">
         <div className="container">
