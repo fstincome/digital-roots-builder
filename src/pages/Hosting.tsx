@@ -4,6 +4,7 @@ import { Check, Server, Globe, Mail, Database, Shield, Zap, HardDrive, ArrowRigh
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
