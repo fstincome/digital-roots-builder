@@ -37,7 +37,7 @@ const PublicNavbar = () => {
     >
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <img src={sightLogo} alt="SIGHT Africa" className="h-10 w-auto" />
+          <img src={sightLogo} alt="SIGHT Africa" className="h-10 w-auto bg-white/90 rounded-md p-1" />
         </Link>
 
         <div className="hidden lg:flex items-center gap-6">
