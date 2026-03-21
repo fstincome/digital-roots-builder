@@ -37,7 +37,9 @@ const PublicNavbar = () => {
     >
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <img src={sightLogo} alt="SIGHT Africa" className="h-10 w-auto bg-white/90 rounded-md p-1" />
+          <span className="inline-flex items-center justify-center h-10 bg-white rounded-lg px-2 py-1 shadow-sm">
+            <img src={sightLogo} alt="SIGHT Africa" className="h-7 w-auto" />
+          </span>
         </Link>
 
         <div className="hidden lg:flex items-center gap-6">
