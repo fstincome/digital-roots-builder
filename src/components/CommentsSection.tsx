@@ -100,7 +100,6 @@ const CommentsSection = ({ articleId, programId }: Props) => {
   };
 
   const getDisplayName = (c: Comment) => {
-    if (c.profiles?.full_name) return c.profiles.full_name;
     if (c.author_name && c.author_name !== "Anonyme") return c.author_name;
     return "Anonyme";
   };
