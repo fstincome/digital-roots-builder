@@ -64,8 +64,8 @@ const Contact = () => {
                 <h3 className="font-semibold text-foreground mb-4">{t("contact.coordinates")}</h3>
                 <div className="space-y-4">
                   {[
-                    { icon: Mail, text: "contact@sightafrica.bi", href: "mailto:contact@sightafrica.bi" },
-                    { icon: Phone, text: "+257 61 000 000", href: "tel:+25761000000" },
+                    { icon: Mail, text: "business@sightnetwork.org", href: "mailto:business@sightnetwork.org" },
+                    { icon: Phone, text: "+257 69 898 947", href: "tel:+25769898947" },
                     { icon: MapPin, text: "Gitega, Burundi" },
                   ].map((c) => (
                     <div key={c.text} className="flex items-center gap-3">

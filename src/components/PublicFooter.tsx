@@ -66,11 +66,11 @@ const PublicFooter = () => {
             <div>
               <h4 className="font-semibold text-foreground mb-4">{t("footer.contactTitle")}</h4>
               <div className="flex flex-col gap-3">
-                <a href="mailto:contact@sightafrica.bi" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-                  <Mail size={14} /> contact@sightafrica.bi
+                <a href="mailto:business@sightnetwork.org" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Mail size={14} /> business@sightnetwork.org
                 </a>
-                <a href="tel:+25761000000" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
-                  <Phone size={14} /> +257 61 000 000
+                <a href="tel:+25769898947" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Phone size={14} /> +257 69 898 947
                 </a>
                 <span className="flex items-center gap-2 text-sm text-muted-foreground">
                   <MapPin size={14} /> Gitega, Burundi

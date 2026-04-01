@@ -49,11 +49,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 text-primary shrink-0" />
-                contact@sight-africa.com
+                business@sightnetwork.org
               </li>
               <li className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-primary shrink-0" />
-                +257 XX XXX XXX
+                +257 69 898 947
               </li>
             </ul>
           </div>
