@@ -44,7 +44,7 @@ const CommentsSection = ({ articleId, programId }: Props) => {
     const { data } = await query;
 
     // Build threaded structure
-    const all = (data || []) as Comment[];
+    const all = (data || []) as unknown as Comment[];
     const topLevel: Comment[] = [];
     const childMap: Record<string, Comment[]> = {};
 
