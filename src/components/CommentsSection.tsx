@@ -21,7 +21,7 @@ const CommentsSection = ({ articleId, programId }: Props) => {
   const { t } = useTranslation();
 
   const fetchComments = async () => {
-    let query = supabase.from("comments").select("*, profiles!inner(full_name, avatar_url)").order("created_at", { ascending: true });
+    let query = supabase.from("comments").select("*, profiles(full_name, avatar_url)").order("created_at", { ascending: true });
     if (articleId) query = query.eq("article_id", articleId);
     if (programId) query = query.eq("program_id", programId);
     const { data } = await query;
@@ -31,9 +31,10 @@ const CommentsSection = ({ articleId, programId }: Props) => {
   useEffect(() => { fetchComments(); }, [articleId, programId]);
 
   const handleSubmit = async () => {
-    if (!content.trim() || !user) return;
+    if (!content.trim()) return;
     setLoading(true);
-    const payload: any = { content: content.trim(), user_id: user.id };
+    const payload: any = { content: content.trim() };
+    if (user) payload.user_id = user.id;
     if (articleId) payload.article_id = articleId;
     if (programId) payload.program_id = programId;
     const { error } = await supabase.from("comments").insert(payload);
@@ -54,22 +55,18 @@ const CommentsSection = ({ articleId, programId }: Props) => {
         {t("social.comments")} ({comments.length})
       </h3>
 
-      {user ? (
-        <div className="flex gap-3 mb-8">
-          <Textarea
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            placeholder={t("social.writeComment")}
-            rows={2}
-            className="flex-1"
-          />
-          <Button variant="hero" size="icon" onClick={handleSubmit} disabled={loading || !content.trim()}>
-            <Send size={16} />
-          </Button>
-        </div>
-      ) : (
-        <p className="text-sm text-muted-foreground mb-6">{t("social.loginToComment")}</p>
-      )}
+      <div className="flex gap-3 mb-8">
+        <Textarea
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          placeholder={t("social.writeComment")}
+          rows={2}
+          className="flex-1"
+        />
+        <Button variant="hero" size="icon" onClick={handleSubmit} disabled={loading || !content.trim()}>
+          <Send size={16} />
+        </Button>
+      </div>
 
       <div className="space-y-4">
         {comments.map((c) => (
@@ -77,10 +74,10 @@ const CommentsSection = ({ articleId, programId }: Props) => {
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-2">
                 <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs font-bold">
-                  {(c.profiles?.full_name || "?")[0].toUpperCase()}
+                  {(c.profiles?.full_name || "A")[0].toUpperCase()}
                 </div>
                 <div>
-                  <span className="text-sm font-medium text-foreground">{c.profiles?.full_name || t("dashboard.noName")}</span>
+                  <span className="text-sm font-medium text-foreground">{c.profiles?.full_name || "Anonyme"}</span>
                   <span className="text-xs text-muted-foreground ml-2">{new Date(c.created_at).toLocaleDateString()}</span>
                 </div>
               </div>

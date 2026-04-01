@@ -20,6 +20,21 @@ const LikesShareBar = ({ articleId, programId, title }: Props) => {
   const { toast } = useToast();
   const { t } = useTranslation();
 
+  const getAnonKey = () => {
+    const key = articleId ? `like_article_${articleId}` : `like_program_${programId}`;
+    return localStorage.getItem(key);
+  };
+
+  const setAnonKey = (id: string) => {
+    const key = articleId ? `like_article_${articleId}` : `like_program_${programId}`;
+    localStorage.setItem(key, id);
+  };
+
+  const removeAnonKey = () => {
+    const key = articleId ? `like_article_${articleId}` : `like_program_${programId}`;
+    localStorage.removeItem(key);
+  };
+
   const fetchLikes = async () => {
     let query = supabase.from("likes").select("*", { count: "exact" });
     if (articleId) query = query.eq("article_id", articleId);
@@ -33,23 +48,32 @@ const LikesShareBar = ({ articleId, programId, title }: Props) => {
       if (programId) userQuery = userQuery.eq("program_id", programId);
       const { data } = await userQuery;
       setLiked((data?.length || 0) > 0);
+    } else {
+      setLiked(!!getAnonKey());
     }
   };
 
   useEffect(() => { fetchLikes(); }, [articleId, programId, user]);
 
   const toggleLike = async () => {
-    if (!user) { toast({ title: t("social.loginToLike") }); return; }
     if (liked) {
-      let query = supabase.from("likes").delete().eq("user_id", user.id);
-      if (articleId) query = query.eq("article_id", articleId);
-      if (programId) query = query.eq("program_id", programId);
-      await query;
+      if (user) {
+        let query = supabase.from("likes").delete().eq("user_id", user.id);
+        if (articleId) query = query.eq("article_id", articleId);
+        if (programId) query = query.eq("program_id", programId);
+        await query;
+      } else {
+        const anonId = getAnonKey();
+        if (anonId) await supabase.from("likes").delete().eq("id", anonId);
+        removeAnonKey();
+      }
     } else {
-      const payload: any = { user_id: user.id };
+      const payload: any = {};
+      if (user) payload.user_id = user.id;
       if (articleId) payload.article_id = articleId;
       if (programId) payload.program_id = programId;
-      await supabase.from("likes").insert(payload);
+      const { data } = await supabase.from("likes").insert(payload).select("id").single();
+      if (data && !user) setAnonKey(data.id);
     }
     fetchLikes();
   };

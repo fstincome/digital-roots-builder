@@ -104,7 +104,7 @@ export type Database = {
           created_at: string
           id: string
           program_id: string | null
-          user_id: string
+          user_id: string | null
         }
         Insert: {
           article_id?: string | null
@@ -112,7 +112,7 @@ export type Database = {
           created_at?: string
           id?: string
           program_id?: string | null
-          user_id: string
+          user_id?: string | null
         }
         Update: {
           article_id?: string | null
@@ -120,7 +120,7 @@ export type Database = {
           created_at?: string
           id?: string
           program_id?: string | null
-          user_id?: string
+          user_id?: string | null
         }
         Relationships: [
           {
@@ -145,21 +145,21 @@ export type Database = {
           created_at: string
           id: string
           program_id: string | null
-          user_id: string
+          user_id: string | null
         }
         Insert: {
           article_id?: string | null
           created_at?: string
           id?: string
           program_id?: string | null
-          user_id: string
+          user_id?: string | null
         }
         Update: {
           article_id?: string | null
           created_at?: string
           id?: string
           program_id?: string | null
-          user_id?: string
+          user_id?: string | null
         }
         Relationships: [
           {
