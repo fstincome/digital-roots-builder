@@ -37,7 +37,7 @@ const CommentsSection = ({ articleId, programId }: Props) => {
   const fetchComments = async () => {
     let query = supabase
       .from("comments")
-      .select("*, profiles(full_name, avatar_url)")
+      .select("*")
       .order("created_at", { ascending: true });
     if (articleId) query = query.eq("article_id", articleId);
     if (programId) query = query.eq("program_id", programId);
