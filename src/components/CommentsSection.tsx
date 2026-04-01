@@ -54,22 +54,18 @@ const CommentsSection = ({ articleId, programId }: Props) => {
         {t("social.comments")} ({comments.length})
       </h3>
 
-      {user ? (
-        <div className="flex gap-3 mb-8">
-          <Textarea
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            placeholder={t("social.writeComment")}
-            rows={2}
-            className="flex-1"
-          />
-          <Button variant="hero" size="icon" onClick={handleSubmit} disabled={loading || !content.trim()}>
-            <Send size={16} />
-          </Button>
-        </div>
-      ) : (
-        <p className="text-sm text-muted-foreground mb-6">{t("social.loginToComment")}</p>
-      )}
+      <div className="flex gap-3 mb-8">
+        <Textarea
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          placeholder={t("social.writeComment")}
+          rows={2}
+          className="flex-1"
+        />
+        <Button variant="hero" size="icon" onClick={handleSubmit} disabled={loading || !content.trim()}>
+          <Send size={16} />
+        </Button>
+      </div>
 
       <div className="space-y-4">
         {comments.map((c) => (
