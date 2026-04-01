@@ -100,25 +100,31 @@ export type Database = {
       comments: {
         Row: {
           article_id: string | null
+          author_name: string | null
           content: string
           created_at: string
           id: string
+          parent_id: string | null
           program_id: string | null
           user_id: string | null
         }
         Insert: {
           article_id?: string | null
+          author_name?: string | null
           content: string
           created_at?: string
           id?: string
+          parent_id?: string | null
           program_id?: string | null
           user_id?: string | null
         }
         Update: {
           article_id?: string | null
+          author_name?: string | null
           content?: string
           created_at?: string
           id?: string
+          parent_id?: string | null
           program_id?: string | null
           user_id?: string | null
         }
@@ -128,6 +134,13 @@ export type Database = {
             columns: ["article_id"]
             isOneToOne: false
             referencedRelation: "articles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "comments_parent_id_fkey"
+            columns: ["parent_id"]
+            isOneToOne: false
+            referencedRelation: "comments"
             referencedColumns: ["id"]
           },
           {
