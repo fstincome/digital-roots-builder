@@ -21,7 +21,7 @@ const CommentsSection = ({ articleId, programId }: Props) => {
   const { t } = useTranslation();
 
   const fetchComments = async () => {
-    let query = supabase.from("comments").select("*, profiles!inner(full_name, avatar_url)").order("created_at", { ascending: true });
+    let query = supabase.from("comments").select("*, profiles(full_name, avatar_url)").order("created_at", { ascending: true });
     if (articleId) query = query.eq("article_id", articleId);
     if (programId) query = query.eq("program_id", programId);
     const { data } = await query;
@@ -31,9 +31,10 @@ const CommentsSection = ({ articleId, programId }: Props) => {
   useEffect(() => { fetchComments(); }, [articleId, programId]);
 
   const handleSubmit = async () => {
-    if (!content.trim() || !user) return;
+    if (!content.trim()) return;
     setLoading(true);
-    const payload: any = { content: content.trim(), user_id: user.id };
+    const payload: any = { content: content.trim() };
+    if (user) payload.user_id = user.id;
     if (articleId) payload.article_id = articleId;
     if (programId) payload.program_id = programId;
     const { error } = await supabase.from("comments").insert(payload);
