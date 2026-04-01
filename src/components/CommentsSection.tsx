@@ -73,10 +73,10 @@ const CommentsSection = ({ articleId, programId }: Props) => {
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-2">
                 <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs font-bold">
-                  {(c.profiles?.full_name || "?")[0].toUpperCase()}
+                  {(c.profiles?.full_name || "A")[0].toUpperCase()}
                 </div>
                 <div>
-                  <span className="text-sm font-medium text-foreground">{c.profiles?.full_name || t("dashboard.noName")}</span>
+                  <span className="text-sm font-medium text-foreground">{c.profiles?.full_name || "Anonyme"}</span>
                   <span className="text-xs text-muted-foreground ml-2">{new Date(c.created_at).toLocaleDateString()}</span>
                 </div>
               </div>
