@@ -8,6 +8,7 @@ import sw from "./locales/sw.json";
 import de from "./locales/de.json";
 import es from "./locales/es.json";
 import it from "./locales/it.json";
+import ja from "./locales/ja.json";
 
 i18n
   .use(LanguageDetector)
@@ -20,6 +21,7 @@ i18n
       de: { translation: de },
       es: { translation: es },
       it: { translation: it },
+      ja: { translation: ja },
     },
     fallbackLng: "en",
     interpolation: { escapeValue: false },
