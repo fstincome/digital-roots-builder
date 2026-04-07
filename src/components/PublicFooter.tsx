@@ -94,8 +94,6 @@ const PublicFooter = () => {
       </footer>
     </>
   );
-});
-
-PublicFooter.displayName = "PublicFooter";
+};
 
 export default PublicFooter;
