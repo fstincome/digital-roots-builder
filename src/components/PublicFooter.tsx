@@ -95,6 +95,8 @@ const PublicFooter = forwardRef<HTMLDivElement>((_, ref) => {
       </footer>
     </>
   );
-};
+});
+
+PublicFooter.displayName = "PublicFooter";
 
 export default PublicFooter;
