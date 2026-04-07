@@ -40,7 +40,6 @@ const PublicFooter = () => {
               <div className="flex flex-col gap-2">
                 {[
                   { label: t("nav.services"), to: "/services" },
-                  { label: t("nav.programs"), to: "/programmes" },
                   { label: t("nav.academy"), to: "/academie" },
                   { label: t("nav.blog"), to: "/blog" },
                   { label: t("nav.about"), to: "/a-propos" },
