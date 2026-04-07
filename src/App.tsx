@@ -55,8 +55,7 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
-              <Route path="/programmes" element={<Programs />} />
-              <Route path="/programmes/:slug" element={<ProgramDetail />} />
+              {/* Programs hidden from public site */}
               <Route path="/academie" element={<Academy />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/bitcoin" element={<Bitcoin />} />
