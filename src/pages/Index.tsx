@@ -23,9 +23,6 @@ const Index = () => {
     supabase.from("articles").select("id, title, slug, excerpt, cover_image, published_at, created_at")
       .eq("status", "published").order("published_at", { ascending: false }).limit(3)
       .then(({ data }) => setLatestArticles(data || []));
-    supabase.from("programs").select("id, title, slug, description, cover_image, status, start_date")
-      .in("status", ["active"]).order("created_at", { ascending: false }).limit(3)
-      .then(({ data }) => setFeaturedPrograms(data || []));
     supabase.from("portfolios").select("*").order("created_at", { ascending: false }).limit(3)
       .then(({ data }) => setLatestPortfolio(data || []));
   }, []);
@@ -157,45 +154,6 @@ const Index = () => {
             <div className="text-center mt-10">
               <Button variant="outline" asChild>
                 <Link to="/blog">{t("home.allArticles")} <ArrowRight className="ml-2" size={16} /></Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Featured Programs */}
-      {featuredPrograms.length > 0 && (
-        <section className="py-24 border-t border-border bg-card/30">
-          <div className="container">
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mb-16">
-              <span className="font-mono text-xs text-primary tracking-widest uppercase">{t("home.programsTag")}</span>
-              <h2 className="text-3xl md:text-4xl font-semibold text-foreground mt-3">{t("home.programsTitle")}</h2>
-            </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {featuredPrograms.map((p, i) => (
-                <motion.div key={p.id} custom={i} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                  <Link to={`/programmes/${p.slug}`} className="group block rounded-xl border border-border bg-card overflow-hidden hover:border-primary/30 transition-all">
-                    {p.cover_image ? (
-                      <img src={p.cover_image} alt={p.title} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
-                    ) : (
-                      <div className="w-full h-48 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
-                        <span className="font-mono text-primary/30 text-5xl">P</span>
-                      </div>
-                    )}
-                    <div className="p-6">
-                      <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">{p.title}</h3>
-                      {p.description && <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{p.description}</p>}
-                      <span className="inline-flex items-center gap-1 text-sm text-primary mt-4 font-medium">
-                        {t("programs.learnMore")} <ArrowRight size={14} />
-                      </span>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-            <div className="text-center mt-10">
-              <Button variant="outline" asChild>
-                <Link to="/programmes">{t("home.allPrograms")} <ArrowRight className="ml-2" size={16} /></Link>
               </Button>
             </div>
           </div>
