@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import sightLogo from "@/assets/sight-logo.png";
+import NewsletterSignup from "./NewsletterSignup";
 
 const WHATSAPP_NUMBER = "25769898947";
 const WHATSAPP_MESSAGE = encodeURIComponent("Bonjour SIGHT Africa, je vous contacte depuis votre site web. J'aimerais avoir plus d'informations sur vos services.");
