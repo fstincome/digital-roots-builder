@@ -51,6 +51,10 @@ const Contact = () => {
 
   return (
     <>
+      <SEO
+        title="Contact — SIGHT Africa | Devis & Support IT au Burundi"
+        description="Contactez SIGHT Africa pour vos projets IT, hardware, software, hébergement ou formation. Réponse rapide, devis gratuit. Gitega, Burundi."
+      />
       <PageBreadcrumb
         title={t("contact.title")}
         subtitle={t("contact.desc")}
@@ -64,20 +68,20 @@ const Contact = () => {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium text-foreground mb-1.5 block">{t("contact.fullName")}</label>
-                  <Input placeholder="Jean Ndikumana" required />
+                  <Input name="full_name" placeholder="Jean Ndikumana" required maxLength={100} />
                 </div>
                 <div>
                   <label className="text-sm font-medium text-foreground mb-1.5 block">{t("contact.email")}</label>
-                  <Input type="email" placeholder="jean@entreprise.bi" required />
+                  <Input name="email" type="email" placeholder="jean@entreprise.bi" required maxLength={255} />
                 </div>
               </div>
               <div>
                 <label className="text-sm font-medium text-foreground mb-1.5 block">{t("contact.subject")}</label>
-                <Input placeholder={t("contact.subjectPlaceholder")} required />
+                <Input name="subject" placeholder={t("contact.subjectPlaceholder")} required maxLength={200} />
               </div>
               <div>
                 <label className="text-sm font-medium text-foreground mb-1.5 block">{t("contact.message")}</label>
-                <Textarea placeholder={t("contact.messagePlaceholder")} rows={5} required />
+                <Textarea name="message" placeholder={t("contact.messagePlaceholder")} rows={5} required maxLength={2000} />
               </div>
               <Button variant="hero" type="submit" disabled={loading} className="w-full">
                 {loading ? t("contact.sending") : t("contact.send")} <Send className="ml-2" size={16} />
