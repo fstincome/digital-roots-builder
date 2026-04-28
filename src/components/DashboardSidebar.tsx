@@ -1,4 +1,4 @@
-import { LayoutDashboard, FileText, FolderOpen, Users, LogOut, Home, Briefcase, Tags } from "lucide-react";
+import { LayoutDashboard, FileText, FolderOpen, Users, LogOut, Home, Briefcase, Tags, Mail, Send } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useAuth } from "@/hooks/useAuth";
 import { useTranslation } from "react-i18next";
@@ -20,6 +20,8 @@ const DashboardSidebar = () => {
     { title: t("dashboard.programs"), url: "/dashboard/programmes", icon: FolderOpen },
     { title: t("dashboard.portfolio"), url: "/dashboard/portfolio", icon: Briefcase },
     { title: t("dashboard.categories"), url: "/dashboard/categories", icon: Tags },
+    { title: t("dashboard.messages"), url: "/dashboard/messages", icon: Mail },
+    { title: t("dashboard.newsletter"), url: "/dashboard/newsletter", icon: Send },
     { title: t("dashboard.users"), url: "/dashboard/utilisateurs", icon: Users },
   ];
 

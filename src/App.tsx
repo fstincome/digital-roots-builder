@@ -36,6 +36,8 @@ import DashboardUsers from "@/pages/dashboard/DashboardUsers";
 import DashboardPortfolio from "@/pages/dashboard/DashboardPortfolio";
 import PortfolioEditor from "@/pages/dashboard/PortfolioEditor";
 import DashboardCategories from "@/pages/dashboard/DashboardCategories";
+import DashboardMessages from "@/pages/dashboard/DashboardMessages";
+import DashboardNewsletter from "@/pages/dashboard/DashboardNewsletter";
 
 const queryClient = new QueryClient();
 
@@ -76,6 +78,8 @@ const App = () => (
               <Route path="portfolio" element={<DashboardPortfolio />} />
               <Route path="portfolio/:id" element={<PortfolioEditor />} />
               <Route path="categories" element={<DashboardCategories />} />
+              <Route path="messages" element={<DashboardMessages />} />
+              <Route path="newsletter" element={<DashboardNewsletter />} />
               <Route path="utilisateurs" element={<DashboardUsers />} />
             </Route>
 
