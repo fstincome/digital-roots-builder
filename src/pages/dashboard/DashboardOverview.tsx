@@ -24,6 +24,7 @@ const DashboardOverview = () => {
   const [articleData, setArticleData] = useState<{ name: string; views: number }[]>([]);
   const [statusData, setStatusData] = useState<{ name: string; value: number }[]>([]);
   const [countryData, setCountryData] = useState<{ country: string; count: number }[]>([]);
+  const [pageData, setPageData] = useState<{ page: string; count: number }[]>([]);
   const [recentVisitors, setRecentVisitors] = useState<any[]>([]);
 
   useEffect(() => {
@@ -80,6 +81,19 @@ const DashboardOverview = () => {
         Object.entries(countryMap)
           .map(([country, count]) => ({ country, count }))
           .sort((a, b) => b.count - a.count)
+      );
+
+      // Pages stats from visitors
+      const pageMap: Record<string, number> = {};
+      (visitors || []).forEach((v: any) => {
+        const p = v.page || "/";
+        pageMap[p] = (pageMap[p] || 0) + 1;
+      });
+      setPageData(
+        Object.entries(pageMap)
+          .map(([page, count]) => ({ page, count }))
+          .sort((a, b) => b.count - a.count)
+          .slice(0, 8)
       );
 
       setRecentVisitors((visitors || []).slice(0, 20));
@@ -270,6 +284,35 @@ const DashboardOverview = () => {
           </CardContent>
         </Card>
       </div>
+
+      {/* Top Pages */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-base flex items-center gap-2">
+            <Eye size={18} /> {t("dashboard.topPages")}
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          {pageData.length > 0 ? (
+            <div className="space-y-3">
+              {pageData.map((p) => (
+                <div key={p.page} className="flex items-center justify-between gap-4">
+                  <span className="text-sm font-mono text-foreground truncate flex-1">{p.page}</span>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <div
+                      className="h-2 rounded-full bg-primary"
+                      style={{ width: `${Math.max(20, (p.count / (pageData[0]?.count || 1)) * 200)}px` }}
+                    />
+                    <span className="text-sm font-medium text-muted-foreground w-10 text-right tabular-nums">{p.count}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-muted-foreground text-sm">Aucune donnée</p>
+          )}
+        </CardContent>
+      </Card>
     </div>
   );
 };

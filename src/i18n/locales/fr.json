@@ -292,7 +292,26 @@
     "noName": "Sans nom",
     "roleAdded": "Rôle ajouté",
     "roleRemoved": "Rôle retiré",
-    "allFieldsRequired": "Tous les champs sont requis"
+    "allFieldsRequired": "Tous les champs sont requis",
+    "messages": "Messages",
+    "newsletter": "Newsletter",
+    "topPages": "Pages les plus visitées"
+  },
+  "newsletter": {
+    "title": "Restez informé",
+    "desc": "Recevez nos actualités et nouveaux articles directement dans votre boîte mail.",
+    "placeholder": "votre@email.com",
+    "subscribe": "S'abonner",
+    "successTitle": "Merci pour votre inscription !",
+    "successDesc": "Vous recevrez bientôt nos prochaines actualités.",
+    "alreadyTitle": "Déjà inscrit",
+    "alreadyDesc": "Cet email est déjà abonné à notre newsletter.",
+    "errorTitle": "Erreur",
+    "invalidEmail": "Adresse email invalide"
+  },
+  "homeCategories": {
+    "tag": "Explorer",
+    "title": "Parcourez par catégorie"
   },
   "pwa": {
     "install": "Installer l'application",

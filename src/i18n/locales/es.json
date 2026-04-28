@@ -292,7 +292,10 @@
     "noName": "Sin nombre",
     "roleAdded": "Rol añadido",
     "roleRemoved": "Rol eliminado",
-    "allFieldsRequired": "Todos los campos son obligatorios"
+    "allFieldsRequired": "Todos los campos son obligatorios",
+    "messages": "Mensajes",
+    "newsletter": "Boletín",
+    "topPages": "Páginas más visitadas"
   },
   "pwa": {
     "install": "Instalar la aplicación",
@@ -316,5 +319,21 @@
     "ctaTitle": "¿Listo para lanzar su proyecto?",
     "ctaDesc": "Contáctenos para elegir el plan que se adapte a sus necesidades.",
     "ctaButton": "Contáctenos"
+  },
+  "newsletter": {
+    "title": "Mantente informado",
+    "desc": "Recibe nuestras novedades y artículos directamente en tu correo.",
+    "placeholder": "tu@email.com",
+    "subscribe": "Suscribirse",
+    "successTitle": "¡Gracias por suscribirte!",
+    "successDesc": "Pronto recibirás nuestras novedades.",
+    "alreadyTitle": "Ya suscrito",
+    "alreadyDesc": "Este correo ya está en nuestra lista.",
+    "errorTitle": "Error",
+    "invalidEmail": "Correo electrónico no válido"
+  },
+  "homeCategories": {
+    "tag": "Explorar",
+    "title": "Navegar por categoría"
   }
 }

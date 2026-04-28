@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import sightLogo from "@/assets/sight-logo.png";
+import NewsletterSignup from "./NewsletterSignup";
 
 const WHATSAPP_NUMBER = "25769898947";
 const WHATSAPP_MESSAGE = encodeURIComponent("Bonjour SIGHT Africa, je vous contacte depuis votre site web. J'aimerais avoir plus d'informations sur vos services.");
@@ -86,7 +87,15 @@ const PublicFooter = () => {
             </div>
           </div>
 
-          <div className="mt-12 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="mt-12 pt-8 border-t border-border grid md:grid-cols-2 gap-6 items-center">
+            <div>
+              <h4 className="font-semibold text-foreground mb-1">{t("newsletter.title")}</h4>
+              <p className="text-sm text-muted-foreground">{t("newsletter.desc")}</p>
+            </div>
+            <NewsletterSignup />
+          </div>
+
+          <div className="mt-8 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} SIGHT Africa. {t("footer.rights")}</p>
           </div>
         </div>

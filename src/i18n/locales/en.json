@@ -292,7 +292,10 @@
     "noName": "No name",
     "roleAdded": "Role added",
     "roleRemoved": "Role removed",
-    "allFieldsRequired": "All fields are required"
+    "allFieldsRequired": "All fields are required",
+    "messages": "Messages",
+    "newsletter": "Newsletter",
+    "topPages": "Top visited pages"
   },
   "pwa": {
     "install": "Install the app",
@@ -316,5 +319,21 @@
     "ctaTitle": "Ready to launch your project?",
     "ctaDesc": "Contact us to choose the plan that fits your needs. Migration and personalized support included.",
     "ctaButton": "Contact us"
+  },
+  "newsletter": {
+    "title": "Stay informed",
+    "desc": "Get our latest news and articles directly in your inbox.",
+    "placeholder": "your@email.com",
+    "subscribe": "Subscribe",
+    "successTitle": "Thank you for subscribing!",
+    "successDesc": "You'll receive our next updates soon.",
+    "alreadyTitle": "Already subscribed",
+    "alreadyDesc": "This email is already on our newsletter list.",
+    "errorTitle": "Error",
+    "invalidEmail": "Invalid email address"
+  },
+  "homeCategories": {
+    "tag": "Explore",
+    "title": "Browse by category"
   }
 }

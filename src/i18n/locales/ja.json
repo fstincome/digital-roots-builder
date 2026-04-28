@@ -292,7 +292,10 @@
     "noName": "名前なし",
     "roleAdded": "役割が追加されました",
     "roleRemoved": "役割が削除されました",
-    "allFieldsRequired": "すべてのフィールドが必要です"
+    "allFieldsRequired": "すべてのフィールドが必要です",
+    "messages": "メッセージ",
+    "newsletter": "ニュースレター",
+    "topPages": "閲覧の多いページ"
   },
   "pwa": {
     "install": "アプリをインストール",
@@ -316,5 +319,21 @@
     "ctaTitle": "プロジェクトを開始する準備はできていますか？",
     "ctaDesc": "ニーズに合ったプランを選ぶためにお問い合わせください。移行とパーソナライズされたサポートが含まれています。",
     "ctaButton": "お問い合わせ"
+  },
+  "newsletter": {
+    "title": "最新情報をお届け",
+    "desc": "最新ニュースと記事をメールでお届けします。",
+    "placeholder": "your@email.com",
+    "subscribe": "登録する",
+    "successTitle": "ご登録ありがとうございます！",
+    "successDesc": "近日中にニュースをお届けします。",
+    "alreadyTitle": "登録済み",
+    "alreadyDesc": "このメールはすでに登録されています。",
+    "errorTitle": "エラー",
+    "invalidEmail": "無効なメールアドレス"
+  },
+  "homeCategories": {
+    "tag": "見つける",
+    "title": "カテゴリで探す"
   }
 }

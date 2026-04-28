@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Server, Code, Shield, GraduationCap, Globe, Zap, Calendar, ExternalLink } from "lucide-react";
+import { ArrowRight, Server, Code, Shield, GraduationCap, Globe, Zap, Calendar, ExternalLink, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
 import heroImg from "@/assets/hero-africa-tech.jpg";
 import HeroSlideshow from "@/components/HeroSlideshow";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -16,7 +17,7 @@ const fadeUp = {
 const Index = () => {
   const { t, i18n } = useTranslation();
   const [latestArticles, setLatestArticles] = useState<any[]>([]);
-  const [featuredPrograms, setFeaturedPrograms] = useState<any[]>([]);
+  const [categories, setCategories] = useState<any[]>([]);
   const [latestPortfolio, setLatestPortfolio] = useState<any[]>([]);
 
   useEffect(() => {
@@ -25,6 +26,8 @@ const Index = () => {
       .then(({ data }) => setLatestArticles(data || []));
     supabase.from("portfolios").select("*").order("created_at", { ascending: false }).limit(3)
       .then(({ data }) => setLatestPortfolio(data || []));
+    supabase.from("categories").select("id, name, slug").eq("type", "article").limit(8)
+      .then(({ data }) => setCategories(data || []));
   }, []);
 
   const locale = i18n.language === "de" ? "de-DE" : i18n.language === "sw" ? "sw-KE" : i18n.language === "en" ? "en-US" : "fr-FR";
@@ -45,8 +48,29 @@ const Index = () => {
     { icon: Zap, title: t("indexServices.maintenance"), desc: t("indexServices.maintenanceDesc") },
   ];
 
+  const orgJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "SIGHT Africa",
+    url: "https://sightafrica.bi",
+    logo: "https://sightafrica.bi/sight-logo.png",
+    description: "SIGHT Africa : Hardware certifié, Software souverain, Hébergement et Formation d'excellence au Burundi.",
+    address: { "@type": "PostalAddress", addressLocality: "Gitega", addressCountry: "BI" },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+25769898947",
+      contactType: "customer service",
+      email: "business@sightnetwork.org",
+    },
+  };
+
   return (
     <>
+      <SEO
+        title="SIGHT Africa — Solutions IT & Transformation Digitale au Burundi"
+        description="Hardware certifié, Software souverain, Hébergement web et Formation d'excellence. Votre partenaire technologique de confiance au Burundi."
+        jsonLd={orgJsonLd}
+      />
       {/* Slideshow */}
       <HeroSlideshow />
 
@@ -142,6 +166,30 @@ const Index = () => {
               <Button variant="outline" asChild>
                 <Link to="/blog">{t("home.allArticles")} <ArrowRight className="ml-2" size={16} /></Link>
               </Button>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Blog Categories */}
+      {categories.length > 0 && (
+        <section className="py-16 border-t border-border bg-card/30">
+          <div className="container">
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mb-10">
+              <span className="font-mono text-xs text-primary tracking-widest uppercase">{t("homeCategories.tag")}</span>
+              <h2 className="text-2xl md:text-3xl font-semibold text-foreground mt-3">{t("homeCategories.title")}</h2>
+            </motion.div>
+            <div className="flex flex-wrap justify-center gap-3">
+              {categories.map((c, i) => (
+                <motion.div key={c.id} custom={i} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+                  <Link
+                    to={`/blog?category=${c.slug}`}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card hover:border-primary/50 hover:text-primary transition-all text-sm"
+                  >
+                    <Tag size={14} /> {c.name}
+                  </Link>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>

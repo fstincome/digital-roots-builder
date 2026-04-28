@@ -292,7 +292,10 @@
     "noName": "Hakuna jina",
     "roleAdded": "Jukumu limeongezwa",
     "roleRemoved": "Jukumu limeondolewa",
-    "allFieldsRequired": "Sehemu zote zinahitajika"
+    "allFieldsRequired": "Sehemu zote zinahitajika",
+    "messages": "Ujumbe",
+    "newsletter": "Jarida",
+    "topPages": "Kurasa zilizotembelewa zaidi"
   },
   "pwa": {
     "install": "Sakinisha programu",
@@ -316,5 +319,21 @@
     "ctaTitle": "Uko tayari kuzindua mradi wako?",
     "ctaDesc": "Wasiliana nasi kuchagua mpango unaofaa mahitaji yako.",
     "ctaButton": "Wasiliana nasi"
+  },
+  "newsletter": {
+    "title": "Pata habari",
+    "desc": "Pokea habari na makala mpya moja kwa moja kwenye barua pepe yako.",
+    "placeholder": "yako@email.com",
+    "subscribe": "Jiandikishe",
+    "successTitle": "Asante kwa kujiandikisha!",
+    "successDesc": "Utapokea taarifa zetu hivi karibuni.",
+    "alreadyTitle": "Tayari umejiandikisha",
+    "alreadyDesc": "Barua pepe hii tayari imo kwenye orodha yetu.",
+    "errorTitle": "Hitilafu",
+    "invalidEmail": "Anwani ya barua pepe si halali"
+  },
+  "homeCategories": {
+    "tag": "Chunguza",
+    "title": "Vinjari kwa kategoria"
   }
 }
