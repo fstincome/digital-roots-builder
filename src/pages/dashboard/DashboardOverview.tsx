@@ -284,6 +284,35 @@ const DashboardOverview = () => {
           </CardContent>
         </Card>
       </div>
+
+      {/* Top Pages */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-base flex items-center gap-2">
+            <Eye size={18} /> {t("dashboard.topPages")}
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          {pageData.length > 0 ? (
+            <div className="space-y-3">
+              {pageData.map((p) => (
+                <div key={p.page} className="flex items-center justify-between gap-4">
+                  <span className="text-sm font-mono text-foreground truncate flex-1">{p.page}</span>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <div
+                      className="h-2 rounded-full bg-primary"
+                      style={{ width: `${Math.max(20, (p.count / (pageData[0]?.count || 1)) * 200)}px` }}
+                    />
+                    <span className="text-sm font-medium text-muted-foreground w-10 text-right tabular-nums">{p.count}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-muted-foreground text-sm">Aucune donnée</p>
+          )}
+        </CardContent>
+      </Card>
     </div>
   );
 };
