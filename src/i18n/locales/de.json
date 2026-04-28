@@ -292,7 +292,10 @@
     "noName": "Kein Name",
     "roleAdded": "Rolle hinzugefügt",
     "roleRemoved": "Rolle entfernt",
-    "allFieldsRequired": "Alle Felder sind erforderlich"
+    "allFieldsRequired": "Alle Felder sind erforderlich",
+    "messages": "Nachrichten",
+    "newsletter": "Newsletter",
+    "topPages": "Meistbesuchte Seiten"
   },
   "pwa": {
     "install": "App installieren",
@@ -316,5 +319,21 @@
     "ctaTitle": "Bereit, Ihr Projekt zu starten?",
     "ctaDesc": "Kontaktieren Sie uns, um den passenden Plan für Ihre Bedürfnisse zu wählen.",
     "ctaButton": "Kontaktieren Sie uns"
+  },
+  "newsletter": {
+    "title": "Bleiben Sie informiert",
+    "desc": "Erhalten Sie unsere Neuigkeiten direkt per E-Mail.",
+    "placeholder": "ihre@email.com",
+    "subscribe": "Abonnieren",
+    "successTitle": "Danke für Ihre Anmeldung!",
+    "successDesc": "Sie erhalten bald unsere Neuigkeiten.",
+    "alreadyTitle": "Bereits angemeldet",
+    "alreadyDesc": "Diese E-Mail ist bereits angemeldet.",
+    "errorTitle": "Fehler",
+    "invalidEmail": "Ungültige E-Mail-Adresse"
+  },
+  "homeCategories": {
+    "tag": "Entdecken",
+    "title": "Nach Kategorie stöbern"
   }
 }

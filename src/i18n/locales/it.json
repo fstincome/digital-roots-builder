@@ -292,7 +292,10 @@
     "noName": "Senza nome",
     "roleAdded": "Ruolo aggiunto",
     "roleRemoved": "Ruolo rimosso",
-    "allFieldsRequired": "Tutti i campi sono obbligatori"
+    "allFieldsRequired": "Tutti i campi sono obbligatori",
+    "messages": "Messaggi",
+    "newsletter": "Newsletter",
+    "topPages": "Pagine più visitate"
   },
   "pwa": {
     "install": "Installa l'applicazione",
@@ -316,5 +319,21 @@
     "ctaTitle": "Pronto a lanciare il tuo progetto?",
     "ctaDesc": "Contattaci per scegliere il piano adatto alle tue esigenze.",
     "ctaButton": "Contattaci"
+  },
+  "newsletter": {
+    "title": "Resta informato",
+    "desc": "Ricevi le nostre novità e articoli direttamente nella tua casella.",
+    "placeholder": "tua@email.com",
+    "subscribe": "Iscriviti",
+    "successTitle": "Grazie per esserti iscritto!",
+    "successDesc": "Riceverai presto le nostre novità.",
+    "alreadyTitle": "Già iscritto",
+    "alreadyDesc": "Questa email è già nella nostra lista.",
+    "errorTitle": "Errore",
+    "invalidEmail": "Indirizzo email non valido"
+  },
+  "homeCategories": {
+    "tag": "Esplora",
+    "title": "Sfoglia per categoria"
   }
 }
