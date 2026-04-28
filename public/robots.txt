@@ -12,3 +12,8 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /dashboard
+Disallow: /login
+Disallow: /reset-password
+
+Sitemap: https://sightafrica.bi/sitemap.xml
