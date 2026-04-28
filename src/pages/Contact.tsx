@@ -39,7 +39,7 @@ const Contact = () => {
       return;
     }
     setLoading(true);
-    const { error } = await (supabase as any).from("contact_messages").insert(parsed.data);
+    const { error } = await supabase.from("contact_messages").insert(parsed.data);
     setLoading(false);
     if (error) {
       toast({ title: "Erreur", description: error.message, variant: "destructive" });
