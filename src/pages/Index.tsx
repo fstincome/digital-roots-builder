@@ -171,6 +171,30 @@ const Index = () => {
         </section>
       )}
 
+      {/* Blog Categories */}
+      {categories.length > 0 && (
+        <section className="py-16 border-t border-border bg-card/30">
+          <div className="container">
+            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mb-10">
+              <span className="font-mono text-xs text-primary tracking-widest uppercase">{t("homeCategories.tag")}</span>
+              <h2 className="text-2xl md:text-3xl font-semibold text-foreground mt-3">{t("homeCategories.title")}</h2>
+            </motion.div>
+            <div className="flex flex-wrap justify-center gap-3">
+              {categories.map((c, i) => (
+                <motion.div key={c.id} custom={i} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+                  <Link
+                    to={`/blog?category=${c.slug}`}
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card hover:border-primary/50 hover:text-primary transition-all text-sm"
+                  >
+                    <Tag size={14} /> {c.name}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Latest Portfolio */}
       {latestPortfolio.length > 0 && (
         <section className="py-24 border-t border-border">
