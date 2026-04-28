@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Server, Code, Shield, GraduationCap, Globe, Zap, Calendar, ExternalLink } from "lucide-react";
+import { ArrowRight, Server, Code, Shield, GraduationCap, Globe, Zap, Calendar, ExternalLink, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
 import heroImg from "@/assets/hero-africa-tech.jpg";
 import HeroSlideshow from "@/components/HeroSlideshow";
+import SEO from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -16,7 +17,7 @@ const fadeUp = {
 const Index = () => {
   const { t, i18n } = useTranslation();
   const [latestArticles, setLatestArticles] = useState<any[]>([]);
-  const [featuredPrograms, setFeaturedPrograms] = useState<any[]>([]);
+  const [categories, setCategories] = useState<any[]>([]);
   const [latestPortfolio, setLatestPortfolio] = useState<any[]>([]);
 
   useEffect(() => {
@@ -25,6 +26,8 @@ const Index = () => {
       .then(({ data }) => setLatestArticles(data || []));
     supabase.from("portfolios").select("*").order("created_at", { ascending: false }).limit(3)
       .then(({ data }) => setLatestPortfolio(data || []));
+    supabase.from("categories").select("id, name, slug").eq("type", "article").limit(8)
+      .then(({ data }) => setCategories(data || []));
   }, []);
 
   const locale = i18n.language === "de" ? "de-DE" : i18n.language === "sw" ? "sw-KE" : i18n.language === "en" ? "en-US" : "fr-FR";
@@ -45,8 +48,29 @@ const Index = () => {
     { icon: Zap, title: t("indexServices.maintenance"), desc: t("indexServices.maintenanceDesc") },
   ];
 
+  const orgJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "SIGHT Africa",
+    url: "https://sightafrica.bi",
+    logo: "https://sightafrica.bi/sight-logo.png",
+    description: "SIGHT Africa : Hardware certifié, Software souverain, Hébergement et Formation d'excellence au Burundi.",
+    address: { "@type": "PostalAddress", addressLocality: "Gitega", addressCountry: "BI" },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+25769898947",
+      contactType: "customer service",
+      email: "business@sightnetwork.org",
+    },
+  };
+
   return (
     <>
+      <SEO
+        title="SIGHT Africa — Solutions IT & Transformation Digitale au Burundi"
+        description="Hardware certifié, Software souverain, Hébergement web et Formation d'excellence. Votre partenaire technologique de confiance au Burundi."
+        jsonLd={orgJsonLd}
+      />
       {/* Slideshow */}
       <HeroSlideshow />
 
