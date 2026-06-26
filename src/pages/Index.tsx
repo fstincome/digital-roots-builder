@@ -60,7 +60,7 @@ const Index = () => {
       "@type": "ContactPoint",
       telephone: "+25769898947",
       contactType: "customer service",
-      email: "business@sightnetwork.org",
+      email: "sightafrica26@gmail.com",
     },
   };
 

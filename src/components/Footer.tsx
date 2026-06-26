@@ -49,7 +49,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 text-primary shrink-0" />
-                business@sightnetwork.org
+                sightafrica26@gmail.com
               </li>
               <li className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-primary shrink-0" />

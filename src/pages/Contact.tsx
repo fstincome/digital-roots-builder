@@ -94,7 +94,7 @@ const Contact = () => {
                 <h3 className="font-semibold text-foreground mb-4">{t("contact.coordinates")}</h3>
                 <div className="space-y-4">
                   {[
-                    { icon: Mail, text: "business@sightnetwork.org", href: "mailto:business@sightnetwork.org" },
+                    { icon: Mail, text: "sightafrica26@gmail.com", href: "mailto:sightafrica26@gmail.com" },
                     { icon: Phone, text: "+257 69 898 947", href: "tel:+25769898947" },
                     { icon: MapPin, text: "Gitega, Burundi" },
                   ].map((c) => (
