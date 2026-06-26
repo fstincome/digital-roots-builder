@@ -335,5 +335,27 @@
   "homeCategories": {
     "tag": "Explore",
     "title": "Browse by category"
+  },
+  "heroSlides": {
+    "s1": {
+      "title": "Digital Sovereignty",
+      "subtitle": "Building Burundi's digital infrastructure",
+      "accent": "Hardware · Software · Training"
+    },
+    "s2": {
+      "title": "SIGHT Academy",
+      "subtitle": "Training the next generation of African tech talent",
+      "accent": "Certifications · Labs · Mentorship"
+    },
+    "s3": {
+      "title": "Enterprise Solutions",
+      "subtitle": "Reliable infrastructure for organizations",
+      "accent": "Networks · Cloud · Security"
+    },
+    "s4": {
+      "title": "Innovation & Research",
+      "subtitle": "Blockchain, AI and decentralized technologies",
+      "accent": "Bitcoin · Lightning · Open Source"
+    }
   }
 }

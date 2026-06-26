@@ -335,5 +335,27 @@
     "ctaTitle": "Prêt à lancer votre projet ?",
     "ctaDesc": "Contactez-nous pour choisir le plan qui correspond à vos besoins. Migration et accompagnement personnalisé inclus.",
     "ctaButton": "Nous contacter"
+  },
+  "heroSlides": {
+    "s1": {
+      "title": "Souveraineté Numérique",
+      "subtitle": "Construire l'infrastructure digitale du Burundi",
+      "accent": "Hardware · Software · Formation"
+    },
+    "s2": {
+      "title": "SIGHT Academy",
+      "subtitle": "Former la prochaine génération de talents tech africains",
+      "accent": "Certifications · Labs · Mentorat"
+    },
+    "s3": {
+      "title": "Solutions Enterprise",
+      "subtitle": "Des infrastructures fiables pour les organisations",
+      "accent": "Réseaux · Cloud · Sécurité"
+    },
+    "s4": {
+      "title": "Innovation & Recherche",
+      "subtitle": "Blockchain, IA et technologies décentralisées",
+      "accent": "Bitcoin · Lightning · Open Source"
+    }
   }
 }

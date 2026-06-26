@@ -335,5 +335,27 @@
   "homeCategories": {
     "tag": "Entdecken",
     "title": "Nach Kategorie stöbern"
+  },
+  "heroSlides": {
+    "s1": {
+      "title": "Digitale Souveränität",
+      "subtitle": "Aufbau der digitalen Infrastruktur Burundis",
+      "accent": "Hardware · Software · Ausbildung"
+    },
+    "s2": {
+      "title": "SIGHT Academy",
+      "subtitle": "Ausbildung der nächsten Generation afrikanischer Tech-Talente",
+      "accent": "Zertifizierungen · Labs · Mentoring"
+    },
+    "s3": {
+      "title": "Enterprise-Lösungen",
+      "subtitle": "Zuverlässige Infrastruktur für Organisationen",
+      "accent": "Netzwerke · Cloud · Sicherheit"
+    },
+    "s4": {
+      "title": "Innovation & Forschung",
+      "subtitle": "Blockchain, KI und dezentrale Technologien",
+      "accent": "Bitcoin · Lightning · Open Source"
+    }
   }
 }

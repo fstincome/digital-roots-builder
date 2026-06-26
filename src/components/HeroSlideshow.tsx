@@ -1,37 +1,18 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import slideImg from "@/assets/slide-sight-1.jpg";
 
-const slides = [
-  {
-    image: slideImg,
-    title: "Souveraineté Numérique",
-    subtitle: "Construire l'infrastructure digitale du Burundi",
-    accent: "Hardware · Software · Formation",
-  },
-  {
-    image: slideImg,
-    title: "SIGHT Academy",
-    subtitle: "Former la prochaine génération de talents tech africains",
-    accent: "Certifications · Labs · Mentorat",
-  },
-  {
-    image: slideImg,
-    title: "Solutions Enterprise",
-    subtitle: "Des infrastructures fiables pour les organisations",
-    accent: "Réseaux · Cloud · Sécurité",
-  },
-  {
-    image: slideImg,
-    title: "Innovation & Recherche",
-    subtitle: "Blockchain, IA et technologies décentralisées",
-    accent: "Bitcoin · Lightning · Open Source",
-  },
-];
-
 const HeroSlideshow = () => {
+  const { t } = useTranslation();
   const [current, setCurrent] = useState(0);
+  const slides = ["s1", "s2", "s3", "s4"].map((k) => ({
+    image: slideImg,
+    title: t(`heroSlides.${k}.title`),
+    subtitle: t(`heroSlides.${k}.subtitle`),
+    accent: t(`heroSlides.${k}.accent`),
+  }));
 
   const next = useCallback(() => setCurrent((p) => (p + 1) % slides.length), []);
   const prev = useCallback(() => setCurrent((p) => (p - 1 + slides.length) % slides.length), []);
