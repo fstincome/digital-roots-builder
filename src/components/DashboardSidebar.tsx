@@ -1,4 +1,4 @@
-import { LayoutDashboard, FileText, FolderOpen, Users, LogOut, Home, Briefcase, Tags, Mail, Send } from "lucide-react";
+import { LayoutDashboard, FileText, FolderOpen, Users, LogOut, Home, Briefcase, Tags, Mail, Send, Menu as MenuIcon } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useAuth } from "@/hooks/useAuth";
 import { useTranslation } from "react-i18next";
@@ -22,6 +22,7 @@ const DashboardSidebar = () => {
     { title: t("dashboard.categories"), url: "/dashboard/categories", icon: Tags },
     { title: t("dashboard.messages"), url: "/dashboard/messages", icon: Mail },
     { title: t("dashboard.newsletter"), url: "/dashboard/newsletter", icon: Send },
+    { title: t("dashboard.menu", "Menu"), url: "/dashboard/menu", icon: MenuIcon },
     { title: t("dashboard.users"), url: "/dashboard/utilisateurs", icon: Users },
   ];
 
