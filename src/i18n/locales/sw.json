@@ -335,5 +335,27 @@
   "homeCategories": {
     "tag": "Chunguza",
     "title": "Vinjari kwa kategoria"
+  },
+  "heroSlides": {
+    "s1": {
+      "title": "Uhuru wa Kidijitali",
+      "subtitle": "Kujenga miundombinu ya kidijitali ya Burundi",
+      "accent": "Hardware · Software · Mafunzo"
+    },
+    "s2": {
+      "title": "SIGHT Academy",
+      "subtitle": "Kufundisha kizazi kijacho cha vipaji vya teknolojia Afrika",
+      "accent": "Vyeti · Labs · Ushauri"
+    },
+    "s3": {
+      "title": "Suluhisho za Biashara",
+      "subtitle": "Miundombinu ya kuaminika kwa mashirika",
+      "accent": "Mitandao · Cloud · Usalama"
+    },
+    "s4": {
+      "title": "Ubunifu na Utafiti",
+      "subtitle": "Blockchain, AI na teknolojia zilizosambazwa",
+      "accent": "Bitcoin · Lightning · Open Source"
+    }
   }
 }
