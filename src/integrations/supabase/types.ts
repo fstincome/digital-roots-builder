@@ -221,6 +221,39 @@ export type Database = {
           },
         ]
       }
+      menu_items: {
+        Row: {
+          created_at: string
+          id: string
+          is_active: boolean
+          key: string
+          label_key: string
+          path: string
+          position: number
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          key: string
+          label_key: string
+          path: string
+          position?: number
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          key?: string
+          label_key?: string
+          path?: string
+          position?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
       newsletter_subscribers: {
         Row: {
           created_at: string
