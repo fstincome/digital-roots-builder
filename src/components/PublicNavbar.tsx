@@ -1,32 +1,48 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { useTranslation } from "react-i18next";
+import { supabase } from "@/integrations/supabase/client";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeToggle from "./ThemeToggle";
 import sightLogo from "@/assets/sight-logo.png";
+
+const DEFAULT_ITEMS = [
+  { label_key: "nav.home", path: "/" },
+  { label_key: "nav.services", path: "/services" },
+  { label_key: "nav.hosting", path: "/hebergement" },
+  { label_key: "nav.academy", path: "/academie" },
+  { label_key: "nav.portfolio", path: "/portfolio" },
+  { label_key: "nav.bitcoin", path: "/bitcoin" },
+  { label_key: "nav.blog", path: "/blog" },
+  { label_key: "nav.about", path: "/a-propos" },
+  { label_key: "nav.contact", path: "/contact" },
+];
 
 const PublicNavbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { user, isAdmin, isEditor } = useAuth();
   const location = useLocation();
   const { t } = useTranslation();
+  const [navItems, setNavItems] = useState(
+    DEFAULT_ITEMS.map(i => ({ label: t(i.label_key), href: i.path }))
+  );
 
-  const navItems = [
-    { label: t("nav.home"), href: "/" },
-    { label: t("nav.services"), href: "/services" },
-    { label: t("nav.hosting"), href: "/hebergement" },
-    
-    { label: t("nav.academy"), href: "/academie" },
-    { label: t("nav.portfolio"), href: "/portfolio" },
-    { label: t("nav.bitcoin"), href: "/bitcoin" },
-    { label: t("nav.blog"), href: "/blog" },
-    { label: t("nav.about"), href: "/a-propos" },
-    { label: t("nav.contact"), href: "/contact" },
-  ];
+  useEffect(() => {
+    supabase
+      .from("menu_items")
+      .select("label_key, path, is_active, position")
+      .eq("is_active", true)
+      .order("position")
+      .then(({ data }) => {
+        if (data && data.length) {
+          setNavItems(data.map((d: any) => ({ label: t(d.label_key), href: d.path })));
+        }
+      });
+  }, [t]);
 
   return (
     <motion.nav
