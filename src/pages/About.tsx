@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
-import { Target, Eye, Heart, Award } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Target, Eye, Heart, Award, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
+import TeamGrid from "@/components/TeamGrid";
+import { Button } from "@/components/ui/button";
 
 const About = () => {
   const { t } = useTranslation();
@@ -53,6 +56,21 @@ const About = () => {
                 <p className="text-sm text-muted-foreground">{v.desc}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="container">
+          <div className="text-center mb-12">
+            <span className="font-mono text-xs text-primary tracking-widest uppercase">{t("team.tag", "Équipe")}</span>
+            <h2 className="text-3xl font-heading font-semibold text-foreground mt-3">{t("team.title", "Notre équipe")}</h2>
+          </div>
+          <TeamGrid limit={6} />
+          <div className="text-center mt-10">
+            <Button variant="outline" asChild>
+              <Link to="/equipe">{t("team.seeAll", "Voir toute l'équipe")} <ArrowRight className="ml-2" size={16} /></Link>
+            </Button>
           </div>
         </div>
       </section>
