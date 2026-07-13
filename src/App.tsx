@@ -22,6 +22,7 @@ import Academy from "@/pages/Academy";
 import Portfolio from "@/pages/Portfolio";
 import Bitcoin from "@/pages/Bitcoin";
 import Hosting from "@/pages/Hosting";
+import Team from "@/pages/Team";
 import Login from "@/pages/Login";
 import ResetPassword from "@/pages/ResetPassword";
 import NotFound from "@/pages/NotFound";
@@ -39,6 +40,7 @@ import DashboardCategories from "@/pages/dashboard/DashboardCategories";
 import DashboardMessages from "@/pages/dashboard/DashboardMessages";
 import DashboardNewsletter from "@/pages/dashboard/DashboardNewsletter";
 import DashboardMenu from "@/pages/dashboard/DashboardMenu";
+import DashboardTeam from "@/pages/dashboard/DashboardTeam";
 
 const queryClient = new QueryClient();
 
@@ -63,6 +65,7 @@ const App = () => (
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/bitcoin" element={<Bitcoin />} />
               <Route path="/hebergement" element={<Hosting />} />
+              <Route path="/equipe" element={<Team />} />
             </Route>
 
             {/* Auth pages (no layout) */}
@@ -82,6 +85,7 @@ const App = () => (
               <Route path="messages" element={<DashboardMessages />} />
               <Route path="newsletter" element={<DashboardNewsletter />} />
               <Route path="menu" element={<DashboardMenu />} />
+              <Route path="equipe" element={<DashboardTeam />} />
               <Route path="utilisateurs" element={<DashboardUsers />} />
             </Route>
 

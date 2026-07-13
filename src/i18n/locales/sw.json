@@ -12,7 +12,8 @@
     "hosting": "Hosting",
     "login": "Ingia",
     "dashboard": "Dashibodi",
-    "myAccount": "Akaunti yangu"
+    "myAccount": "Akaunti yangu",
+    "team": "Timu"
   },
   "hero": {
     "tag": "// SIGHT AFRICA — BURUNDI",
@@ -295,7 +296,8 @@
     "allFieldsRequired": "Sehemu zote zinahitajika",
     "messages": "Ujumbe",
     "newsletter": "Jarida",
-    "topPages": "Kurasa zilizotembelewa zaidi"
+    "topPages": "Kurasa zilizotembelewa zaidi",
+    "team": "Timu"
   },
   "pwa": {
     "install": "Sakinisha programu",
@@ -357,5 +359,12 @@
       "subtitle": "Blockchain, AI na teknolojia zilizosambazwa",
       "accent": "Bitcoin · Lightning · Open Source"
     }
+  },
+  "team": {
+    "title": "Timu yetu",
+    "tag": "Timu",
+    "intro": "Timu yenye shauku inayoendesha mabadiliko ya kidijitali barani Afrika.",
+    "desc": "Kutana na watu nyuma ya SIGHT Africa.",
+    "seeAll": "Ona timu nzima"
   }
 }

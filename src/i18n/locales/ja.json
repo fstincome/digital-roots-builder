@@ -12,7 +12,8 @@
     "hosting": "ホスティング",
     "login": "ログイン",
     "dashboard": "ダッシュボード",
-    "myAccount": "マイアカウント"
+    "myAccount": "マイアカウント",
+    "team": "チーム"
   },
   "hero": {
     "tag": "// SIGHT AFRICA — ブルンジ",
@@ -295,7 +296,8 @@
     "allFieldsRequired": "すべてのフィールドが必要です",
     "messages": "メッセージ",
     "newsletter": "ニュースレター",
-    "topPages": "閲覧の多いページ"
+    "topPages": "閲覧の多いページ",
+    "team": "チーム"
   },
   "pwa": {
     "install": "アプリをインストール",
@@ -357,5 +359,12 @@
       "subtitle": "ブロックチェーン、AI、分散型テクノロジー",
       "accent": "Bitcoin · Lightning · オープンソース"
     }
+  },
+  "team": {
+    "title": "私たちのチーム",
+    "tag": "チーム",
+    "intro": "アフリカのデジタル変革を推進する情熱的なチーム。",
+    "desc": "SIGHT Africaを支える人々をご紹介します。",
+    "seeAll": "チーム全員を見る"
   }
 }

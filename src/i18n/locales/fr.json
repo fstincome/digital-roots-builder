@@ -12,7 +12,8 @@
     "hosting": "Hébergement",
     "login": "Se connecter",
     "dashboard": "Dashboard",
-    "myAccount": "Mon compte"
+    "myAccount": "Mon compte",
+    "team": "Équipe"
   },
   "hero": {
     "tag": "// SIGHT AFRICA — BURUNDI",
@@ -295,7 +296,8 @@
     "allFieldsRequired": "Tous les champs sont requis",
     "messages": "Messages",
     "newsletter": "Newsletter",
-    "topPages": "Pages les plus visitées"
+    "topPages": "Pages les plus visitées",
+    "team": "Équipe"
   },
   "newsletter": {
     "title": "Restez informé",
@@ -357,5 +359,12 @@
       "subtitle": "Blockchain, IA et technologies décentralisées",
       "accent": "Bitcoin · Lightning · Open Source"
     }
+  },
+  "team": {
+    "title": "Notre équipe",
+    "tag": "Équipe",
+    "intro": "Une équipe passionnée au service de la transformation digitale en Afrique.",
+    "desc": "Découvrez les personnes qui font vivre SIGHT Africa.",
+    "seeAll": "Voir toute l'équipe"
   }
 }
