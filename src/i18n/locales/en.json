@@ -12,7 +12,8 @@
     "hosting": "Hosting",
     "login": "Sign in",
     "dashboard": "Dashboard",
-    "myAccount": "My account"
+    "myAccount": "My account",
+    "team": "Team"
   },
   "hero": {
     "tag": "// SIGHT AFRICA — BURUNDI",
@@ -295,7 +296,8 @@
     "allFieldsRequired": "All fields are required",
     "messages": "Messages",
     "newsletter": "Newsletter",
-    "topPages": "Top visited pages"
+    "topPages": "Top visited pages",
+    "team": "Team"
   },
   "pwa": {
     "install": "Install the app",
@@ -357,5 +359,12 @@
       "subtitle": "Blockchain, AI and decentralized technologies",
       "accent": "Bitcoin · Lightning · Open Source"
     }
+  },
+  "team": {
+    "title": "Our team",
+    "tag": "Team",
+    "intro": "A passionate team driving digital transformation in Africa.",
+    "desc": "Meet the people behind SIGHT Africa.",
+    "seeAll": "See the whole team"
   }
 }
