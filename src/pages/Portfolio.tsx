@@ -9,7 +9,7 @@ import { getPortfolioTranslation } from "@/i18n/portfolioItems";
 const Portfolio = () => {
   const [items, setItems] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     supabase.from("portfolios").select("*").order("created_at", { ascending: false })
