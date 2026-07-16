@@ -4,6 +4,7 @@ import { ExternalLink } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useTranslation } from "react-i18next";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
+import { getPortfolioTranslation } from "@/i18n/portfolioItems";
 
 const Portfolio = () => {
   const [items, setItems] = useState<any[]>([]);
