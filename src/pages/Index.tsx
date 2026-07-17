@@ -5,7 +5,7 @@ import { ArrowRight, Server, Code, Shield, GraduationCap, Globe, Zap, Calendar, 
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
-import heroImg from "@/assets/hero-africa-tech.jpg";
+import heroImg from "@/assets/hero/hero-5.jpg.asset.json";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import SEO from "@/components/SEO";
 
@@ -77,7 +77,7 @@ const Index = () => {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Digital Africa" className="w-full h-full object-cover opacity-30" />
+          <img src={heroImg.url} alt="Digital Africa" className="w-full h-full object-cover opacity-30" />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/30" />
         </div>
         <div className="container relative z-10 py-20">
