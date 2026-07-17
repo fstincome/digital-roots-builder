@@ -74,41 +74,68 @@ const TeamGrid = ({ limit }: { limit?: number }) => {
       </div>
 
       <Dialog open={!!selected} onOpenChange={(o) => !o && setSelected(null)}>
-        <DialogContent className="max-w-lg">
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
           {selected && (
             <>
-              <div className="flex items-center gap-4">
-                <div className="h-20 w-20 rounded-full overflow-hidden bg-muted shrink-0">
+              <div className="flex flex-col sm:flex-row items-start gap-5">
+                <div className="h-28 w-28 rounded-xl overflow-hidden bg-muted shrink-0 border border-border">
                   {selected.photo_url ? (
                     <img src={selected.photo_url} alt={selected.full_name} className="w-full h-full object-cover" />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-primary/10">
-                      <User className="text-primary/50" size={32} />
+                      <User className="text-primary/50" size={40} />
                     </div>
                   )}
                 </div>
-                <div>
+                <div className="flex-1">
                   <DialogHeader className="text-left space-y-1">
-                    <DialogTitle>{selected.full_name}</DialogTitle>
-                    <DialogDescription>{selected.role}</DialogDescription>
+                    <DialogTitle className="text-2xl">{selected.full_name}</DialogTitle>
+                    <DialogDescription className="text-primary font-medium">{selected.role}</DialogDescription>
                   </DialogHeader>
+                  {selected.linkedin_url && (
+                    <a
+                      href={selected.linkedin_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border hover:border-primary/50 hover:text-primary transition-all text-xs"
+                    >
+                      <Linkedin size={14} /> LinkedIn
+                    </a>
+                  )}
                 </div>
               </div>
+
               {selected.bio && (
-                <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line mt-2">
-                  {selected.bio}
-                </p>
+                <div className="mt-5">
+                  <h4 className="text-xs font-mono uppercase tracking-widest text-primary mb-2">Biographie</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
+                    {selected.bio}
+                  </p>
+                </div>
               )}
-              {selected.linkedin_url && (
-                <div className="flex items-center gap-3 pt-2">
-                  <a
-                    href={selected.linkedin_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:border-primary/50 hover:text-primary transition-all text-sm"
-                  >
-                    <Linkedin size={16} /> LinkedIn
-                  </a>
+
+              {selected.skills && selected.skills.length > 0 && (
+                <div className="mt-5">
+                  <h4 className="text-xs font-mono uppercase tracking-widest text-primary mb-2">Compétences clés</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {selected.skills.map((s) => (
+                      <span
+                        key={s}
+                        className="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs text-foreground"
+                      >
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {selected.journey && (
+                <div className="mt-5">
+                  <h4 className="text-xs font-mono uppercase tracking-widest text-primary mb-2">Parcours</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
+                    {selected.journey}
+                  </p>
                 </div>
               )}
             </>
