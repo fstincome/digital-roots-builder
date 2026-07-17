@@ -161,6 +161,18 @@ const DashboardTeam = () => {
                 <Input placeholder="https://linkedin.com/in/..." value={editing.linkedin_url || ""} onChange={e => setEditing({ ...editing, linkedin_url: e.target.value })} />
               </div>
               <div>
+                <Label>Compétences clés (séparées par des virgules)</Label>
+                <Input
+                  placeholder="Ex : React, Node.js, Bitcoin, SEO"
+                  value={(editing.skills || []).join(", ")}
+                  onChange={e => setEditing({ ...editing, skills: e.target.value.split(",").map(s => s.trim()).filter(Boolean) })}
+                />
+              </div>
+              <div>
+                <Label>Parcours (une ligne par étape, préfixer avec • si souhaité)</Label>
+                <Textarea rows={5} value={editing.journey || ""} onChange={e => setEditing({ ...editing, journey: e.target.value })} />
+              </div>
+              <div>
                 <Label>Email (interne)</Label>
                 <Input type="email" value={editing.email || ""} onChange={e => setEditing({ ...editing, email: e.target.value })} />
               </div>
