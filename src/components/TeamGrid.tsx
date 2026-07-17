@@ -14,6 +14,8 @@ export type TeamMember = {
   photo_url: string | null;
   linkedin_url: string | null;
   email: string | null;
+  skills: string[] | null;
+  journey: string | null;
 };
 
 const TeamGrid = ({ limit }: { limit?: number }) => {
