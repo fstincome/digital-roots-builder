@@ -5,7 +5,7 @@ import { ArrowRight, Server, Code, Shield, GraduationCap, Globe, Zap, Calendar, 
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
-import heroImg from "@/assets/hero-africa-tech.jpg";
+import heroImg from "@/assets/hero/hero-5.jpg.asset.json";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import SEO from "@/components/SEO";
 
