@@ -21,11 +21,13 @@ type Member = {
   email: string | null;
   display_order: number;
   is_active: boolean;
+  skills: string[] | null;
+  journey: string | null;
 };
 
 const empty: Partial<Member> = {
   full_name: "", role: "", bio: "", photo_url: "", linkedin_url: "", email: "",
-  display_order: 0, is_active: true,
+  display_order: 0, is_active: true, skills: [], journey: "",
 };
 
 const DashboardTeam = () => {
