@@ -412,9 +412,11 @@ export type Database = {
           full_name: string
           id: string
           is_active: boolean
+          journey: string | null
           linkedin_url: string | null
           photo_url: string | null
           role: string
+          skills: string[] | null
           updated_at: string
         }
         Insert: {
@@ -425,9 +427,11 @@ export type Database = {
           full_name: string
           id?: string
           is_active?: boolean
+          journey?: string | null
           linkedin_url?: string | null
           photo_url?: string | null
           role: string
+          skills?: string[] | null
           updated_at?: string
         }
         Update: {
@@ -438,9 +442,11 @@ export type Database = {
           full_name?: string
           id?: string
           is_active?: boolean
+          journey?: string | null
           linkedin_url?: string | null
           photo_url?: string | null
           role?: string
+          skills?: string[] | null
           updated_at?: string
         }
         Relationships: []
