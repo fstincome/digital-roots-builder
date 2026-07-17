@@ -28,7 +28,7 @@ const HeroSlideshow = () => {
   }, [next]);
 
   return (
-    <section className="relative w-full h-[50vh] md:h-[60vh] overflow-hidden">
+    <section className="relative w-full h-[70vh] md:h-[85vh] overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
