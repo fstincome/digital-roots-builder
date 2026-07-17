@@ -25,7 +25,7 @@ const TeamGrid = ({ limit }: { limit?: number }) => {
   useEffect(() => {
     let q = supabase
       .from("team_members")
-      .select("id, full_name, role, bio, photo_url, linkedin_url, email")
+      .select("id, full_name, role, bio, photo_url, linkedin_url, email, skills, journey")
       .eq("is_active", true)
       .order("display_order", { ascending: true });
     if (limit) q = q.limit(limit);
