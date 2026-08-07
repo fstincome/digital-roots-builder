@@ -18,12 +18,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <PageBreadcrumb
-        title={t("portfolio.title")}
-        subtitle={t("portfolio.desc")}
-        items={[{ label: t("nav.portfolio") }]}
-      />
-      <section className="pt-16 pb-10">
+      <section className="pt-24 pb-10">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <span className="inline-block px-3 py-1 text-xs font-mono font-medium tracking-wider text-primary bg-primary/10 rounded-full mb-4">
