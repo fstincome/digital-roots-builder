@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useTranslation } from "react-i18next";
-import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { getPortfolioTranslation } from "@/i18n/portfolioItems";
 
 const Portfolio = () => {
@@ -18,12 +17,22 @@ const Portfolio = () => {
 
   return (
     <>
-      <PageBreadcrumb
-        title={t("portfolio.title")}
-        subtitle={t("portfolio.desc")}
-        items={[{ label: t("nav.portfolio") }]}
-      />
-      <section className="py-20">
+      <section className="pt-24 pb-10">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="inline-block px-3 py-1 text-xs font-mono font-medium tracking-wider text-primary bg-primary/10 rounded-full mb-4">
+              {t("portfolio.tag")}
+            </span>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              {t("portfolio.title")}
+            </h1>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              {t("portfolio.intro")}
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="pb-20">
         <div className="container">
           {loading ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
