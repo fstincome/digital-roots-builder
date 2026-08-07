@@ -71,7 +71,8 @@ const CommentsSection = ({ articleId, programId }: Props) => {
 
   useEffect(() => {
     fetchComments();
-  }, [articleId, programId]);
+  }, [articleId, programId, user]);
+
 
   const handleSubmit = async () => {
     if (!content.trim() || !authorName.trim()) {
