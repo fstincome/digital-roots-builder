@@ -35,13 +35,18 @@ const CommentsSection = ({ articleId, programId }: Props) => {
   const { t } = useTranslation();
 
   const fetchComments = async () => {
+    // user_id is only readable by signed-in users (hidden from anonymous visitors)
+    const columns = user
+      ? "id, content, author_name, article_id, program_id, parent_id, created_at, user_id"
+      : "id, content, author_name, article_id, program_id, parent_id, created_at";
     let query = supabase
       .from("comments")
-      .select("*")
+      .select(columns)
       .order("created_at", { ascending: true });
     if (articleId) query = query.eq("article_id", articleId);
     if (programId) query = query.eq("program_id", programId);
     const { data } = await query;
+
 
     // Build threaded structure
     const all = (data || []) as unknown as Comment[];
@@ -66,7 +71,8 @@ const CommentsSection = ({ articleId, programId }: Props) => {
 
   useEffect(() => {
     fetchComments();
-  }, [articleId, programId]);
+  }, [articleId, programId, user]);
+
 
   const handleSubmit = async () => {
     if (!content.trim() || !authorName.trim()) {

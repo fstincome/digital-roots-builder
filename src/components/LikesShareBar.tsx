@@ -36,7 +36,7 @@ const LikesShareBar = ({ articleId, programId, title }: Props) => {
   };
 
   const fetchLikes = async () => {
-    let query = supabase.from("likes").select("*", { count: "exact" });
+    let query = supabase.from("likes").select("id", { count: "exact", head: true });
     if (articleId) query = query.eq("article_id", articleId);
     if (programId) query = query.eq("program_id", programId);
     const { count } = await query;
