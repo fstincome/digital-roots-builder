@@ -23,7 +23,22 @@ const Portfolio = () => {
         subtitle={t("portfolio.desc")}
         items={[{ label: t("nav.portfolio") }]}
       />
-      <section className="py-20">
+      <section className="pt-16 pb-10">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="inline-block px-3 py-1 text-xs font-mono font-medium tracking-wider text-primary bg-primary/10 rounded-full mb-4">
+              {t("portfolio.tag")}
+            </span>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+              {t("portfolio.title")}
+            </h1>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              {t("portfolio.intro")}
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="pb-20">
         <div className="container">
           {loading ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
