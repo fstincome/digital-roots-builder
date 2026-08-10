@@ -43,7 +43,7 @@ const HeroSlideshow = () => {
             alt={slides[current].title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/60 to-black/40" />
 
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center px-4">
@@ -51,7 +51,7 @@ const HeroSlideshow = () => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="font-mono text-xs md:text-sm text-primary tracking-widest uppercase block mb-3"
+                className="font-mono text-xs md:text-sm text-primary tracking-widest uppercase block mb-3 drop-shadow"
               >
                 {slides[current].accent}
               </motion.span>
@@ -59,7 +59,7 @@ const HeroSlideshow = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-3xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-3"
+                className="text-3xl md:text-5xl lg:text-6xl font-semibold text-white mb-3 drop-shadow-lg"
               >
                 {slides[current].title}
               </motion.h2>
@@ -67,7 +67,7 @@ const HeroSlideshow = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto"
+                className="text-base md:text-lg text-white/85 max-w-xl mx-auto drop-shadow"
               >
                 {slides[current].subtitle}
               </motion.p>
