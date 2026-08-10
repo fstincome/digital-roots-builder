@@ -9,7 +9,13 @@
     <link rel="canonical" href="https://sightafrica.bi" />
     <link rel="icon" href="/sight-logo.png" type="image/png" />
     <link rel="apple-touch-icon" href="/sight-logo.png" />
-    <meta name="theme-color" content="#0a0a0f" />
+    <meta name="theme-color" content="#fafafa" />
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme");
+        document.documentElement.classList.add(t === "dark" ? "dark" : "light");
+      })();
+    </script>
 
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/8b8043c3-93ca-4442-9eb5-70239c7d72a8/id-preview-686bc2fc--f5aaa088-4e51-4ddf-b6e0-7c0a692ba5ce.lovable.app-1773582805114.png">
