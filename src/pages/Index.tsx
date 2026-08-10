@@ -147,8 +147,8 @@ const Index = () => {
       <section className="py-24">
         <div className="container">
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mb-16">
-            <span className="font-mono text-xs text-primary tracking-widest uppercase">{t("indexServices.tag")}</span>
-            <h2 className="text-3xl md:text-4xl font-semibold text-foreground mt-3">{t("indexServices.title")}</h2>
+            <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-mono text-xs text-primary tracking-widest uppercase">{t("indexServices.tag")}</span>
+            <h2 className="text-3xl md:text-5xl font-semibold text-foreground mt-5">{t("indexServices.title")}</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
