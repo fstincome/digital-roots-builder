@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Server, Code, Shield, GraduationCap, Globe, Zap, Calendar, ExternalLink, Tag } from "lucide-react";
+import { ArrowRight, Server, Code, Shield, GraduationCap, Globe, Zap, Calendar, ExternalLink, Tag, Target, Eye, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
