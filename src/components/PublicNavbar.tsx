@@ -49,9 +49,9 @@ const PublicNavbar = () => {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl"
+      className="fixed top-0 left-0 right-0 z-50 px-3 pt-3 sm:px-6 sm:pt-4"
     >
-      <div className="container flex h-16 items-center justify-between">
+      <div className="mx-auto max-w-7xl rounded-[28px] border border-border bg-card/70 px-4 sm:px-6 shadow-lg backdrop-blur-xl flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <span className="inline-flex items-center justify-center h-10 bg-white rounded-lg px-2 py-1 shadow-sm">
             <img src={sightLogo} alt="SIGHT Africa" className="h-7 w-auto" />
