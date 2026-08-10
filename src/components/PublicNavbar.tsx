@@ -49,30 +49,31 @@ const PublicNavbar = () => {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl"
+      className="fixed top-0 left-0 right-0 z-50 px-3 pt-3 sm:px-6 sm:pt-4"
     >
-      <div className="container flex h-16 items-center justify-between">
+      <div className="mx-auto max-w-7xl rounded-[28px] border border-border bg-card/70 px-4 sm:px-6 shadow-lg backdrop-blur-xl flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <span className="inline-flex items-center justify-center h-10 bg-white rounded-lg px-2 py-1 shadow-sm">
             <img src={sightLogo} alt="SIGHT Africa" className="h-7 w-auto" />
           </span>
         </Link>
 
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-1">
           {navItems.map((item) => (
             <Link
               key={item.href}
               to={item.href}
-              className={`text-sm transition-colors duration-200 ${
+              className={`rounded-full px-3 py-1.5 text-sm transition-colors duration-200 ${
                 location.pathname === item.href
-                  ? "text-primary font-medium"
-                  : "text-muted-foreground hover:text-primary"
+                  ? "bg-primary/10 text-primary font-medium"
+                  : "text-muted-foreground hover:bg-secondary hover:text-primary"
               }`}
             >
               {item.label}
             </Link>
           ))}
         </div>
+
 
         <div className="hidden sm:flex items-center gap-2">
           <ThemeToggle />
@@ -110,9 +111,9 @@ const PublicNavbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-border bg-background/95 backdrop-blur-xl"
+            className="lg:hidden mx-auto mt-2 max-w-7xl overflow-hidden rounded-3xl border border-border bg-card/90 shadow-lg backdrop-blur-xl"
           >
-            <div className="container py-4 flex flex-col gap-3">
+            <div className="px-5 py-4 flex flex-col gap-3">
               {navItems.map((item) => (
                 <Link
                   key={item.href}

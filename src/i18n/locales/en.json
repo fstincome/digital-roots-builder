@@ -367,5 +367,42 @@
     "intro": "A passionate team driving digital transformation in Africa.",
     "desc": "Meet the people behind SIGHT Africa.",
     "seeAll": "See the whole team"
+  },
+  "whoWeAre": {
+    "tag": "Who We Are",
+    "title": "A smart tech partner for",
+    "titleHighlight": "growing organizations",
+    "p1": "SIGHT Africa builds the critical digital infrastructure of Burundi: certified hardware, sovereign software, hosting and world-class training.",
+    "mission": "Our Mission",
+    "missionDesc": "Give every organization easy access to smart technology so they can do more with less.",
+    "vision": "Our Vision",
+    "visionDesc": "Become a leading name in sovereign technology across Burundi, East Africa and beyond.",
+    "values": "Our Values",
+    "valuesDesc": "We lead with innovation, work closely with our clients and always aim for excellence."
+  },
+  "process": {
+    "tag": "How We Work",
+    "title": "Our implementation flow",
+    "desc": "From the first call to a live system, here is how we take your organization from idea to intelligent, automated reality.",
+    "s1": "Discover",
+    "s1d": "We learn your goals, challenges and current systems before writing a single line of code.",
+    "s2": "Design",
+    "s2d": "We map a clear architecture and experience, then share a plan you can actually understand.",
+    "s3": "Build",
+    "s3d": "Agile delivery with regular check-ins, so you always know what is happening and why.",
+    "s4": "Launch & Support",
+    "s4d": "We launch, monitor and maintain — keeping your systems fast, secure and reliable."
+  },
+  "faq": {
+    "tag": "FAQ",
+    "title": "Frequently asked questions",
+    "q1": "What services does SIGHT Africa offer?",
+    "a1": "Certified hardware, sovereign software development, web hosting and VPS, cybersecurity, IT consulting and professional training.",
+    "q2": "Do you build custom websites and applications?",
+    "a2": "Yes. We design and develop websites, web platforms and mobile applications tailored to your organization — see our portfolio.",
+    "q3": "Where do you operate?",
+    "a3": "We are based in Gitega, Burundi, and serve clients across the country and East Africa, with remote support available.",
+    "q4": "Do you provide ongoing support?",
+    "a4": "Yes, we offer maintenance contracts and enterprise support to keep your systems running at peak efficiency."
   }
 }

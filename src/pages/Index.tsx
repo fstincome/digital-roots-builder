@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Server, Code, Shield, GraduationCap, Globe, Zap, Calendar, ExternalLink, Tag } from "lucide-react";
+import { ArrowRight, Server, Code, Shield, GraduationCap, Globe, Zap, Calendar, ExternalLink, Tag, Target, Eye, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
 import heroImg from "@/assets/hero-africa-tech.jpg";
@@ -75,39 +76,80 @@ const Index = () => {
       <HeroSlideshow />
 
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-        <div className="absolute inset-0">
-          <img src={heroImg} alt="Digital Africa" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/30" />
-        </div>
-        <div className="container relative z-10 py-20">
-          <div className="max-w-4xl">
-            <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <span className="font-mono text-sm text-primary mb-4 block tracking-wider">{t("hero.tag")}</span>
-              <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-foreground mb-6 leading-[1.05]">
-                {t("hero.title")} <span className="text-primary">{t("hero.titleHighlight")}</span>
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 leading-relaxed">{t("hero.desc")}</p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="lg" asChild>
-                  <Link to="/services">{t("hero.cta")} <ArrowRight className="ml-2" size={18} /></Link>
-                </Button>
-                <Button variant="heroGhost" size="lg" asChild>
-                  <Link to="/contact">{t("hero.ctaContact")}</Link>
-                </Button>
-              </div>
-            </motion.div>
+      <section className="px-3 sm:px-6 pt-24">
+        <div className="mx-auto max-w-7xl relative overflow-hidden rounded-[32px] border border-primary/20 min-h-[78vh] flex items-center">
+          <div className="absolute inset-0">
+            <img src={heroImg} alt="Digital Africa" className="w-full h-full object-cover opacity-30" />
+            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/30" />
+          </div>
+          <div className="relative z-10 px-6 sm:px-12 lg:px-16 py-20">
+            <div className="max-w-3xl">
+              <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+                <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-mono text-xs text-primary tracking-widest uppercase mb-6">
+                  {t("hero.tag")}
+                </span>
+                <h1 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-foreground mb-6 leading-[1.05]">
+                  {t("hero.title")} <span className="text-primary">{t("hero.titleHighlight")}</span>
+                </h1>
+                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 leading-relaxed">{t("hero.desc")}</p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button variant="hero" size="lg" className="rounded-full" asChild>
+                    <Link to="/services">{t("hero.cta")} <ArrowRight className="ml-2" size={18} /></Link>
+                  </Button>
+                  <Button variant="heroGhost" size="lg" className="rounded-full" asChild>
+                    <Link to="/contact">{t("hero.ctaContact")}</Link>
+                  </Button>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Who We Are */}
+      <section className="py-24">
+        <div className="container grid lg:grid-cols-2 gap-12 items-start">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-mono text-xs text-primary tracking-widest uppercase">
+              {t("whoWeAre.tag")}
+            </span>
+            <h2 className="text-3xl md:text-5xl font-semibold text-foreground mt-5 leading-tight">
+              {t("whoWeAre.title")} <span className="text-primary">{t("whoWeAre.titleHighlight")}</span>
+            </h2>
+            <p className="text-muted-foreground mt-6 leading-relaxed">{t("whoWeAre.p1")}</p>
+            <Button variant="outline" className="rounded-full mt-8" asChild>
+              <Link to="/a-propos">{t("nav.about")} <ArrowRight className="ml-2" size={16} /></Link>
+            </Button>
+          </motion.div>
+          <div className="space-y-4">
+            {[
+              { icon: Target, title: t("whoWeAre.mission"), desc: t("whoWeAre.missionDesc") },
+              { icon: Eye, title: t("whoWeAre.vision"), desc: t("whoWeAre.visionDesc") },
+              { icon: Sparkles, title: t("whoWeAre.values"), desc: t("whoWeAre.valuesDesc") },
+            ].map((c, i) => (
+              <motion.div key={i} custom={i} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
+                className="rounded-2xl border border-border bg-card p-6 hover:border-primary/40 transition-colors">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-lg font-semibold text-primary">{c.title}</h3>
+                    <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{c.desc}</p>
+                  </div>
+                  <c.icon className="text-primary shrink-0" size={22} />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
 
       {/* Services */}
       <section className="py-24">
         <div className="container">
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mb-16">
-            <span className="font-mono text-xs text-primary tracking-widest uppercase">{t("indexServices.tag")}</span>
-            <h2 className="text-3xl md:text-4xl font-semibold text-foreground mt-3">{t("indexServices.title")}</h2>
+            <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-mono text-xs text-primary tracking-widest uppercase">{t("indexServices.tag")}</span>
+            <h2 className="text-3xl md:text-5xl font-semibold text-foreground mt-5">{t("indexServices.title")}</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((s, i) => (
@@ -235,6 +277,45 @@ const Index = () => {
           </div>
         </section>
       )}
+
+      {/* Implementation flow */}
+      <section className="py-24 border-t border-border">
+        <div className="container">
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="max-w-2xl">
+            <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-mono text-xs text-primary tracking-widest uppercase">{t("process.tag")}</span>
+            <h2 className="text-3xl md:text-5xl font-semibold text-foreground mt-5">{t("process.title")}</h2>
+            <p className="text-muted-foreground mt-4 leading-relaxed">{t("process.desc")}</p>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+            {[1, 2, 3, 4].map((n, i) => (
+              <motion.div key={n} custom={i} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
+                className="rounded-2xl border border-border bg-card p-6 hover:border-primary/40 transition-colors">
+                <span className="font-mono text-3xl text-primary/40">0{n}</span>
+                <h3 className="text-lg font-semibold text-foreground mt-4">{t(`process.s${n}`)}</h3>
+                <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{t(`process.s${n}d`)}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24 border-t border-border">
+        <div className="container max-w-3xl">
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mb-12">
+            <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-mono text-xs text-primary tracking-widest uppercase">{t("faq.tag")}</span>
+            <h2 className="text-3xl md:text-5xl font-semibold text-foreground mt-5">{t("faq.title")}</h2>
+          </motion.div>
+          <Accordion type="single" collapsible className="space-y-3">
+            {[1, 2, 3, 4].map((n) => (
+              <AccordionItem key={n} value={`q${n}`} className="rounded-2xl border border-border bg-card px-5">
+                <AccordionTrigger className="text-left text-base font-semibold hover:no-underline">{t(`faq.q${n}`)}</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">{t(`faq.a${n}`)}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-24 gradient-mesh">

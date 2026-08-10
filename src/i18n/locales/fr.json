@@ -367,5 +367,42 @@
     "intro": "Une équipe passionnée au service de la transformation digitale en Afrique.",
     "desc": "Découvrez les personnes qui font vivre SIGHT Africa.",
     "seeAll": "Voir toute l'équipe"
+  },
+  "whoWeAre": {
+    "tag": "Qui sommes-nous",
+    "title": "Un partenaire technologique intelligent pour les",
+    "titleHighlight": "organisations en croissance",
+    "p1": "SIGHT Africa bâtit l'infrastructure numérique critique du Burundi : hardware certifié, software souverain, hébergement et formation d'excellence.",
+    "mission": "Notre Mission",
+    "missionDesc": "Donner à chaque organisation un accès simple à la technologie intelligente pour faire plus avec moins.",
+    "vision": "Notre Vision",
+    "visionDesc": "Devenir une référence de la technologie souveraine au Burundi, en Afrique de l'Est et au-delà.",
+    "values": "Nos Valeurs",
+    "valuesDesc": "Nous plaçons l'innovation en tête, travaillons au plus près de nos clients et visons toujours l'excellence."
+  },
+  "process": {
+    "tag": "Notre méthode",
+    "title": "Notre flux d'implémentation",
+    "desc": "Du premier échange au système en production, voici comment nous transformons votre idée en réalité automatisée et intelligente.",
+    "s1": "Découverte",
+    "s1d": "Nous comprenons vos objectifs, vos contraintes et vos systèmes actuels avant d'écrire une ligne de code.",
+    "s2": "Conception",
+    "s2d": "Nous définissons une architecture et une expérience claires, puis partageons un plan compréhensible.",
+    "s3": "Réalisation",
+    "s3d": "Livraison agile avec points réguliers : vous savez toujours ce qui avance et pourquoi.",
+    "s4": "Lancement & Support",
+    "s4d": "Nous lançons, surveillons et maintenons — vos systèmes restent rapides, sûrs et fiables."
+  },
+  "faq": {
+    "tag": "FAQ",
+    "title": "Questions fréquentes",
+    "q1": "Quels services propose SIGHT Africa ?",
+    "a1": "Hardware certifié, développement de logiciels souverains, hébergement web et VPS, cybersécurité, conseil IT et formations professionnelles.",
+    "q2": "Réalisez-vous des sites et applications sur mesure ?",
+    "a2": "Oui. Nous concevons des sites, plateformes web et applications mobiles adaptés à votre organisation — voir notre portfolio.",
+    "q3": "Où intervenez-vous ?",
+    "a3": "Nous sommes basés à Gitega, au Burundi, et accompagnons des clients dans tout le pays et en Afrique de l'Est, avec support à distance.",
+    "q4": "Assurez-vous un support continu ?",
+    "a4": "Oui, nous proposons des contrats de maintenance et un support entreprise pour garder vos systèmes performants."
   }
 }
