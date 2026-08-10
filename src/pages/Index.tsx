@@ -277,6 +277,45 @@ const Index = () => {
         </section>
       )}
 
+      {/* Implementation flow */}
+      <section className="py-24 border-t border-border">
+        <div className="container">
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="max-w-2xl">
+            <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-mono text-xs text-primary tracking-widest uppercase">{t("process.tag")}</span>
+            <h2 className="text-3xl md:text-5xl font-semibold text-foreground mt-5">{t("process.title")}</h2>
+            <p className="text-muted-foreground mt-4 leading-relaxed">{t("process.desc")}</p>
+          </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
+            {[1, 2, 3, 4].map((n, i) => (
+              <motion.div key={n} custom={i} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
+                className="rounded-2xl border border-border bg-card p-6 hover:border-primary/40 transition-colors">
+                <span className="font-mono text-3xl text-primary/40">0{n}</span>
+                <h3 className="text-lg font-semibold text-foreground mt-4">{t(`process.s${n}`)}</h3>
+                <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{t(`process.s${n}d`)}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24 border-t border-border">
+        <div className="container max-w-3xl">
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mb-12">
+            <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-mono text-xs text-primary tracking-widest uppercase">{t("faq.tag")}</span>
+            <h2 className="text-3xl md:text-5xl font-semibold text-foreground mt-5">{t("faq.title")}</h2>
+          </motion.div>
+          <Accordion type="single" collapsible className="space-y-3">
+            {[1, 2, 3, 4].map((n) => (
+              <AccordionItem key={n} value={`q${n}`} className="rounded-2xl border border-border bg-card px-5">
+                <AccordionTrigger className="text-left text-base font-semibold hover:no-underline">{t(`faq.q${n}`)}</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">{t(`faq.a${n}`)}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 gradient-mesh">
         <div className="container text-center">
