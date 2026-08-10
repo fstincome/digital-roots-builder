@@ -58,21 +58,22 @@ const PublicNavbar = () => {
           </span>
         </Link>
 
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-1">
           {navItems.map((item) => (
             <Link
               key={item.href}
               to={item.href}
-              className={`text-sm transition-colors duration-200 ${
+              className={`rounded-full px-3 py-1.5 text-sm transition-colors duration-200 ${
                 location.pathname === item.href
-                  ? "text-primary font-medium"
-                  : "text-muted-foreground hover:text-primary"
+                  ? "bg-primary/10 text-primary font-medium"
+                  : "text-muted-foreground hover:bg-secondary hover:text-primary"
               }`}
             >
               {item.label}
             </Link>
           ))}
         </div>
+
 
         <div className="hidden sm:flex items-center gap-2">
           <ThemeToggle />
