@@ -111,9 +111,9 @@ const PublicNavbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden border-t border-border bg-background/95 backdrop-blur-xl"
+            className="lg:hidden mx-auto mt-2 max-w-7xl overflow-hidden rounded-3xl border border-border bg-card/90 shadow-lg backdrop-blur-xl"
           >
-            <div className="container py-4 flex flex-col gap-3">
+            <div className="px-5 py-4 flex flex-col gap-3">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
