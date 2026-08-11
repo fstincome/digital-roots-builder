@@ -2,12 +2,12 @@ import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import slide1 from "@/assets/hero/hero-1.jpg.asset.json";
-import slide2 from "@/assets/hero/hero-2.jpg.asset.json";
-import slide3 from "@/assets/hero/hero-3.jpg.asset.json";
-import slide4 from "@/assets/hero/hero-4.jpg.asset.json";
+import slide1 from "@/assets/hero/hero-1.jpg";
+import slide2 from "@/assets/hero/hero-2.jpg";
+import slide3 from "@/assets/hero/hero-3.jpg";
+import slide4 from "@/assets/hero/hero-4.jpg";
 
-const slideImages = [slide1.url, slide2.url, slide3.url, slide4.url];
+const slideImages = [slide1, slide2, slide3, slide4];
 
 const HeroSlideshow = () => {
   const { t } = useTranslation();
