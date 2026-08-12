@@ -348,6 +348,96 @@ export const teamContent: Record<string, Partial<Record<TeamLang, TeamEntry>>> =
         "• Lycée Monseigneur Joachim Ruhuna, Muyaga — masomo ya sekondari\n• Seminari Kuu ya Saint Curé d'Ars, Bujumbura (2022-2025) — Shahada ya falsafa\n• Mkurugenzi Mkuu — ZENONSHOPNET\n• Mkurugenzi wa Biashara — LA TECH BURUNDI COMPANY na SHIBUCO\n• Katibu Mtendaji — Giving Hand Vocation\n• Idara ya Mawasiliano — Société Pétrolière du Burundi (SOPEBU)\n• Mkurugenzi wa Biashara — SIGHT Africa",
     },
   },
+
+  "NDAYIRAGIJE Théogène": {
+    fr: {
+      role: "Business Development & Marketing Manager",
+      bio: "NDAYIRAGIJE Théogène, né le 15 avril 1995 à Muyinga, est un professionnel burundais spécialisé en marketing, développement commercial, gestion de projets et engagement communautaire. Il est diplômé de l'Université du Burundi en Management des Organisations, option Marketing.\n\nChez SIGHT Africa, il contribue au développement commercial, à l'identification de nouvelles opportunités, à la prospection et à la gestion des relations clients et partenaires. Il promeut les solutions de l'entreprise en matériel informatique, logiciels, cybersécurité, cloud, formation et transformation numérique.\n\nAncien Directeur Général de Power Food Solution, Chargé des Relations Client au CENEF-BURUNDI et journaliste à Radio Maria Burundi, il combine stratégie d'entreprise, écoute client et communication. Fondateur d'APJAS – Action pour une Jeunesse Active et Solidaire, il est engagé dans l'éducation et l'autonomisation des jeunes.\n\nSon rôle : faire l'interface entre les besoins des organisations et les solutions technologiques de SIGHT Africa, en transformant les opportunités commerciales en projets à forte valeur ajoutée.",
+      skills: ["Développement commercial", "Marketing stratégique", "Prospection & négociation", "Relation client & fidélisation", "Gestion de projets", "Communication & création de contenu", "Engagement communautaire"],
+      journey: "• Business Development & Marketing Manager — SIGHT Africa\n• Directeur Général — Power Food Solution\n• Chargé des Relations Client — CENEF-BURUNDI\n• Journaliste — Radio Maria Burundi\n• Fondateur — APJAS (Action pour une Jeunesse Active et Solidaire)\n• Management des Organisations, option Marketing — Université du Burundi",
+    },
+    en: {
+      role: "Business Development & Marketing Manager",
+      bio: "NDAYIRAGIJE Théogène, born on 15 April 1995 in Muyinga, is a Burundian professional specialising in marketing, business development, project management and community engagement. He holds a degree in Organisational Management (Marketing) from the University of Burundi.\n\nAt SIGHT Africa he drives business development, identifies new opportunities, leads prospecting and manages client and partner relationships. He promotes the company's offering across IT hardware, software solutions, cybersecurity, cloud, training and digital transformation.\n\nFormerly General Manager of Power Food Solution, Client Relations Officer at CENEF-BURUNDI and a journalist at Radio Maria Burundi, he combines business strategy, customer insight and communication. He founded APJAS – Action for an Active and United Youth, dedicated to youth education and empowerment.\n\nHis role is to bridge organisational needs and SIGHT Africa's technology solutions, turning commercial opportunities into high-value projects.",
+      skills: ["Business development", "Strategic marketing", "Prospecting & negotiation", "Client relations & retention", "Project management", "Communication & content creation", "Community engagement"],
+      journey: "• Business Development & Marketing Manager — SIGHT Africa\n• General Manager — Power Food Solution\n• Client Relations Officer — CENEF-BURUNDI\n• Journalist — Radio Maria Burundi\n• Founder — APJAS (Action for an Active and United Youth)\n• Organisational Management, Marketing — University of Burundi",
+    },
+    es: {
+      role: "Gerente de Desarrollo Comercial y Marketing",
+      bio: "NDAYIRAGIJE Théogène, nacido el 15 de abril de 1995 en Muyinga, es un profesional burundés especializado en marketing, desarrollo comercial, gestión de proyectos y compromiso comunitario. Es licenciado en Gestión de Organizaciones (Marketing) por la Universidad de Burundi.\n\nEn SIGHT Africa impulsa el desarrollo comercial, identifica nuevas oportunidades, dirige la prospección y gestiona las relaciones con clientes y socios, promoviendo las soluciones de hardware, software, ciberseguridad, nube, formación y transformación digital.\n\nFue Director General de Power Food Solution, Responsable de Relaciones con Clientes en CENEF-BURUNDI y periodista en Radio Maria Burundi. Fundó APJAS – Acción por una Juventud Activa y Solidaria.\n\nSu función: conectar las necesidades de las organizaciones con las soluciones tecnológicas de SIGHT Africa.",
+      skills: ["Desarrollo comercial", "Marketing estratégico", "Prospección y negociación", "Relación con clientes", "Gestión de proyectos", "Comunicación y contenidos", "Compromiso comunitario"],
+      journey: "• Gerente de Desarrollo Comercial y Marketing — SIGHT Africa\n• Director General — Power Food Solution\n• Relaciones con Clientes — CENEF-BURUNDI\n• Periodista — Radio Maria Burundi\n• Fundador — APJAS\n• Gestión de Organizaciones, Marketing — Universidad de Burundi",
+    },
+    de: {
+      role: "Leiter Geschäftsentwicklung & Marketing",
+      bio: "NDAYIRAGIJE Théogène, geboren am 15. April 1995 in Muyinga, ist ein burundischer Fachmann für Marketing, Geschäftsentwicklung, Projektmanagement und gesellschaftliches Engagement. Er hat einen Abschluss in Organisationsmanagement (Marketing) der Universität Burundi.\n\nBei SIGHT Africa verantwortet er die Geschäftsentwicklung, erschließt neue Chancen, betreibt Akquise und pflegt Kunden- und Partnerbeziehungen. Er vermarktet die Lösungen des Unternehmens in Hardware, Software, Cybersicherheit, Cloud, Schulung und digitaler Transformation.\n\nFrüher Geschäftsführer von Power Food Solution, Kundenbetreuer bei CENEF-BURUNDI und Journalist bei Radio Maria Burundi. Gründer von APJAS – Aktion für eine aktive und solidarische Jugend.\n\nSeine Rolle: Brücke zwischen den Bedürfnissen der Organisationen und den Technologielösungen von SIGHT Africa.",
+      skills: ["Geschäftsentwicklung", "Strategisches Marketing", "Akquise & Verhandlung", "Kundenbeziehungen", "Projektmanagement", "Kommunikation & Content", "Gemeinschaftsengagement"],
+      journey: "• Leiter Geschäftsentwicklung & Marketing — SIGHT Africa\n• Geschäftsführer — Power Food Solution\n• Kundenbetreuer — CENEF-BURUNDI\n• Journalist — Radio Maria Burundi\n• Gründer — APJAS\n• Organisationsmanagement, Marketing — Universität Burundi",
+    },
+    it: {
+      role: "Responsabile Sviluppo Commerciale e Marketing",
+      bio: "NDAYIRAGIJE Théogène, nato il 15 aprile 1995 a Muyinga, è un professionista burundese specializzato in marketing, sviluppo commerciale, gestione di progetti e impegno comunitario. È laureato in Gestione delle Organizzazioni (Marketing) all'Università del Burundi.\n\nIn SIGHT Africa guida lo sviluppo commerciale, individua nuove opportunità, cura la prospezione e le relazioni con clienti e partner, promuovendo le soluzioni di hardware, software, cybersicurezza, cloud, formazione e trasformazione digitale.\n\nGià Direttore Generale di Power Food Solution, Responsabile Relazioni Clienti presso CENEF-BURUNDI e giornalista a Radio Maria Burundi. Fondatore di APJAS – Azione per una Gioventù Attiva e Solidale.\n\nIl suo ruolo: collegare i bisogni delle organizzazioni alle soluzioni tecnologiche di SIGHT Africa.",
+      skills: ["Sviluppo commerciale", "Marketing strategico", "Prospezione e negoziazione", "Relazioni con i clienti", "Gestione progetti", "Comunicazione e contenuti", "Impegno comunitario"],
+      journey: "• Responsabile Sviluppo Commerciale e Marketing — SIGHT Africa\n• Direttore Generale — Power Food Solution\n• Relazioni Clienti — CENEF-BURUNDI\n• Giornalista — Radio Maria Burundi\n• Fondatore — APJAS\n• Gestione delle Organizzazioni, Marketing — Università del Burundi",
+    },
+    ja: {
+      role: "事業開発・マーケティングマネージャー",
+      bio: "NDAYIRAGIJE Théogène（1995年4月15日ムインガ生まれ）は、マーケティング、事業開発、プロジェクト管理、地域活動を専門とするブルンジのプロフェッショナルです。ブルンジ大学で組織経営（マーケティング専攻）の学位を取得しました。\n\nSIGHT Africaでは事業開発を担い、新たな機会の発掘、営業活動、顧客・パートナーとの関係構築を推進しています。ITハードウェア、ソフトウェア、サイバーセキュリティ、クラウド、研修、デジタルトランスフォーメーションの各分野で当社のソリューションを提案しています。\n\nPower Food Solutionの代表、CENEF-BURUNDIの顧客担当、Radio Maria Burundiの記者を経験。青少年の教育と自立を支援するAPJASの創設者でもあります。\n\n組織のニーズとSIGHT Africaの技術ソリューションを結ぶ架け橋として活躍しています。",
+      skills: ["事業開発", "戦略的マーケティング", "新規開拓・交渉", "顧客関係構築", "プロジェクト管理", "コミュニケーション・コンテンツ制作", "地域連携"],
+      journey: "• 事業開発・マーケティングマネージャー — SIGHT Africa\n• 代表 — Power Food Solution\n• 顧客担当 — CENEF-BURUNDI\n• 記者 — Radio Maria Burundi\n• 創設者 — APJAS\n• 組織経営（マーケティング）— ブルンジ大学",
+    },
+    sw: {
+      role: "Meneja wa Maendeleo ya Biashara na Masoko",
+      bio: "NDAYIRAGIJE Théogène, aliyezaliwa 15 Aprili 1995 Muyinga, ni mtaalamu wa Burundi katika masoko, maendeleo ya biashara, usimamizi wa miradi na ushirikiano wa jamii. Ana shahada ya Usimamizi wa Mashirika (Masoko) kutoka Chuo Kikuu cha Burundi.\n\nKatika SIGHT Africa anaongoza maendeleo ya biashara, kutafuta nafasi mpya, kuwasiliana na wateja na washirika, na kutangaza suluhisho za kampuni katika vifaa vya TEHAMA, programu, usalama mtandaoni, wingu, mafunzo na mabadiliko ya kidijitali.\n\nAlikuwa Mkurugenzi Mkuu wa Power Food Solution, Mratibu wa Uhusiano na Wateja CENEF-BURUNDI, na mwandishi wa habari Radio Maria Burundi. Mwanzilishi wa APJAS – hatua kwa vijana wenye bidii na mshikamano.\n\nJukumu lake: kuunganisha mahitaji ya mashirika na suluhisho za teknolojia za SIGHT Africa.",
+      skills: ["Maendeleo ya biashara", "Masoko ya kimkakati", "Utafutaji wateja na majadiliano", "Uhusiano na wateja", "Usimamizi wa miradi", "Mawasiliano na maudhui", "Ushirikiano wa jamii"],
+      journey: "• Meneja wa Maendeleo ya Biashara na Masoko — SIGHT Africa\n• Mkurugenzi Mkuu — Power Food Solution\n• Uhusiano na Wateja — CENEF-BURUNDI\n• Mwandishi wa habari — Radio Maria Burundi\n• Mwanzilishi — APJAS\n• Usimamizi wa Mashirika, Masoko — Chuo Kikuu cha Burundi",
+    },
+  },
+
+  "Munyana Hyacinthe": {
+    fr: {
+      role: "Digital Operations Manager",
+      bio: "Munyana Hyacinthe est une professionnelle spécialisée dans les opérations numériques, le suivi des services technologiques et l'accompagnement des utilisateurs. Basée à Gitega, elle collabore au quotidien avec des professionnels de l'informatique pour développer des solutions adaptées aux besoins des organisations.\n\nAu sein de SIGHT Africa, elle assure la coordination et le suivi des opérations liées aux services numériques : bon fonctionnement des opérations quotidiennes, accompagnement des utilisateurs et clients, suivi des incidents, documentation des procédures et coordination avec les équipes techniques.\n\nElle participe au déploiement et au suivi des solutions numériques de l'entreprise (services digitaux, paiement, outils de gestion).\n\nOrganisée, rigoureuse et dotée d'une forte capacité d'apprentissage, elle accorde une attention particulière à la qualité du service, à la fiabilité des opérations et à l'expérience des utilisateurs, avec une approche orientée résolution de problèmes et amélioration continue.",
+      skills: ["Opérations numériques", "Suivi des services IT", "Support utilisateurs", "Gestion des incidents", "Documentation des procédures", "Coordination technique", "Amélioration continue"],
+      journey: "• Digital Operations Manager — SIGHT Africa\n• Coordination des opérations et services numériques\n• Suivi des incidents et qualité de service\n• Déploiement des solutions digitales et de paiement\n• Basée à Gitega, Burundi",
+    },
+    en: {
+      role: "Digital Operations Manager",
+      bio: "Munyana Hyacinthe is a professional specialising in digital operations, technology service monitoring and user support. Based in Gitega, she works daily alongside IT professionals to build solutions tailored to organisational needs.\n\nAt SIGHT Africa she coordinates and monitors operations across the company's digital services: keeping day-to-day operations running smoothly, supporting users and clients, tracking incidents, documenting procedures and coordinating with technical teams.\n\nShe also contributes to the rollout and follow-up of SIGHT Africa's digital solutions, including digital services, payments and management tools.\n\nOrganised, rigorous and a fast learner, she places particular emphasis on service quality, operational reliability and user experience, with a problem-solving and continuous-improvement mindset.",
+      skills: ["Digital operations", "IT service monitoring", "User support", "Incident management", "Process documentation", "Technical coordination", "Continuous improvement"],
+      journey: "• Digital Operations Manager — SIGHT Africa\n• Coordination of digital operations and services\n• Incident tracking and service quality\n• Rollout of digital and payment solutions\n• Based in Gitega, Burundi",
+    },
+    es: {
+      role: "Gerente de Operaciones Digitales",
+      bio: "Munyana Hyacinthe es una profesional especializada en operaciones digitales, seguimiento de servicios tecnológicos y soporte a usuarios. Con base en Gitega, colabora a diario con profesionales de TI para desarrollar soluciones adaptadas a las organizaciones.\n\nEn SIGHT Africa coordina y supervisa las operaciones de los servicios digitales: funcionamiento diario, acompañamiento de usuarios y clientes, seguimiento de incidencias, documentación de procedimientos y coordinación con los equipos técnicos.\n\nParticipa además en el despliegue y seguimiento de las soluciones digitales de la empresa (servicios digitales, pagos, herramientas de gestión).\n\nOrganizada y rigurosa, prioriza la calidad del servicio, la fiabilidad de las operaciones y la experiencia del usuario.",
+      skills: ["Operaciones digitales", "Seguimiento de servicios TI", "Soporte a usuarios", "Gestión de incidencias", "Documentación de procesos", "Coordinación técnica", "Mejora continua"],
+      journey: "• Gerente de Operaciones Digitales — SIGHT Africa\n• Coordinación de operaciones y servicios digitales\n• Seguimiento de incidencias y calidad\n• Despliegue de soluciones digitales y de pago\n• Con base en Gitega, Burundi",
+    },
+    de: {
+      role: "Leiterin Digital Operations",
+      bio: "Munyana Hyacinthe ist Fachkraft für digitale Abläufe, die Überwachung technologischer Dienste und die Betreuung von Nutzern. Von Gitega aus arbeitet sie täglich mit IT-Fachleuten zusammen, um passende Lösungen für Organisationen zu entwickeln.\n\nBei SIGHT Africa koordiniert und überwacht sie die Abläufe der digitalen Dienste: reibungsloser Tagesbetrieb, Betreuung von Nutzern und Kunden, Störungsverfolgung, Dokumentation von Prozessen und Abstimmung mit den technischen Teams.\n\nSie begleitet außerdem die Einführung der digitalen Lösungen des Unternehmens (digitale Dienste, Zahlungen, Management-Tools).\n\nStrukturiert und gewissenhaft legt sie besonderen Wert auf Servicequalität, Zuverlässigkeit und Nutzererlebnis.",
+      skills: ["Digitale Abläufe", "Überwachung von IT-Diensten", "Nutzerbetreuung", "Störungsmanagement", "Prozessdokumentation", "Technische Koordination", "Kontinuierliche Verbesserung"],
+      journey: "• Leiterin Digital Operations — SIGHT Africa\n• Koordination digitaler Abläufe und Dienste\n• Störungsverfolgung und Servicequalität\n• Einführung digitaler und Zahlungslösungen\n• Standort Gitega, Burundi",
+    },
+    it: {
+      role: "Responsabile Operazioni Digitali",
+      bio: "Munyana Hyacinthe è una professionista specializzata in operazioni digitali, monitoraggio dei servizi tecnologici e supporto agli utenti. Con base a Gitega, collabora quotidianamente con professionisti IT per sviluppare soluzioni adatte alle organizzazioni.\n\nIn SIGHT Africa coordina e monitora le operazioni dei servizi digitali: funzionamento quotidiano, supporto a utenti e clienti, gestione degli incidenti, documentazione delle procedure e coordinamento con i team tecnici.\n\nPartecipa inoltre al rilascio e al monitoraggio delle soluzioni digitali dell'azienda (servizi digitali, pagamenti, strumenti di gestione).\n\nOrganizzata e rigorosa, dà particolare importanza alla qualità del servizio, all'affidabilità e all'esperienza degli utenti.",
+      skills: ["Operazioni digitali", "Monitoraggio servizi IT", "Supporto utenti", "Gestione incidenti", "Documentazione processi", "Coordinamento tecnico", "Miglioramento continuo"],
+      journey: "• Responsabile Operazioni Digitali — SIGHT Africa\n• Coordinamento operazioni e servizi digitali\n• Gestione incidenti e qualità del servizio\n• Rilascio di soluzioni digitali e di pagamento\n• Con base a Gitega, Burundi",
+    },
+    ja: {
+      role: "デジタルオペレーションマネージャー",
+      bio: "Munyana Hyacintheは、デジタル運用、技術サービスの監視、利用者サポートを専門とするプロフェッショナルです。ギテガを拠点に、IT専門家と協働して組織のニーズに合ったソリューションを開発しています。\n\nSIGHT Africaでは、デジタルサービスに関する運用の調整と監視を担当。日々の運用の安定稼働、利用者・顧客の支援、インシデント対応、手順書の整備、技術チームとの連携を行っています。\n\nまた、デジタルサービス、決済、業務管理ツールなど当社ソリューションの導入とフォローアップにも携わっています。\n\n計画的かつ丁寧で学習意欲が高く、サービス品質、運用の信頼性、ユーザー体験を重視し、問題解決と継続的改善に取り組んでいます。",
+      skills: ["デジタル運用", "ITサービス監視", "利用者サポート", "インシデント管理", "手順の文書化", "技術チーム連携", "継続的改善"],
+      journey: "• デジタルオペレーションマネージャー — SIGHT Africa\n• デジタル運用・サービスの調整\n• インシデント対応とサービス品質\n• デジタル・決済ソリューションの導入\n• 拠点：ブルンジ・ギテガ",
+    },
+    sw: {
+      role: "Meneja wa Uendeshaji wa Kidijitali",
+      bio: "Munyana Hyacinthe ni mtaalamu wa uendeshaji wa kidijitali, ufuatiliaji wa huduma za teknolojia na msaada kwa watumiaji. Akiwa Gitega, anashirikiana kila siku na wataalamu wa TEHAMA kutengeneza suluhisho zinazokidhi mahitaji ya mashirika.\n\nKatika SIGHT Africa anaratibu na kufuatilia shughuli za huduma za kidijitali: uendeshaji wa kila siku, msaada kwa watumiaji na wateja, ufuatiliaji wa matukio, kuandika taratibu na kushirikiana na timu za kiufundi.\n\nAnashiriki pia katika usambazaji na ufuatiliaji wa suluhisho za kidijitali za kampuni (huduma za kidijitali, malipo, zana za usimamizi).\n\nAna mpangilio mzuri, umakini na uwezo mkubwa wa kujifunza, akizingatia ubora wa huduma, uhakika wa uendeshaji na hali ya watumiaji.",
+      skills: ["Uendeshaji wa kidijitali", "Ufuatiliaji wa huduma za TEHAMA", "Msaada kwa watumiaji", "Usimamizi wa matukio", "Kuandika taratibu", "Uratibu wa kiufundi", "Uboreshaji endelevu"],
+      journey: "• Meneja wa Uendeshaji wa Kidijitali — SIGHT Africa\n• Uratibu wa shughuli na huduma za kidijitali\n• Ufuatiliaji wa matukio na ubora wa huduma\n• Usambazaji wa suluhisho za kidijitali na malipo\n• Makao: Gitega, Burundi",
+    },
+  },
 };
 
 export const getTeamEntry = (fullName: string, lang: string): TeamEntry | undefined => {
