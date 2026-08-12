@@ -87,7 +87,7 @@ const TeamGrid = ({ limit }: { limit?: number }) => {
               </h3>
               <p className="text-sm text-muted-foreground mt-1">{m.role}</p>
               <span className="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border text-xs font-medium text-foreground group-hover:border-primary/50 group-hover:text-primary transition-all">
-                <User size={14} /> Open bio
+                <User size={14} /> {t("team.openBio", "Open bio")}
               </span>
             </div>
           </motion.button>
