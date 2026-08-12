@@ -153,7 +153,7 @@ const TeamGrid = ({ limit }: { limit?: number }) => {
 
               {selected.journey && (
                 <div className="mt-5">
-                  <h4 className="text-xs font-mono uppercase tracking-widest text-primary mb-2">Parcours</h4>
+                  <h4 className="text-xs font-mono uppercase tracking-widest text-primary mb-2">{t("team.journeyLabel", "Parcours")}</h4>
                   <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
                     {selected.journey}
                   </p>
