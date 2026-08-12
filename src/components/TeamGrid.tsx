@@ -57,14 +57,15 @@ const TeamGrid = ({ limit }: { limit?: number }) => {
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {members.map((m, i) => (
+        {localized.map((m, i) => (
           <motion.button
             key={m.id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.05 }}
-            onClick={() => setSelected(m)}
+            onClick={() => setSelectedId(m.id)}
+
             className="group text-left rounded-xl border border-border bg-card overflow-hidden hover:border-primary/50 transition-all"
           >
             <div className="aspect-square bg-muted overflow-hidden">
