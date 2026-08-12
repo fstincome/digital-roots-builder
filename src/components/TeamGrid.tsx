@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Linkedin, User } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
+import { getTeamEntry } from "@/i18n/teamMembers";
 import {
   Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription,
 } from "@/components/ui/dialog";
@@ -19,8 +21,9 @@ export type TeamMember = {
 };
 
 const TeamGrid = ({ limit }: { limit?: number }) => {
+  const { t, i18n } = useTranslation();
   const [members, setMembers] = useState<TeamMember[]>([]);
-  const [selected, setSelected] = useState<TeamMember | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
 
   useEffect(() => {
     let q = supabase
@@ -32,7 +35,24 @@ const TeamGrid = ({ limit }: { limit?: number }) => {
     q.then(({ data }) => setMembers((data as TeamMember[]) || []));
   }, [limit]);
 
+  // Localized view of a member: translations override the DB values when available.
+  const localize = (m: TeamMember): TeamMember => {
+    const tr = getTeamEntry(m.full_name, i18n.language);
+    if (!tr) return m;
+    return {
+      ...m,
+      role: tr.role || m.role,
+      bio: tr.bio || m.bio,
+      skills: tr.skills?.length ? tr.skills : m.skills,
+      journey: tr.journey || m.journey,
+    };
+  };
+
+  const localized = members.map(localize);
+  const selected = localized.find((m) => m.id === selectedId) || null;
+
   if (members.length === 0) return null;
+
 
   return (
     <>
