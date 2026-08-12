@@ -366,6 +366,10 @@
     "tag": "チーム",
     "intro": "アフリカのデジタル変革を推進する情熱的なチーム。",
     "desc": "SIGHT Africaを支える人々をご紹介します。",
-    "seeAll": "チーム全員を見る"
+    "seeAll": "チーム全員を見る",
+    "openBio": "経歴を見る",
+    "bioLabel": "経歴",
+    "skillsLabel": "主なスキル",
+    "journeyLabel": "歩み"
   }
 }

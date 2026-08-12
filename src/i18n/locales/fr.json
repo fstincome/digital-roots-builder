@@ -366,7 +366,11 @@
     "tag": "Équipe",
     "intro": "Une équipe passionnée au service de la transformation digitale en Afrique.",
     "desc": "Découvrez les personnes qui font vivre SIGHT Africa.",
-    "seeAll": "Voir toute l'équipe"
+    "seeAll": "Voir toute l'équipe",
+    "openBio": "Open bio",
+    "bioLabel": "Biographie",
+    "skillsLabel": "Compétences clés",
+    "journeyLabel": "Parcours"
   },
   "whoWeAre": {
     "tag": "Qui sommes-nous",

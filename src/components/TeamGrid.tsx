@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Linkedin, User } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
+import { getTeamEntry } from "@/i18n/teamMembers";
 import {
   Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription,
 } from "@/components/ui/dialog";
@@ -19,8 +21,9 @@ export type TeamMember = {
 };
 
 const TeamGrid = ({ limit }: { limit?: number }) => {
+  const { t, i18n } = useTranslation();
   const [members, setMembers] = useState<TeamMember[]>([]);
-  const [selected, setSelected] = useState<TeamMember | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
 
   useEffect(() => {
     let q = supabase
@@ -32,19 +35,37 @@ const TeamGrid = ({ limit }: { limit?: number }) => {
     q.then(({ data }) => setMembers((data as TeamMember[]) || []));
   }, [limit]);
 
+  // Localized view of a member: translations override the DB values when available.
+  const localize = (m: TeamMember): TeamMember => {
+    const tr = getTeamEntry(m.full_name, i18n.language);
+    if (!tr) return m;
+    return {
+      ...m,
+      role: tr.role || m.role,
+      bio: tr.bio || m.bio,
+      skills: tr.skills?.length ? tr.skills : m.skills,
+      journey: tr.journey || m.journey,
+    };
+  };
+
+  const localized = members.map(localize);
+  const selected = localized.find((m) => m.id === selectedId) || null;
+
   if (members.length === 0) return null;
+
 
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {members.map((m, i) => (
+        {localized.map((m, i) => (
           <motion.button
             key={m.id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.05 }}
-            onClick={() => setSelected(m)}
+            onClick={() => setSelectedId(m.id)}
+
             className="group text-left rounded-xl border border-border bg-card overflow-hidden hover:border-primary/50 transition-all"
           >
             <div className="aspect-square bg-muted overflow-hidden">
@@ -66,14 +87,14 @@ const TeamGrid = ({ limit }: { limit?: number }) => {
               </h3>
               <p className="text-sm text-muted-foreground mt-1">{m.role}</p>
               <span className="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border text-xs font-medium text-foreground group-hover:border-primary/50 group-hover:text-primary transition-all">
-                <User size={14} /> Open bio
+                <User size={14} /> {t("team.openBio", "Open bio")}
               </span>
             </div>
           </motion.button>
         ))}
       </div>
 
-      <Dialog open={!!selected} onOpenChange={(o) => !o && setSelected(null)}>
+      <Dialog open={!!selected} onOpenChange={(o) => !o && setSelectedId(null)}>
         <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
           {selected && (
             <>
@@ -107,7 +128,7 @@ const TeamGrid = ({ limit }: { limit?: number }) => {
 
               {selected.bio && (
                 <div className="mt-5">
-                  <h4 className="text-xs font-mono uppercase tracking-widest text-primary mb-2">Biographie</h4>
+                  <h4 className="text-xs font-mono uppercase tracking-widest text-primary mb-2">{t("team.bioLabel", "Biographie")}</h4>
                   <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
                     {selected.bio}
                   </p>
@@ -116,7 +137,7 @@ const TeamGrid = ({ limit }: { limit?: number }) => {
 
               {selected.skills && selected.skills.length > 0 && (
                 <div className="mt-5">
-                  <h4 className="text-xs font-mono uppercase tracking-widest text-primary mb-2">Compétences clés</h4>
+                  <h4 className="text-xs font-mono uppercase tracking-widest text-primary mb-2">{t("team.skillsLabel", "Compétences clés")}</h4>
                   <div className="flex flex-wrap gap-2">
                     {selected.skills.map((s) => (
                       <span
@@ -132,7 +153,7 @@ const TeamGrid = ({ limit }: { limit?: number }) => {
 
               {selected.journey && (
                 <div className="mt-5">
-                  <h4 className="text-xs font-mono uppercase tracking-widest text-primary mb-2">Parcours</h4>
+                  <h4 className="text-xs font-mono uppercase tracking-widest text-primary mb-2">{t("team.journeyLabel", "Parcours")}</h4>
                   <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
                     {selected.journey}
                   </p>
