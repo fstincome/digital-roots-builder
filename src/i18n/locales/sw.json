@@ -366,6 +366,10 @@
     "tag": "Timu",
     "intro": "Timu yenye shauku inayoendesha mabadiliko ya kidijitali barani Afrika.",
     "desc": "Kutana na watu nyuma ya SIGHT Africa.",
-    "seeAll": "Ona timu nzima"
+    "seeAll": "Ona timu nzima",
+    "openBio": "Fungua wasifu",
+    "bioLabel": "Wasifu",
+    "skillsLabel": "Ujuzi muhimu",
+    "journeyLabel": "Safari"
   }
 }

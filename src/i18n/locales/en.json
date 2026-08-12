@@ -366,7 +366,11 @@
     "tag": "Team",
     "intro": "A passionate team driving digital transformation in Africa.",
     "desc": "Meet the people behind SIGHT Africa.",
-    "seeAll": "See the whole team"
+    "seeAll": "See the whole team",
+    "openBio": "Open bio",
+    "bioLabel": "Biography",
+    "skillsLabel": "Key skills",
+    "journeyLabel": "Journey"
   },
   "whoWeAre": {
     "tag": "Who We Are",
