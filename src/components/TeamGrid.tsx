@@ -128,7 +128,7 @@ const TeamGrid = ({ limit }: { limit?: number }) => {
 
               {selected.bio && (
                 <div className="mt-5">
-                  <h4 className="text-xs font-mono uppercase tracking-widest text-primary mb-2">Biographie</h4>
+                  <h4 className="text-xs font-mono uppercase tracking-widest text-primary mb-2">{t("team.bioLabel", "Biographie")}</h4>
                   <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
                     {selected.bio}
                   </p>
