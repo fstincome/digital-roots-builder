@@ -137,7 +137,7 @@ const TeamGrid = ({ limit }: { limit?: number }) => {
 
               {selected.skills && selected.skills.length > 0 && (
                 <div className="mt-5">
-                  <h4 className="text-xs font-mono uppercase tracking-widest text-primary mb-2">Compétences clés</h4>
+                  <h4 className="text-xs font-mono uppercase tracking-widest text-primary mb-2">{t("team.skillsLabel", "Compétences clés")}</h4>
                   <div className="flex flex-wrap gap-2">
                     {selected.skills.map((s) => (
                       <span
