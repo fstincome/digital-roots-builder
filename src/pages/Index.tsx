@@ -9,6 +9,7 @@ import { supabase } from "@/integrations/supabase/client";
 import heroImg from "@/assets/hero-africa-tech.jpg";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import SEO from "@/components/SEO";
+import QrToolSection from "@/components/QrToolSection";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
