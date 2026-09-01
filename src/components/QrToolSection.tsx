@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import { QrCode, ScanLine, Sparkles, ArrowUpRight } from "lucide-react";
+import { QrCode, ScanLine, ArrowUpRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 
 const QR_URL = "https://qrcodes.sightnetwork.org/";
-const QR_GENERATE_URL = "https://qrcodes.sightnetwork.org/generate";
 const QR_SCAN_URL = "https://qrcodes.sightnetwork.org/scan";
 
 const QrToolSection = () => {
@@ -22,7 +21,7 @@ const QrToolSection = () => {
         >
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-mono text-xs text-primary tracking-widest uppercase">
-              <Sparkles size={14} /> {t("qr.tag")}
+              <QrCode size={14} /> {t("qr.tag")}
             </span>
             <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mt-5">
               {t("qr.title")}
@@ -39,7 +38,7 @@ const QrToolSection = () => {
 
             <div className="flex flex-wrap gap-3 mt-8">
               <Button variant="hero" size="lg" asChild>
-                <a href={QR_GENERATE_URL} target="_blank" rel="noopener noreferrer">
+                <a href={QR_URL} target="_blank" rel="noopener noreferrer">
                   <QrCode className="mr-2" size={18} /> {t("qr.ctaGenerate")}
                 </a>
               </Button>
