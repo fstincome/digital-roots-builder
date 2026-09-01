@@ -171,6 +171,9 @@ const Index = () => {
         </div>
       </section>
 
+      <QrToolSection />
+
+
       {/* Latest Articles */}
       {latestArticles.length > 0 && (
         <section className="py-24 border-t border-border">
