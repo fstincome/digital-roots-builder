@@ -371,5 +371,18 @@
     "bioLabel": "Biografia",
     "skillsLabel": "Competenze chiave",
     "journeyLabel": "Percorso"
+  },
+  "qr": {
+    "tag": "Strumento gratuito",
+    "title": "Generatore di QR Code SIGHT",
+    "desc": "Crea in pochi secondi QR code personalizzati con il tuo logo e scansionali direttamente dal browser. Uno strumento gratuito sviluppato da SIGHT Africa per imprese, scuole, negozi e associazioni del Burundi.",
+    "f1": "QR code con logo",
+    "f2": "Scansione con la fotocamera",
+    "f3": "Download immediato",
+    "f4": "Nessun account richiesto",
+    "ctaGenerate": "Genera un QR code",
+    "ctaScan": "Scansiona un QR code",
+    "freeBadge": "Gratuito · Online",
+    "cardDesc": "Vai direttamente alla piattaforma QR Code di SIGHT Network."
   }
 }

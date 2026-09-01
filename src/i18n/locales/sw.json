@@ -371,5 +371,18 @@
     "bioLabel": "Wasifu",
     "skillsLabel": "Ujuzi muhimu",
     "journeyLabel": "Safari"
+  },
+  "qr": {
+    "tag": "Zana ya bure",
+    "title": "Kitengeneza QR Code cha SIGHT",
+    "desc": "Tengeneza QR code za kipekee zenye logo yako kwa sekunde kadhaa, kisha zichanganue moja kwa moja kwenye kivinjari chako. Zana ya bure iliyoundwa na SIGHT Africa kwa biashara, shule, maduka na vyama vya Burundi.",
+    "f1": "QR code na logo",
+    "f2": "Changanua kwa kamera",
+    "f3": "Pakua papo hapo",
+    "f4": "Hakuna akaunti inayohitajika",
+    "ctaGenerate": "Tengeneza QR code",
+    "ctaScan": "Changanua QR code",
+    "freeBadge": "Bure · Mtandaoni",
+    "cardDesc": "Fikia moja kwa moja jukwaa la QR Codes la SIGHT Network."
   }
 }

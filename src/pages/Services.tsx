@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Server, Code, Shield, GraduationCap, Globe, Zap, Wrench, Database, Cloud } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
+import QrToolSection from "@/components/QrToolSection";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.5 } }) };
 
@@ -26,6 +27,8 @@ const Services = () => {
         subtitle={t("services.desc")}
         items={[{ label: t("nav.services") }]}
       />
+
+      <QrToolSection />
 
       <section className="py-20">
         <div className="container">
