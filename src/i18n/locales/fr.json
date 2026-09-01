@@ -408,5 +408,18 @@
     "a3": "Nous sommes basés à Gitega, au Burundi, et accompagnons des clients dans tout le pays et en Afrique de l'Est, avec support à distance.",
     "q4": "Assurez-vous un support continu ?",
     "a4": "Oui, nous proposons des contrats de maintenance et un support entreprise pour garder vos systèmes performants."
+  },
+  "qr": {
+    "tag": "Outil gratuit",
+    "title": "Générateur de QR Codes SIGHT",
+    "desc": "Créez en quelques secondes des QR codes personnalisés avec votre logo, puis scannez-les directement depuis votre navigateur. Un outil gratuit développé par SIGHT Africa pour les entreprises, écoles, commerces et associations du Burundi.",
+    "f1": "QR code avec logo",
+    "f2": "Scanner via la caméra",
+    "f3": "Téléchargement instantané",
+    "f4": "Aucun compte requis",
+    "ctaGenerate": "Générer un QR code",
+    "ctaScan": "Scanner un QR code",
+    "freeBadge": "Gratuit · En ligne",
+    "cardDesc": "Accédez directement à la plateforme QR Codes de SIGHT Network."
   }
 }
