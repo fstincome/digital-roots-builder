@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { QrCode, ScanLine, Sparkles, ArrowUpRight } from "lucide-react";
+import { QrCode, ScanLine, ArrowUpRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 
 const QR_URL = "https://qrcodes.sightnetwork.org/";
-const QR_GENERATE_URL = "https://qrcodes.sightnetwork.org/generate";
 const QR_SCAN_URL = "https://qrcodes.sightnetwork.org/scan";
+
 
 const QrToolSection = () => {
   const { t } = useTranslation();
