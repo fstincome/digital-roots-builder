@@ -22,7 +22,7 @@ const QrToolSection = () => {
         >
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 font-mono text-xs text-primary tracking-widest uppercase">
-              <Sparkles size={14} /> {t("qr.tag")}
+              <QrCode size={14} /> {t("qr.tag")}
             </span>
             <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mt-5">
               {t("qr.title")}
@@ -39,7 +39,7 @@ const QrToolSection = () => {
 
             <div className="flex flex-wrap gap-3 mt-8">
               <Button variant="hero" size="lg" asChild>
-                <a href={QR_GENERATE_URL} target="_blank" rel="noopener noreferrer">
+                <a href={QR_URL} target="_blank" rel="noopener noreferrer">
                   <QrCode className="mr-2" size={18} /> {t("qr.ctaGenerate")}
                 </a>
               </Button>
