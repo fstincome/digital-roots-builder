@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 const QR_URL = "https://qrcodes.sightnetwork.org/";
 const QR_SCAN_URL = "https://qrcodes.sightnetwork.org/scan";
 
-
 const QrToolSection = () => {
   const { t } = useTranslation();
 
