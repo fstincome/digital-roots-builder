@@ -347,7 +347,46 @@ export const portfolioContent: Record<string, Partial<Record<PortfolioLang, Entr
         "Shirika lililojitolea kukuza maendeleo endelevu, ulinzi wa mazingira na mabadiliko ya kiikolojia barani Afrika. Centre for Green Development huongoza miradi ya utafiti, utetezi na mafunzo kuhusu uchumi wa kijani, kilimo cha kurejesha, nishati mbadala na uhimilivu wa hali ya hewa. Kwa kushirikiana na jamii za ndani, serikali na washirika wa kimataifa, huchangia kujenga mustakabali wa kijani zaidi na kuimarisha uwezo wa ndani wa kukabiliana na changamoto za mazingira.",
     },
   },
+
+  "https://www.tabito.travel": {
+    fr: {
+      title: "Tanganyika e-Bridge International Tours (TABITO)",
+      description:
+        "Société anonyme de droit burundais créée en septembre 2023, TABITO est un tour opérateur récepteur porté par une équipe multidisciplinaire dévouée au tourisme durable. Elle couvre le tourisme de divertissement comme le tourisme de conférence et d'évènementiel, en régénérant les valeurs de l'après Covid-19. Partenaire privilégié pour rejoindre la destination d'Afrique centrale et orientale logée dans le bassin du Lac Tanganyika, TABITO est connectée aux sous-destinations nationales : montagnes, destinations maritimes et balnéaires. Née d'une expérience hautement humaine, d'une ambition hautement technologique et d'un cœur hautement hospitalier, elle garde sa clientèle branchée globalement par un pont digital enraciné dans la fraîcheur des brises du Tanganyika.",
+    },
+    en: {
+      title: "Tanganyika e-Bridge International Tours (TABITO)",
+      description:
+        "A Burundian public limited company founded in September 2023, TABITO is an inbound tour operator driven by a multidisciplinary team devoted to sustainable tourism. It serves both leisure travel and conference and event tourism, renewing the values of the post-Covid-19 era. A privileged partner for reaching the great destination of Central and East Africa nestled in the Lake Tanganyika basin, TABITO connects travellers to national sub-destinations: mountains, lakeside and seaside experiences. Born of deeply human experience, high technological ambition and a profoundly hospitable heart, it keeps its clients globally connected through a digital bridge rooted in the fresh breezes of Tanganyika.",
+    },
+    es: {
+      title: "Tanganyika e-Bridge International Tours (TABITO)",
+      description:
+        "Sociedad anónima de derecho burundés creada en septiembre de 2023, TABITO es un operador turístico receptivo impulsado por un equipo multidisciplinario dedicado al turismo sostenible. Abarca tanto el turismo de ocio como el de congresos y eventos, renovando los valores de la era pos-Covid-19. Socio privilegiado para acceder al gran destino de África central y oriental situado en la cuenca del lago Tanganica, TABITO conecta con los subdestinos nacionales: montañas, destinos lacustres y balnearios. Nacida de una experiencia profundamente humana, una ambición altamente tecnológica y un corazón hospitalario, mantiene a su clientela conectada globalmente mediante un puente digital arraigado en las brisas frescas del Tanganica.",
+    },
+    de: {
+      title: "Tanganyika e-Bridge International Tours (TABITO)",
+      description:
+        "Die im September 2023 gegründete burundische Aktiengesellschaft TABITO ist ein Incoming-Reiseveranstalter mit einem multidisziplinären Team, das sich dem nachhaltigen Tourismus widmet. Sie deckt sowohl Freizeittourismus als auch Kongress- und Eventtourismus ab und belebt die Werte der Zeit nach Covid-19 neu. Als bevorzugter Partner für die große Destination Zentral- und Ostafrikas im Becken des Tanganjikasees verbindet TABITO Reisende mit nationalen Teildestinationen: Berge, See- und Badeziele. Aus zutiefst menschlicher Erfahrung, hohem technologischem Anspruch und großer Gastfreundschaft entstanden, hält sie ihre Gäste über eine digitale Brücke global vernetzt.",
+    },
+    it: {
+      title: "Tanganyika e-Bridge International Tours (TABITO)",
+      description:
+        "Società per azioni di diritto burundese creata nel settembre 2023, TABITO è un tour operator incoming guidato da un team multidisciplinare dedito al turismo sostenibile. Si occupa sia di turismo leisure sia di turismo congressuale ed eventi, rigenerando i valori del periodo post Covid-19. Partner privilegiato per raggiungere la grande destinazione dell'Africa centrale e orientale nel bacino del Lago Tanganica, TABITO collega alle sotto-destinazioni nazionali: montagne, mete lacustri e balneari. Nata da un'esperienza profondamente umana, da un'ambizione tecnologica e da un cuore ospitale, mantiene i clienti connessi globalmente tramite un ponte digitale.",
+    },
+    ja: {
+      title: "Tanganyika e-Bridge International Tours (TABITO)",
+      description:
+        "2023年9月に設立されたブルンジの株式会社TABITOは、持続可能な観光に献身する多分野のチームによるインバウンド・ツアーオペレーターです。レジャー観光に加え、会議・イベント観光も手がけ、コロナ後の新しい価値を創出しています。タンガニーカ湖流域に広がる中央・東アフリカの魅力的なデスティネーションへの特別なパートナーとして、山岳地帯や湖畔・海浜など国内のサブデスティネーションをつなぎます。人間味あふれる経験、高い技術的野心、そしてもてなしの心から生まれ、デジタルの架け橋で顧客を世界とつなぎ続けます。",
+    },
+    sw: {
+      title: "Tanganyika e-Bridge International Tours (TABITO)",
+      description:
+        "Kampuni ya hisa ya Burundi iliyoanzishwa Septemba 2023, TABITO ni mwendeshaji watalii wa ndani unaoongozwa na timu ya taaluma mbalimbali iliyojitolea kwa utalii endelevu. Hushughulikia utalii wa burudani pamoja na utalii wa mikutano na matukio, ikihuisha maadili ya kipindi cha baada ya Covid-19. Kama mshirika wa kipekee wa kufikia eneo kuu la Afrika ya Kati na Mashariki katika bonde la Ziwa Tanganyika, TABITO huunganisha maeneo madogo ya kitaifa: milima, fukwe na maeneo ya ziwa. Ikizaliwa kutokana na uzoefu wa kibinadamu, matarajio ya kiteknolojia na moyo wa ukarimu, huwaweka wateja wake wameunganishwa kidunia kupitia daraja la kidijitali.",
+    },
+  },
 };
+
 
 export const getPortfolioTranslation = (
   link: string | null | undefined,
