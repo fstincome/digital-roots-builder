@@ -30,6 +30,8 @@ const Bitcoin = () => {
         items={[{ label: t("nav.bitcoin") }]}
       />
 
+      <BitLiberaSection />
+
       <section className="py-20 border-b border-border bg-card/30">
         <div className="container">
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-center mb-16">
