@@ -384,5 +384,19 @@
     "ctaScan": "Changanua QR code",
     "freeBadge": "Bure · Mtandaoni",
     "cardDesc": "Fikia moja kwa moja jukwaa la QR Codes la SIGHT Network."
+  },
+  "bitlibera": {
+    "tag": "Suluhu ya malipo ya Bitcoin",
+    "title": "BitLibera —",
+    "titleHighlight": "malipo ya Bitcoin kote EAC",
+    "desc": "Suluhu yetu ya malipo ya Bitcoin kwa Afrika Mashariki. BitLibera huunganisha Lightning Network na pochi za simu za ndani: wafanyabiashara, wafanyakazi huru na diaspora hupokea na kutuma thamani kwa sekunde, bila gharama kubwa, kutoka Burundi hadi Jumuiya yote ya Afrika Mashariki.",
+    "f1": "Malipo ya Lightning kwa QR code",
+    "f2": "Ubadilishaji SATs ↔ pochi za simu",
+    "f3": "Uhamisho wa diaspora kwa sekunde",
+    "f4": "API na webhooks kwa wasanidi",
+    "ctaVisit": "Gundua BitLibera",
+    "ctaPay": "Badilisha na My Satoshis",
+    "badge": "Malipo · EAC",
+    "cardDesc": "Fika moja kwa moja kwenye jukwaa la malipo ya Bitcoin la BitLibera."
   }
 }

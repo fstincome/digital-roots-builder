@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
+import BitLiberaSection from "@/components/BitLiberaSection";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -29,6 +30,8 @@ const Bitcoin = () => {
         subtitle={t("bitcoin.desc")}
         items={[{ label: t("nav.bitcoin") }]}
       />
+
+      <BitLiberaSection />
 
       <section className="py-20 border-b border-border bg-card/30">
         <div className="container">
