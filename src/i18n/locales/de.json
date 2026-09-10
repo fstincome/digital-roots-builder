@@ -384,5 +384,19 @@
     "ctaScan": "QR-Code scannen",
     "freeBadge": "Kostenlos · Online",
     "cardDesc": "Direkt zur QR-Code-Plattform von SIGHT Network."
+  },
+  "bitlibera": {
+    "tag": "Bitcoin-Zahlungslösung",
+    "title": "BitLibera —",
+    "titleHighlight": "Bitcoin-Zahlungen in der EAC",
+    "desc": "Unsere Bitcoin-Zahlungslösung für Ostafrika. BitLibera verbindet das Lightning Network mit lokalen Mobile Wallets: Händler, Freelancer und die Diaspora empfangen und senden Werte in Sekunden, ohne überhöhte Gebühren – von Burundi in die gesamte Ostafrikanische Gemeinschaft.",
+    "f1": "Lightning-Zahlung per QR-Code",
+    "f2": "SATs ↔ Mobile-Wallet-Umtausch",
+    "f3": "Diaspora-Überweisungen in Sekunden",
+    "f4": "API und Webhooks für Entwickler",
+    "ctaVisit": "BitLibera entdecken",
+    "ctaPay": "Mit My Satoshis tauschen",
+    "badge": "Zahlungen · EAC",
+    "cardDesc": "Direkt zur Bitcoin-Zahlungsplattform BitLibera."
   }
 }

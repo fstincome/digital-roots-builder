@@ -384,5 +384,19 @@
     "ctaScan": "QRコードをスキャン",
     "freeBadge": "無料・オンライン",
     "cardDesc": "SIGHT Network のQRコードプラットフォームへ直接アクセス。"
+  },
+  "bitlibera": {
+    "tag": "ビットコイン決済ソリューション",
+    "title": "BitLibera —",
+    "titleHighlight": "EAC全域のビットコイン決済",
+    "desc": "東アフリカ向けの当社のビットコイン決済ソリューション。BitLiberaはライトニングネットワークと現地のモバイルウォレットを接続し、加盟店、フリーランス、ディアスポラが数秒で価値を受け取り送金できます。過大な手数料なしに、ブルンジから東アフリカ共同体全域へ。",
+    "f1": "QRコードによるライトニング決済",
+    "f2": "SATs ↔ モバイルウォレット変換",
+    "f3": "数秒で完了するディアスポラ送金",
+    "f4": "開発者向けAPIとWebhook",
+    "ctaVisit": "BitLiberaを見る",
+    "ctaPay": "My Satoshisで交換",
+    "badge": "決済 · EAC",
+    "cardDesc": "BitLiberaのビットコイン決済プラットフォームへ直接アクセス。"
   }
 }
