@@ -385,7 +385,46 @@ export const portfolioContent: Record<string, Partial<Record<PortfolioLang, Entr
         "Kampuni ya hisa ya Burundi iliyoanzishwa Septemba 2023, TABITO ni mwendeshaji watalii wa ndani unaoongozwa na timu ya taaluma mbalimbali iliyojitolea kwa utalii endelevu. Hushughulikia utalii wa burudani pamoja na utalii wa mikutano na matukio, ikihuisha maadili ya kipindi cha baada ya Covid-19. Kama mshirika wa kipekee wa kufikia eneo kuu la Afrika ya Kati na Mashariki katika bonde la Ziwa Tanganyika, TABITO huunganisha maeneo madogo ya kitaifa: milima, fukwe na maeneo ya ziwa. Ikizaliwa kutokana na uzoefu wa kibinadamu, matarajio ya kiteknolojia na moyo wa ukarimu, huwaweka wateja wake wameunganishwa kidunia kupitia daraja la kidijitali.",
     },
   },
+
+  "https://www.bitlibera.com": {
+    fr: {
+      title: "BitLibera",
+      description:
+        "Notre solution de paiement Bitcoin pour l'Afrique de l'Est. BitLibera relie le Lightning Network aux portefeuilles mobiles locaux : commerçants, freelances et diaspora encaissent et envoient de la valeur en quelques secondes, sans frais d'intermédiaires excessifs. La plateforme propose l'encaissement par QR code, la conversion instantanée entre satoshis et portefeuilles mobiles, des transferts diaspora quasi immédiats, ainsi qu'une API et des webhooks pour intégrer les paiements Bitcoin dans vos applications. Ancrée au Burundi, elle s'étend à toute la Communauté d'Afrique de l'Est et s'accompagne de formations pratiques sur la garde autonome des fonds.",
+    },
+    en: {
+      title: "BitLibera",
+      description:
+        "Our Bitcoin payment solution for East Africa. BitLibera bridges the Lightning Network with local mobile wallets: merchants, freelancers and the diaspora receive and send value in seconds, without excessive intermediary fees. The platform offers QR code checkout, instant conversion between satoshis and mobile wallets, near-instant diaspora transfers, plus an API and webhooks to embed Bitcoin payments in your own applications. Rooted in Burundi, it extends across the East African Community and comes with hands-on self-custody training.",
+    },
+    es: {
+      title: "BitLibera",
+      description:
+        "Nuestra solución de pago Bitcoin para África del Este. BitLibera conecta la Lightning Network con las carteras móviles locales: comercios, freelancers y la diáspora cobran y envían valor en segundos, sin comisiones abusivas de intermediarios. La plataforma ofrece cobro por código QR, conversión instantánea entre satoshis y carteras móviles, transferencias de la diáspora casi inmediatas, además de una API y webhooks para integrar los pagos Bitcoin en sus aplicaciones. Arraigada en Burundi, se extiende a toda la Comunidad de África Oriental con formaciones prácticas de autocustodia.",
+    },
+    de: {
+      title: "BitLibera",
+      description:
+        "Unsere Bitcoin-Zahlungslösung für Ostafrika. BitLibera verbindet das Lightning Network mit lokalen Mobile Wallets: Händler, Freelancer und die Diaspora empfangen und senden Werte in Sekunden, ohne überhöhte Vermittlergebühren. Die Plattform bietet QR-Code-Zahlungen, sofortigen Umtausch zwischen Satoshis und Mobile Wallets, nahezu unmittelbare Diaspora-Überweisungen sowie API und Webhooks zur Integration von Bitcoin-Zahlungen in eigene Anwendungen. In Burundi verankert, reicht sie in die gesamte Ostafrikanische Gemeinschaft und wird von praxisnahen Self-Custody-Schulungen begleitet.",
+    },
+    it: {
+      title: "BitLibera",
+      description:
+        "La nostra soluzione di pagamento Bitcoin per l'Africa orientale. BitLibera collega la Lightning Network ai portafogli mobili locali: commercianti, freelance e diaspora incassano e inviano valore in pochi secondi, senza commissioni eccessive. La piattaforma offre l'incasso tramite QR code, la conversione istantanea tra satoshi e portafogli mobili, trasferimenti della diaspora quasi immediati, oltre a API e webhook per integrare i pagamenti Bitcoin nelle proprie applicazioni. Radicata in Burundi, si estende a tutta la Comunità dell'Africa Orientale con formazioni pratiche sulla self-custody.",
+    },
+    ja: {
+      title: "BitLibera",
+      description:
+        "東アフリカ向けの当社のビットコイン決済ソリューション。BitLiberaはライトニングネットワークと現地のモバイルウォレットを接続し、加盟店、フリーランス、ディアスポラが過大な仲介手数料なしに数秒で価値を受け取り送金できます。QRコード決済、サトシとモバイルウォレット間の即時変換、ほぼ即時のディアスポラ送金、さらに自社アプリへ組み込むためのAPIとWebhookを提供。ブルンジに根ざしながら東アフリカ共同体全域へ広がり、自己保管に関する実践的な研修も伴います。",
+    },
+    sw: {
+      title: "BitLibera",
+      description:
+        "Suluhu yetu ya malipo ya Bitcoin kwa Afrika Mashariki. BitLibera huunganisha Lightning Network na pochi za simu za ndani: wafanyabiashara, wafanyakazi huru na diaspora hupokea na kutuma thamani kwa sekunde, bila gharama kubwa za wapatanishi. Jukwaa hutoa malipo kwa QR code, ubadilishaji wa papo hapo kati ya satoshi na pochi za simu, uhamisho wa diaspora wa haraka, pamoja na API na webhooks za kuunganisha malipo ya Bitcoin katika programu zako. Ikiwa na mizizi Burundi, inafikia Jumuiya yote ya Afrika Mashariki na mafunzo ya vitendo ya kutunza fedha mwenyewe.",
+    },
+  },
 };
+
 
 
 export const getPortfolioTranslation = (
