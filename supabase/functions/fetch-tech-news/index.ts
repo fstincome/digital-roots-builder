@@ -22,15 +22,19 @@ const json = (body: unknown, status = 200) =>
     headers: { ...corsHeaders, 'Content-Type': 'application/json' },
   });
 
+const NAMED: Record<string, string> = {
+  nbsp: ' ', amp: '&', quot: '"', apos: "'", lt: '<', gt: '>',
+  laquo: '«', raquo: '»', hellip: '…', rsquo: '’', lsquo: '‘',
+  ldquo: '“', rdquo: '”', ndash: '–', mdash: '—', eacute: 'é', egrave: 'è',
+};
+
 const strip = (html: string) =>
   html
     .replace(/<[^>]*>/g, ' ')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&amp;/g, '&')
-    .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'")
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&([a-z]+);/gi, (m, n) => NAMED[n.toLowerCase()] ?? m)
+    .replace(/\u00a0/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 
