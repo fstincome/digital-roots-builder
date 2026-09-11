@@ -451,6 +451,75 @@ export type Database = {
         }
         Relationships: []
       }
+      tech_news: {
+        Row: {
+          created_at: string
+          guid: string
+          id: string
+          image: string | null
+          link: string
+          published_at: string | null
+          source: string
+          source_url: string | null
+          summary: string | null
+          title: string
+          translated_at: string | null
+          translations: Json
+        }
+        Insert: {
+          created_at?: string
+          guid: string
+          id?: string
+          image?: string | null
+          link: string
+          published_at?: string | null
+          source?: string
+          source_url?: string | null
+          summary?: string | null
+          title: string
+          translated_at?: string | null
+          translations?: Json
+        }
+        Update: {
+          created_at?: string
+          guid?: string
+          id?: string
+          image?: string | null
+          link?: string
+          published_at?: string | null
+          source?: string
+          source_url?: string | null
+          summary?: string | null
+          title?: string
+          translated_at?: string | null
+          translations?: Json
+        }
+        Relationships: []
+      }
+      tech_news_jobs: {
+        Row: {
+          lease_until: string | null
+          message: string | null
+          name: string
+          status: string
+          updated_at: string
+        }
+        Insert: {
+          lease_until?: string | null
+          message?: string | null
+          name: string
+          status?: string
+          updated_at?: string
+        }
+        Update: {
+          lease_until?: string | null
+          message?: string | null
+          name?: string
+          status?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           id: string

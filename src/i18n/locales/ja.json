@@ -13,7 +13,8 @@
     "login": "ログイン",
     "dashboard": "ダッシュボード",
     "myAccount": "マイアカウント",
-    "team": "チーム"
+    "team": "チーム",
+    "techNews": "テックニュース"
   },
   "hero": {
     "tag": "// SIGHT AFRICA — ブルンジ",
@@ -398,5 +399,14 @@
     "ctaPay": "My Satoshisで交換",
     "badge": "決済 · EAC",
     "cardDesc": "BitLiberaのビットコイン決済プラットフォームへ直接アクセス。"
+  },
+  "techNews": {
+    "tag": "技術動向",
+    "title": "テクノロジーニュース",
+    "desc": "技術・IT分野の最新ニュースを毎日翻訳してお届けします。",
+    "empty": "まだニュースがありません。",
+    "source": "出典",
+    "read": "記事を読む",
+    "updated": "自動更新"
   }
 }
