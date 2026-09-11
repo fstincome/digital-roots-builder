@@ -15,6 +15,7 @@ import Services from "@/pages/Services";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Blog from "@/pages/Blog";
+import TechNews from "@/pages/TechNews";
 import BlogPost from "@/pages/BlogPost";
 import Programs from "@/pages/Programs";
 import ProgramDetail from "@/pages/ProgramDetail";
@@ -60,6 +61,7 @@ const App = () => (
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/actualites-tech" element={<TechNews />} />
               {/* Programs hidden from public site */}
               <Route path="/academie" element={<Academy />} />
               <Route path="/portfolio" element={<Portfolio />} />
