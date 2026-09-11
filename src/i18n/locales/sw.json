@@ -13,7 +13,8 @@
     "login": "Ingia",
     "dashboard": "Dashibodi",
     "myAccount": "Akaunti yangu",
-    "team": "Timu"
+    "team": "Timu",
+    "techNews": "Habari za Teknolojia"
   },
   "hero": {
     "tag": "// SIGHT AFRICA — BURUNDI",
@@ -398,5 +399,14 @@
     "ctaPay": "Badilisha na My Satoshis",
     "badge": "Malipo · EAC",
     "cardDesc": "Fika moja kwa moja kwenye jukwaa la malipo ya Bitcoin la BitLibera."
+  },
+  "techNews": {
+    "tag": "Ufuatiliaji wa teknolojia",
+    "title": "Habari za teknolojia",
+    "desc": "Uteuzi wa kila siku wa habari za teknolojia na TEHAMA, zilizotafsiriwa kwa ajili yako.",
+    "empty": "Hakuna habari bado.",
+    "source": "Chanzo",
+    "read": "Soma makala",
+    "updated": "Inasasishwa kiotomatiki"
   }
 }

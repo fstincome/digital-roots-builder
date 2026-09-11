@@ -13,7 +13,8 @@
     "login": "Anmelden",
     "dashboard": "Dashboard",
     "myAccount": "Mein Konto",
-    "team": "Team"
+    "team": "Team",
+    "techNews": "Tech-News"
   },
   "hero": {
     "tag": "// SIGHT AFRICA — BURUNDI",
@@ -398,5 +399,14 @@
     "ctaPay": "Mit My Satoshis tauschen",
     "badge": "Zahlungen · EAC",
     "cardDesc": "Direkt zur Bitcoin-Zahlungsplattform BitLibera."
+  },
+  "techNews": {
+    "tag": "Technologiebeobachtung",
+    "title": "Technologie-Nachrichten",
+    "desc": "Eine tägliche Auswahl an Tech- und IT-Nachrichten, für Sie übersetzt.",
+    "empty": "Noch keine Nachrichten.",
+    "source": "Quelle",
+    "read": "Artikel lesen",
+    "updated": "Automatisch aktualisiert"
   }
 }
