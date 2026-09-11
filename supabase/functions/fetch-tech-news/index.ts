@@ -3,6 +3,7 @@ import { createClient } from 'npm:@supabase/supabase-js@2';
 
 const FEEDS = [
   { source: 'Developpez.com', url: 'https://www.developpez.com/index/rss' },
+  { source: 'Next', url: 'https://next.ink/feed/' },
 ];
 
 const JOB = 'fetch-tech-news';
@@ -50,7 +51,9 @@ const parseFeed = (xml: string) => {
     if (!title || !link) continue;
     const desc = tag(b, 'description') || '';
     const img = b.match(/<enclosure[^>]*url="([^"]+)"/i)?.[1]
+      || b.match(/<media:(?:content|thumbnail)[^>]*url="([^"]+)"/i)?.[1]
       || desc.match(/<img[^>]*src="([^"]+)"/i)?.[1]
+      || b.match(/<img[^>]*src="([^"]+)"/i)?.[1]
       || null;
     const date = tag(b, 'pubDate');
     items.push({
