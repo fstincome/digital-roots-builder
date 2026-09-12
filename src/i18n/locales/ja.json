@@ -400,6 +400,19 @@
     "badge": "決済 · EAC",
     "cardDesc": "BitLiberaのビットコイン決済プラットフォームへ直接アクセス。"
   },
+  "exchanger": {
+    "tag": "無料ツール",
+    "title": "BitcoinとLumicashを簡単に交換",
+    "desc": "Lumicashを通じて、サトシとブルンジ・フランを売買できます。BitLibera交換所なら、アカウント登録やKYCなしで素早く取引できます。",
+    "f1": "Bitcoin ↔ Lumicash",
+    "f2": "アカウント不要",
+    "f3": "迅速な取引",
+    "f4": "ブルンジ向けに設計",
+    "ctaExchange": "交換所を開く",
+    "ctaDocs": "ドキュメントを見る",
+    "badge": "無料 · アカウント不要",
+    "imageAlt": "BitLiberaのBitcoin・Lumicash交換画面"
+  },
   "techNews": {
     "tag": "技術動向",
     "title": "テクノロジーニュース",

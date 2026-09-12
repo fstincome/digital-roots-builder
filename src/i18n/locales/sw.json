@@ -400,6 +400,19 @@
     "badge": "Malipo · EAC",
     "cardDesc": "Fika moja kwa moja kwenye jukwaa la malipo ya Bitcoin la BitLibera."
   },
+  "exchanger": {
+    "tag": "Zana ya bure",
+    "title": "Badilisha Bitcoin na Lumicash kwa urahisi",
+    "desc": "Nunua au uza satoshi kwa faranga za Burundi kupitia Lumicash. Exchanger ya BitLibera hukuwezesha kufanya miamala haraka, bila akaunti wala mchakato wa KYC.",
+    "f1": "Bitcoin ↔ Lumicash",
+    "f2": "Hakuna akaunti inayohitajika",
+    "f3": "Miamala ya haraka",
+    "f4": "Imeundwa kwa ajili ya Burundi",
+    "ctaExchange": "Fungua exchanger",
+    "ctaDocs": "Tazama nyaraka",
+    "badge": "Bure · Bila akaunti",
+    "imageAlt": "Kiolesura cha exchanger ya Bitcoin na Lumicash ya BitLibera"
+  },
   "techNews": {
     "tag": "Ufuatiliaji wa teknolojia",
     "title": "Habari za teknolojia",

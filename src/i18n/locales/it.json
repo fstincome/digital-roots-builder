@@ -400,6 +400,19 @@
     "badge": "Pagamenti · EAC",
     "cardDesc": "Vai direttamente alla piattaforma di pagamento Bitcoin BitLibera."
   },
+  "exchanger": {
+    "tag": "Strumento gratuito",
+    "title": "Scambia Bitcoin e Lumicash con facilità",
+    "desc": "Compra o vendi satoshi in franchi burundesi tramite Lumicash. L'exchanger BitLibera consente operazioni rapide, senza account e senza procedura KYC.",
+    "f1": "Bitcoin ↔ Lumicash",
+    "f2": "Nessun account richiesto",
+    "f3": "Transazioni rapide",
+    "f4": "Creato per il Burundi",
+    "ctaExchange": "Apri l'exchanger",
+    "ctaDocs": "Vedi la documentazione",
+    "badge": "Gratuito · Senza account",
+    "imageAlt": "Interfaccia dell'exchanger Bitcoin e Lumicash di BitLibera"
+  },
   "techNews": {
     "tag": "Osservatorio tecnologico",
     "title": "Notizie tecnologiche",
