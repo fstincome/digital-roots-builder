@@ -423,6 +423,19 @@
     "freeBadge": "Gratuit · En ligne",
     "cardDesc": "Accédez directement à la plateforme QR Codes de SIGHT Network."
   },
+  "exchanger": {
+    "tag": "Outil gratuit",
+    "title": "Échangez Bitcoin et Lumicash simplement",
+    "desc": "Achetez ou vendez des sats contre des francs burundais via Lumicash. L'échangeur BitLibera vous permet d'effectuer vos opérations rapidement, sans compte et sans procédure KYC.",
+    "f1": "Bitcoin ↔ Lumicash",
+    "f2": "Aucun compte requis",
+    "f3": "Transactions rapides",
+    "f4": "Conçu pour le Burundi",
+    "ctaExchange": "Ouvrir l'échangeur",
+    "ctaDocs": "Voir la documentation",
+    "badge": "Gratuit · Sans compte",
+    "imageAlt": "Interface de l'échangeur Bitcoin et Lumicash BitLibera"
+  },
   "bitlibera": {
     "tag": "Solution Bitcoin de paiement",
     "title": "BitLibera —",

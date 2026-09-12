@@ -400,6 +400,19 @@
     "badge": "Pagos · EAC",
     "cardDesc": "Accede directamente a la plataforma de pagos Bitcoin BitLibera."
   },
+  "exchanger": {
+    "tag": "Herramienta gratuita",
+    "title": "Cambia Bitcoin y Lumicash fácilmente",
+    "desc": "Compra o vende sats por francos burundeses mediante Lumicash. El intercambiador BitLibera permite operar rápidamente, sin cuenta y sin proceso KYC.",
+    "f1": "Bitcoin ↔ Lumicash",
+    "f2": "Sin cuenta",
+    "f3": "Transacciones rápidas",
+    "f4": "Creado para Burundi",
+    "ctaExchange": "Abrir el intercambiador",
+    "ctaDocs": "Ver la documentación",
+    "badge": "Gratis · Sin cuenta",
+    "imageAlt": "Interfaz del intercambiador Bitcoin y Lumicash de BitLibera"
+  },
   "techNews": {
     "tag": "Vigilancia tecnológica",
     "title": "Noticias tecnológicas",

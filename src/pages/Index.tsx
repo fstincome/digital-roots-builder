@@ -10,6 +10,7 @@ import heroImg from "@/assets/hero-africa-tech.jpg";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import SEO from "@/components/SEO";
 import QrToolSection from "@/components/QrToolSection";
+import BitLiberaExchangerSection from "@/components/BitLiberaExchangerSection";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -173,6 +174,8 @@ const Index = () => {
       </section>
 
       <QrToolSection />
+
+      <BitLiberaExchangerSection />
 
 
       {/* Latest Articles */}

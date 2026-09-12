@@ -400,6 +400,19 @@
     "badge": "Zahlungen · EAC",
     "cardDesc": "Direkt zur Bitcoin-Zahlungsplattform BitLibera."
   },
+  "exchanger": {
+    "tag": "Kostenloses Tool",
+    "title": "Bitcoin und Lumicash einfach tauschen",
+    "desc": "Kaufen oder verkaufen Sie Sats gegen burundische Francs über Lumicash. Mit dem BitLibera-Exchanger handeln Sie schnell, ohne Konto und ohne KYC-Verfahren.",
+    "f1": "Bitcoin ↔ Lumicash",
+    "f2": "Kein Konto erforderlich",
+    "f3": "Schnelle Transaktionen",
+    "f4": "Für Burundi entwickelt",
+    "ctaExchange": "Exchanger öffnen",
+    "ctaDocs": "Dokumentation ansehen",
+    "badge": "Kostenlos · Ohne Konto",
+    "imageAlt": "BitLibera-Oberfläche zum Tausch von Bitcoin und Lumicash"
+  },
   "techNews": {
     "tag": "Technologiebeobachtung",
     "title": "Technologie-Nachrichten",
