@@ -69,13 +69,41 @@ const TechNews = () => {
 
       <section className="py-20">
         <div className="container">
-          <div className="flex items-center gap-2 mb-8 text-xs uppercase tracking-widest text-primary">
+          <div className="flex items-center gap-2 mb-4 text-xs uppercase tracking-widest text-primary">
             <Newspaper size={14} />
             <span>{t("techNews.tag")}</span>
             <span className="text-muted-foreground normal-case tracking-normal">
               · {t("techNews.updated")}
             </span>
           </div>
+
+          {!loading && sources.length > 1 && (
+            <div className="flex flex-wrap gap-2 mb-8">
+              <button
+                onClick={() => setSourceFilter(null)}
+                className={`rounded-full px-4 py-1.5 text-sm border transition-colors ${
+                  sourceFilter === null
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "border-border text-muted-foreground hover:border-primary/40 hover:text-foreground"
+                }`}
+              >
+                {t("techNews.all")}
+              </button>
+              {sources.map((s) => (
+                <button
+                  key={s}
+                  onClick={() => setSourceFilter(s === sourceFilter ? null : s)}
+                  className={`rounded-full px-4 py-1.5 text-sm border transition-colors ${
+                    sourceFilter === s
+                      ? "bg-primary text-primary-foreground border-primary"
+                      : "border-border text-muted-foreground hover:border-primary/40 hover:text-foreground"
+                  }`}
+                >
+                  {s}
+                </button>
+              ))}
+            </div>
+          )}
 
           {loading ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
