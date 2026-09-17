@@ -215,7 +215,7 @@ export const portfolioContent: Record<string, Partial<Record<PortfolioLang, Entr
     de: {
       title: "EMSI BURUNDI (Electro Multi-Services Innovation)",
       description:
-        "EMSIS BURUNDI (Electro Multi-Services Innovation) mit Sitz in Muyinga widmet sich der Lieferung außergewöhnlicher Waren und Dienstleistungen: Online-Beschaffungsunterstützung und Elektronikbestellungen für alle Ihre geschäftlichen Bedürfnisse. Das Expertenteam bietet ein breites Spektrum spezialisierter Dienstleistungen für verschiedene Branchen — maßgeschneiderte Softwarelösungen und Online-Sourcing von Qualitätsprodukten. Das Engagement für Exzellenz und Kundenzufriedenheit macht EMSI zum bevorzugten Partner.",
+        "EMSI BURUNDI (Electro Multi-Services Innovation) mit Sitz in Muyinga widmet sich der Lieferung außergewöhnlicher Waren und Dienstleistungen: Online-Beschaffungsunterstützung und Elektronikbestellungen für alle Ihre geschäftlichen Bedürfnisse. Das Expertenteam bietet ein breites Spektrum spezialisierter Dienstleistungen für verschiedene Branchen — maßgeschneiderte Softwarelösungen und Online-Sourcing von Qualitätsprodukten. Das Engagement für Exzellenz und Kundenzufriedenheit macht EMSI zum bevorzugten Partner.",
     },
     it: {
       title: "EMSI BURUNDI (Electro Multi-Services Innovation)",
