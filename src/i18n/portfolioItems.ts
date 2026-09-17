@@ -198,39 +198,39 @@ export const portfolioContent: Record<string, Partial<Record<PortfolioLang, Entr
 
   "https://www.emsi.bi": {
     fr: {
-      title: "EMSI (Entreprise de Maintenance, Services et Informatique)",
+      title: "EMSI BURUNDI (Electro Multi-Services Innovation)",
       description:
-        "Fournisseur de solutions technologiques au Burundi, spécialisé dans la maintenance technique, le support informatique et les services d'intégration réseau pour les entreprises et les institutions. EMSI accompagne la transformation digitale locale en proposant des services d'ingénierie logicielle, de gestion d'infrastructures informatiques et de maintenance préventive et curative de systèmes technologiques. Son expertise permet aux organisations d'optimiser leur outil informatique, d'assurer la continuité de leurs opérations et de sécuriser leurs données environnementales.",
+        "Basée à Muyinga, EMSI BURUNDI (Electro Multi-Services Innovation) se consacre à la livraison de biens et services exceptionnels : support d'approvisionnement en ligne et commandes de produits électroniques pour tous vos besoins professionnels. Son équipe d'experts offre une large gamme de services spécialisés adaptés à divers secteurs — solutions logicielles personnalisées, sourcing en ligne de produits de qualité. Son engagement pour l'excellence et la satisfaction client fait d'elle un partenaire de choix.",
     },
     en: {
-      title: "EMSI (Maintenance, Services and IT Company)",
+      title: "EMSI BURUNDI (Electro Multi-Services Innovation)",
       description:
-        "Technology solutions provider in Burundi, specialized in technical maintenance, IT support and network integration services for companies and institutions. EMSI supports local digital transformation with software engineering, IT infrastructure management and preventive and corrective maintenance of technology systems. Its expertise helps organizations optimize their IT tools, ensure business continuity and secure their operational data.",
+        "Based in Muyinga, EMSI BURUNDI (Electro Multi-Services Innovation) is dedicated to delivering exceptional goods and services: online procurement support and electronics orders for all your business needs. Its team of experts offers a wide range of specialized services for various industries — customized software solutions and online sourcing of top-quality products. Its commitment to excellence and customer satisfaction makes it a preferred partner.",
     },
     es: {
-      title: "EMSI (Empresa de Mantenimiento, Servicios e Informática)",
+      title: "EMSI BURUNDI (Electro Multi-Services Innovation)",
       description:
-        "Proveedor de soluciones tecnológicas en Burundi, especializado en mantenimiento técnico, soporte informático e integración de redes para empresas e instituciones. EMSI acompaña la transformación digital local con ingeniería de software, gestión de infraestructuras TI y mantenimiento preventivo y correctivo de sistemas tecnológicos. Su experiencia permite a las organizaciones optimizar sus herramientas TI, asegurar la continuidad de sus operaciones y proteger sus datos.",
+        "Con sede en Muyinga, EMSI BURUNDI (Electro Multi-Services Innovation) se dedica a ofrecer bienes y servicios excepcionales: apoyo de aprovisionamiento en línea y pedidos de productos electrónicos para todas sus necesidades empresariales. Su equipo de expertos ofrece una amplia gama de servicios especializados para diversos sectores — soluciones de software personalizadas y abastecimiento en línea de productos de primera calidad. Su compromiso con la excelencia y la satisfacción del cliente la convierten en un socio preferido.",
     },
     de: {
-      title: "EMSI (Unternehmen für Wartung, Services und IT)",
+      title: "EMSI BURUNDI (Electro Multi-Services Innovation)",
       description:
-        "Anbieter von Technologielösungen in Burundi, spezialisiert auf technische Wartung, IT-Support und Netzwerkintegration für Unternehmen und Institutionen. EMSI begleitet die lokale Digitalisierung mit Softwareentwicklung, IT-Infrastrukturmanagement sowie präventiver und kurativer Wartung technologischer Systeme. Die Expertise hilft Organisationen, ihre IT zu optimieren, die Geschäftskontinuität zu sichern und ihre Daten zu schützen.",
+        "EMSIS BURUNDI (Electro Multi-Services Innovation) mit Sitz in Muyinga widmet sich der Lieferung außergewöhnlicher Waren und Dienstleistungen: Online-Beschaffungsunterstützung und Elektronikbestellungen für alle Ihre geschäftlichen Bedürfnisse. Das Expertenteam bietet ein breites Spektrum spezialisierter Dienstleistungen für verschiedene Branchen — maßgeschneiderte Softwarelösungen und Online-Sourcing von Qualitätsprodukten. Das Engagement für Exzellenz und Kundenzufriedenheit macht EMSI zum bevorzugten Partner.",
     },
     it: {
-      title: "EMSI (Impresa di Manutenzione, Servizi e Informatica)",
+      title: "EMSI BURUNDI (Electro Multi-Services Innovation)",
       description:
-        "Fornitore di soluzioni tecnologiche in Burundi, specializzato in manutenzione tecnica, supporto informatico e integrazione di rete per aziende e istituzioni. EMSI accompagna la trasformazione digitale locale con servizi di ingegneria del software, gestione delle infrastrutture IT e manutenzione preventiva e correttiva dei sistemi tecnologici. La sua competenza aiuta le organizzazioni a ottimizzare gli strumenti IT, garantire la continuità operativa e proteggere i dati.",
+        "Con sede a Muyinga, EMSI BURUNDI (Electro Multi-Services Innovation) si dedica alla fornitura di beni e servizi eccezionali: supporto all'approvvigionamento online e ordini di prodotti elettronici per ogni esigenza aziendale. Il suo team di esperti offre un'ampia gamma di servizi specializzati per diversi settori — soluzioni software personalizzate e sourcing online di prodotti di alta qualità. L'impegno per l'eccellenza e la soddisfazione del cliente ne fa un partner privilegiato.",
     },
     ja: {
-      title: "EMSI(保守・サービス・IT企業)",
+      title: "EMSI BURUNDI（Electro Multi-Services Innovation）",
       description:
-        "ブルンジのテクノロジーソリューション企業で、企業や機関向けの技術保守、IT サポート、ネットワーク統合サービスを専門としています。EMSIはソフトウェアエンジニアリング、ITインフラ管理、テクノロジーシステムの予防・修復保守を通じて地域のデジタル変革を支援。組織のIT環境の最適化、業務継続性の確保、データセキュリティを実現します。",
+        "ムインガに拠点を置くEMSI BURUNDI（Electro Multi-Services Innovation）は、優れた商品とサービスの提供に専念しています。ビジネスのあらゆるニーズに対応するオンライン調達サポートと電子製品の注文を提供。専門家チームが、様々な業界に合わせたカスタムソフトウェアソリューションや高品質製品のオンライン調達など、幅広い専門サービスを提供します。卓越性と顧客満足へのコミットメントにより、信頼のパートナーとして選ばれています。",
     },
     sw: {
-      title: "EMSI (Kampuni ya Matengenezo, Huduma na TEHAMA)",
+      title: "EMSI BURUNDI (Electro Multi-Services Innovation)",
       description:
-        "Mtoa suluhisho za teknolojia nchini Burundi, mwenye utaalamu wa matengenezo ya kiufundi, msaada wa TEHAMA na huduma za muunganiko wa mtandao kwa makampuni na taasisi. EMSI husaidia mabadiliko ya kidijitali ya ndani kwa uhandisi wa programu, usimamizi wa miundombinu ya TEHAMA na matengenezo ya kinga na tiba ya mifumo ya teknolojia. Utaalamu wake huwasaidia mashirika kuboresha zana zao, kuhakikisha mwendelezo wa shughuli na kulinda data zao.",
+        "Iliyo makao Muyinga, EMSI BURUNDI (Electro Multi-Services Innovation) imejitolea kutoa bidhaa na huduma bora: msaada wa ununuzi mtandaoni na oda za vifaa vya elektroniki kwa mahitaji yote ya biashara yako. Timu yake ya wataalamu inatoa huduma mbalimbali za kipekee kwa sekta mbalimbali — suluhisho za programu za kipekee na utafutaji mtandaoni wa bidhaa bora. Dhamira yake ya ubora na kuridhisha wateja huifanya kuwa mshirika unaopendwa.",
     },
   },
 
