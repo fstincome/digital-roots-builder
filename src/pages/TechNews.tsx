@@ -121,7 +121,7 @@ const TechNews = () => {
             <div className="text-center py-20 text-muted-foreground">{t("techNews.empty")}</div>
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {items.map((item, i) => {
+              {filtered.map((item, i) => {
                 const { title, summary } = localized(item);
                 return (
                   <motion.article
