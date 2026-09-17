@@ -20,7 +20,11 @@ interface NewsItem {
 const TechNews = () => {
   const [items, setItems] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const [sourceFilter, setSourceFilter] = useState<string | null>(null);
   const { t, i18n } = useTranslation();
+
+  const sources = [...new Set(items.map((i) => i.source))];
+  const filtered = sourceFilter ? items.filter((i) => i.source === sourceFilter) : items;
 
   useEffect(() => {
     supabase
