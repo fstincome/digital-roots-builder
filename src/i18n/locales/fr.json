@@ -457,6 +457,7 @@
     "empty": "Aucune actualité pour le moment.",
     "source": "Source",
     "read": "Lire l'article",
-    "updated": "Mis à jour automatiquement"
+    "updated": "Mis à jour automatiquement",
+    "all": "Tous"
   }
 }

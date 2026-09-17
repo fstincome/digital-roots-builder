@@ -457,6 +457,7 @@
     "empty": "No news yet.",
     "source": "Source",
     "read": "Read the article",
-    "updated": "Updated automatically"
+    "updated": "Updated automatically",
+    "all": "All"
   }
 }
