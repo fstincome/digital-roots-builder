@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { motion } from "framer-motion";
 import { Calendar, ExternalLink, Newspaper } from "lucide-react";
 import { useTranslation } from "react-i18next";
