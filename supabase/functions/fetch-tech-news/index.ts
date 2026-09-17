@@ -4,6 +4,7 @@ import { createClient } from 'npm:@supabase/supabase-js@2';
 const FEEDS = [
   { source: 'Developpez.com', url: 'https://www.developpez.com/index/rss' },
   { source: 'Next', url: 'https://next.ink/feed/' },
+  { source: 'Journal du Coin', url: 'https://journalducoin.com/feed/' },
 ];
 
 const JOB = 'fetch-tech-news';
