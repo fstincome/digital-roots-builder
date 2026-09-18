@@ -29,7 +29,7 @@ const WeatherWidget = () => {
 
   return (
     <div
-      className="fixed bottom-6 right-24 sm:right-36 z-50 flex items-center gap-2 bg-card/90 backdrop-blur border border-border px-4 py-3 rounded-full shadow-lg"
+      className="fixed top-[5.25rem] right-4 sm:right-8 z-40 flex items-center gap-2 bg-card/90 backdrop-blur border border-border px-4 py-2 rounded-full shadow-lg"
       title="Gitega, Burundi"
     >
       <Thermometer size={20} className="text-primary" />
