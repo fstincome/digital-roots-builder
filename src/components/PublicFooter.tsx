@@ -13,6 +13,9 @@ const PublicFooter = () => {
 
   return (
     <>
+      {/* Current temperature (Gitega) */}
+      <WeatherWidget />
+
       {/* Floating WhatsApp Button */}
       <a
         href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
