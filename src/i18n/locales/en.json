@@ -82,7 +82,9 @@
     "s7": "Infrastructure & Networks",
     "s7d": "Design, deployment and management of your network infrastructure and data center.",
     "s8": "Cloud Solutions",
-    "s8d": "Migration and management of your applications in the cloud for more flexibility and resilience."
+    "s8d": "Migration and management of your applications in the cloud for more flexibility and resilience.",
+    "s9": "Digital & Performance Marketing",
+    "s9d": "End-to-end digital strategies: SEO, social media, online advertising and performance analytics to grow your visibility and sales."
   },
   "about": {
     "tag": "Who we are",
