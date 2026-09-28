@@ -173,9 +173,10 @@ const Index = () => {
         </div>
       </section>
 
+      <BitLiberaExchangerSection />
+
       <QrToolSection />
 
-      <BitLiberaExchangerSection />
 
 
       {/* Latest Articles */}

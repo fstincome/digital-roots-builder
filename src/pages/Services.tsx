@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Server, Code, Shield, GraduationCap, Globe, Zap, Wrench, Database, Cloud } from "lucide-react";
+import { Server, Code, Shield, GraduationCap, Globe, Zap, Wrench, Database, Cloud, Megaphone } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import QrToolSection from "@/components/QrToolSection";
@@ -19,6 +19,7 @@ const Services = () => {
     { icon: Wrench, title: t("services.s6"), desc: t("services.s6d"), features: ["Contrats", "24/7", "Préventive", "Sur site"] },
     { icon: Database, title: t("services.s7"), desc: t("services.s7d"), features: ["Architecture", "Data center", "Câblage", "Monitoring"] },
     { icon: Cloud, title: t("services.s8"), desc: t("services.s8d"), features: ["Migration", "Sauvegarde", "Dédiés", "Hébergement"] },
+    { icon: Megaphone, title: t("services.s9"), desc: t("services.s9d"), features: ["SEO", "Réseaux sociaux", "Publicité en ligne", "Analytics"] },
   ];
 
   return (
