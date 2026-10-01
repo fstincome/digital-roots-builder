@@ -19,6 +19,7 @@ const DEFAULT_ITEMS = [
   { label_key: "nav.bitcoin", path: "/bitcoin" },
   { label_key: "nav.blog", path: "/blog" },
   { label_key: "nav.techNews", path: "/actualites-tech" },
+  { label_key: "nav.resources", path: "/ressources" },
   { label_key: "nav.about", path: "/a-propos" },
   { label_key: "nav.contact", path: "/contact" },
 ];
