@@ -14,7 +14,8 @@
     "dashboard": "Dashboard",
     "myAccount": "Mein Konto",
     "team": "Team",
-    "techNews": "Tech-News"
+    "techNews": "Tech-News",
+    "resources": "Ressourcen"
   },
   "hero": {
     "tag": "// SIGHT AFRICA — BURUNDI",
@@ -424,5 +425,22 @@
     "read": "Artikel lesen",
     "updated": "Automatisch aktualisiert",
     "all": "Alle"
+  },
+  "resources": {
+    "tag": "Werkzeugkasten",
+    "title": "Nützliche Ressourcen",
+    "desc": "Eine handverlesene Auswahl von 35 wirklich nützlichen Websites für Studierende, Gründer und Tech-Teams.",
+    "visit": "Seite besuchen",
+    "cat": {
+      "archive": "Archive & Referenz",
+      "files": "Bilder, PDFs & Dateien",
+      "writing": "Schreiben & Übersetzung",
+      "ai": "KI & Suche",
+      "productivity": "Produktivität",
+      "design": "Design & Kreatives",
+      "dev": "Entwicklung",
+      "security": "Sicherheit & Diagnose",
+      "sharing": "Kommunikation & Austausch"
+    }
   }
 }

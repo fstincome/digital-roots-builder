@@ -14,7 +14,8 @@
     "dashboard": "Dashboard",
     "myAccount": "Mon compte",
     "team": "Équipe",
-    "techNews": "Actus Tech"
+    "techNews": "Actus Tech",
+    "resources": "Ressources"
   },
   "hero": {
     "tag": "// SIGHT AFRICA — BURUNDI",
@@ -461,5 +462,22 @@
     "read": "Lire l'article",
     "updated": "Mis à jour automatiquement",
     "all": "Tous"
+  },
+  "resources": {
+    "tag": "Boîte à outils",
+    "title": "Ressources utiles",
+    "desc": "Une sélection de 35 sites web vraiment utiles, choisis par SIGHT Africa pour les étudiants, entrepreneurs et équipes tech.",
+    "visit": "Visiter le site",
+    "cat": {
+      "archive": "Archives & Référence",
+      "files": "Images, PDF & Fichiers",
+      "writing": "Écriture & Traduction",
+      "ai": "IA & Recherche",
+      "productivity": "Productivité",
+      "design": "Design & Créatif",
+      "dev": "Développement",
+      "security": "Sécurité & Diagnostic",
+      "sharing": "Communication & Partage"
+    }
   }
 }

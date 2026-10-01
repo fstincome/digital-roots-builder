@@ -14,7 +14,8 @@
     "dashboard": "ダッシュボード",
     "myAccount": "マイアカウント",
     "team": "チーム",
-    "techNews": "テックニュース"
+    "techNews": "テックニュース",
+    "resources": "リソース"
   },
   "hero": {
     "tag": "// SIGHT AFRICA — ブルンジ",
@@ -424,5 +425,22 @@
     "read": "記事を読む",
     "updated": "自動更新",
     "all": "すべて"
+  },
+  "resources": {
+    "tag": "ツールボックス",
+    "title": "役立つリソース",
+    "desc": "学生・起業家・テックチームのために厳選した、本当に役立つ35のウェブサイト。",
+    "visit": "サイトを見る",
+    "cat": {
+      "archive": "アーカイブ & リファレンス",
+      "files": "画像・PDF・ファイル",
+      "writing": "文章作成 & 翻訳",
+      "ai": "AI & 検索",
+      "productivity": "生産性",
+      "design": "デザイン & クリエイティブ",
+      "dev": "開発",
+      "security": "セキュリティ & 診断",
+      "sharing": "コミュニケーション & 共有"
+    }
   }
 }
