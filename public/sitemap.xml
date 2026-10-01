@@ -8,5 +8,7 @@
   <url><loc>https://sightafrica.bi/bitcoin</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sightafrica.bi/blog</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://sightafrica.bi/a-propos</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sightafrica.bi/actualites-tech</loc><changefreq>hourly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://sightafrica.bi/ressources</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://sightafrica.bi/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

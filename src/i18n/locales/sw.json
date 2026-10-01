@@ -14,7 +14,8 @@
     "dashboard": "Dashibodi",
     "myAccount": "Akaunti yangu",
     "team": "Timu",
-    "techNews": "Habari za Teknolojia"
+    "techNews": "Habari za Teknolojia",
+    "resources": "Rasilimali"
   },
   "hero": {
     "tag": "// SIGHT AFRICA — BURUNDI",
@@ -424,5 +425,22 @@
     "read": "Soma makala",
     "updated": "Inasasishwa kiotomatiki",
     "all": "Zote"
+  },
+  "resources": {
+    "tag": "Zana",
+    "title": "Rasilimali muhimu",
+    "desc": "Mkusanyo wa tovuti 35 zenye manufaa kweli kwa wanafunzi, wajasiriamali na timu za TEHAMA.",
+    "visit": "Tembelea tovuti",
+    "cat": {
+      "archive": "Nyaraka & Marejeleo",
+      "files": "Picha, PDF & Faili",
+      "writing": "Uandishi & Tafsiri",
+      "ai": "AI & Utafutaji",
+      "productivity": "Ufanisi",
+      "design": "Muundo & Ubunifu",
+      "dev": "Usanidi programu",
+      "security": "Usalama & Uchunguzi",
+      "sharing": "Mawasiliano & Kushiriki"
+    }
   }
 }

@@ -14,7 +14,8 @@
     "dashboard": "Dashboard",
     "myAccount": "Il mio account",
     "team": "Team",
-    "techNews": "News Tech"
+    "techNews": "News Tech",
+    "resources": "Risorse"
   },
   "hero": {
     "tag": "// SIGHT AFRICA — BURUNDI",
@@ -424,5 +425,22 @@
     "read": "Leggi l'articolo",
     "updated": "Aggiornato automaticamente",
     "all": "Tutti"
+  },
+  "resources": {
+    "tag": "Strumenti",
+    "title": "Risorse utili",
+    "desc": "Una selezione di 35 siti web davvero utili per studenti, imprenditori e team tech.",
+    "visit": "Visita il sito",
+    "cat": {
+      "archive": "Archivi & Riferimenti",
+      "files": "Immagini, PDF & File",
+      "writing": "Scrittura & Traduzione",
+      "ai": "IA & Ricerca",
+      "productivity": "Produttività",
+      "design": "Design & Creatività",
+      "dev": "Sviluppo",
+      "security": "Sicurezza & Diagnostica",
+      "sharing": "Comunicazione & Condivisione"
+    }
   }
 }
