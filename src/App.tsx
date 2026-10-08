@@ -64,6 +64,7 @@ const App = () => (
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/actualites-tech" element={<TechNews />} />
               <Route path="/ressources" element={<Resources />} />
+              <Route path="/explorer" element={<Resources collection="explore" />} />
               {/* Programs hidden from public site */}
               <Route path="/academie" element={<Academy />} />
               <Route path="/portfolio" element={<Portfolio />} />

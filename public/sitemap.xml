@@ -10,5 +10,6 @@
   <url><loc>https://sightafrica.bi/a-propos</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sightafrica.bi/actualites-tech</loc><changefreq>hourly</changefreq><priority>0.7</priority></url>
   <url><loc>https://sightafrica.bi/ressources</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://sightafrica.bi/explorer</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://sightafrica.bi/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>
