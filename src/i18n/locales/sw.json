@@ -442,5 +442,20 @@
       "security": "Usalama & Uchunguzi",
       "sharing": "Mawasiliano & Kushiriki"
     }
+  },
+  "explore": {
+    "title": "Ugunduzi wa Intaneti",
+    "tag": "Chunguza dunia",
+    "desc": "Tovuti 50 za kuchunguza sayari, sayansi, data, sanaa na utamaduni.",
+    "cat": {
+      "live": "Sayari moja kwa moja",
+      "maps": "Ramani & Jiografia",
+      "travel": "Safari pepe",
+      "space": "Anga & Uzoefu",
+      "data": "Data & Taswira",
+      "culture": "Vitabu, Sanaa & Urithi",
+      "sound": "Muziki & Sauti",
+      "knowledge": "Maarifa & Sayansi"
+    }
   }
 }

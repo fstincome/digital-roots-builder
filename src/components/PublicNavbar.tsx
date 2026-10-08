@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown, BookOpen, Compass } from "lucide-react";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { useTranslation } from "react-i18next";
@@ -26,6 +27,7 @@ const DEFAULT_ITEMS = [
 
 const PublicNavbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
   const { user, isAdmin, isEditor } = useAuth();
   const location = useLocation();
   const { t } = useTranslation();
@@ -60,8 +62,21 @@ const PublicNavbar = () => {
           </span>
         </Link>
 
-        <div className="hidden lg:flex items-center gap-1">
+        <div className="hidden 2xl:flex items-center gap-1">
           {navItems.map((item) => (
+            item.href === "/ressources" ? (
+              <DropdownMenu key={item.href}>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="sm" className={location.pathname === "/ressources" || location.pathname === "/explorer" ? "text-primary" : "text-muted-foreground"}>
+                    {item.label}<ChevronDown size={14} />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start">
+                  <DropdownMenuItem asChild><Link to="/ressources"><BookOpen size={16} className="mr-2" />{t("resources.title")}</Link></DropdownMenuItem>
+                  <DropdownMenuItem asChild><Link to="/explorer"><Compass size={16} className="mr-2" />{t("explore.title")}</Link></DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) :
             <Link
               key={item.href}
               to={item.href}
@@ -77,7 +92,7 @@ const PublicNavbar = () => {
         </div>
 
 
-        <div className="hidden sm:flex items-center gap-2">
+        <div className="hidden 2xl:flex items-center gap-2">
           <ThemeToggle />
           <LanguageSwitcher />
           {user ? (
@@ -98,12 +113,12 @@ const PublicNavbar = () => {
           )}
         </div>
 
-        <div className="flex items-center gap-2 lg:hidden">
+        <div className="flex items-center gap-2 2xl:hidden">
           <ThemeToggle />
           <LanguageSwitcher />
-          <button className="text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
+          <Button variant="ghost" size="icon" aria-label="Menu" aria-expanded={mobileOpen} onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          </Button>
         </div>
       </div>
 
@@ -113,10 +128,21 @@ const PublicNavbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden mx-auto mt-2 max-w-7xl overflow-hidden rounded-3xl border border-border bg-card/90 shadow-lg backdrop-blur-xl"
+            className="2xl:hidden mx-auto mt-2 max-w-7xl overflow-y-auto max-h-[calc(100dvh-6rem)] rounded-3xl border border-border bg-card/90 shadow-lg backdrop-blur-xl"
           >
             <div className="px-5 py-4 flex flex-col gap-3">
               {navItems.map((item) => (
+                item.href === "/ressources" ? (
+                  <div key={item.href}>
+                    <Button variant="ghost" className="w-full justify-between px-0 text-sm" aria-expanded={resourcesOpen} onClick={() => setResourcesOpen(!resourcesOpen)}>
+                      {item.label}<ChevronDown size={16} className={resourcesOpen ? "rotate-180" : ""} />
+                    </Button>
+                    {resourcesOpen && <div className="flex flex-col gap-3 border-l border-border pl-4 py-2">
+                      <Link to="/ressources" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>{t("resources.title")}</Link>
+                      <Link to="/explorer" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>{t("explore.title")}</Link>
+                    </div>}
+                  </div>
+                ) :
                 <Link
                   key={item.href}
                   to={item.href}

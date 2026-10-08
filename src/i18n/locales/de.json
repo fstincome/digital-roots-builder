@@ -442,5 +442,20 @@
       "security": "Sicherheit & Diagnose",
       "sharing": "Kommunikation & Austausch"
     }
+  },
+  "explore": {
+    "title": "Internet-Entdeckungen",
+    "tag": "Die Welt entdecken",
+    "desc": "50 Websites zum Erkunden von Erde, Wissenschaft, Daten, Kunst und Kultur.",
+    "cat": {
+      "live": "Planet live",
+      "maps": "Karten & Geografie",
+      "travel": "Virtuelle Reisen",
+      "space": "Weltraum & Erlebnisse",
+      "data": "Daten & Visualisierung",
+      "culture": "Bücher, Kunst & Kulturerbe",
+      "sound": "Musik & Klänge",
+      "knowledge": "Wissen & Wissenschaft"
+    }
   }
 }
