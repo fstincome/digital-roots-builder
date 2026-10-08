@@ -479,5 +479,20 @@
       "security": "Security & Diagnostics",
       "sharing": "Communication & Sharing"
     }
+  },
+  "explore": {
+    "title": "Internet discoveries",
+    "tag": "Explore the world",
+    "desc": "50 websites to explore the planet, science, data, arts and culture.",
+    "cat": {
+      "live": "Live planet",
+      "maps": "Maps & Geography",
+      "travel": "Virtual travel",
+      "space": "Space & Experiences",
+      "data": "Data & Visualization",
+      "culture": "Books, Arts & Heritage",
+      "sound": "Music & Sound",
+      "knowledge": "Knowledge & Science"
+    }
   }
 }

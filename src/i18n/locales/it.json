@@ -442,5 +442,20 @@
       "security": "Sicurezza & Diagnostica",
       "sharing": "Comunicazione & Condivisione"
     }
+  },
+  "explore": {
+    "title": "Scoperte Internet",
+    "tag": "Esplora il mondo",
+    "desc": "50 siti per esplorare il pianeta, la scienza, i dati, l’arte e la cultura.",
+    "cat": {
+      "live": "Pianeta in diretta",
+      "maps": "Mappe & Geografia",
+      "travel": "Viaggi virtuali",
+      "space": "Spazio & Esperienze",
+      "data": "Dati & Visualizzazione",
+      "culture": "Libri, Arte & Patrimonio",
+      "sound": "Musica & Suoni",
+      "knowledge": "Conoscenza & Scienza"
+    }
   }
 }
