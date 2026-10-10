@@ -15,7 +15,10 @@
     "myAccount": "My account",
     "team": "Team",
     "techNews": "Tech News",
-    "resources": "Resources"
+    "resources": "Resources",
+    "solutions": "Solutions",
+    "publications": "Publications",
+    "company": "Company"
   },
   "hero": {
     "tag": "// SIGHT AFRICA — BURUNDI",
@@ -424,7 +427,8 @@
     "ctaGenerate": "Generate a QR code",
     "ctaScan": "Scan a QR code",
     "freeBadge": "Free · Online",
-    "cardDesc": "Go straight to the SIGHT Network QR Codes platform."
+    "cardDesc": "Go straight to the SIGHT Network QR Codes platform.",
+    "navLabel": "QR codes"
   },
   "exchanger": {
     "tag": "Free tool",
@@ -451,7 +455,8 @@
     "ctaVisit": "Discover BitLibera",
     "ctaPay": "Convert with My Satoshis",
     "badge": "Payments · EAC",
-    "cardDesc": "Go straight to the BitLibera Bitcoin payment platform."
+    "cardDesc": "Go straight to the BitLibera Bitcoin payment platform.",
+    "navLabel": "BitLibera"
   },
   "techNews": {
     "tag": "Tech watch",
@@ -494,5 +499,19 @@
       "sound": "Music & Sound",
       "knowledge": "Knowledge & Science"
     }
+  },
+  "core": {
+    "name": "SIGHT CORE",
+    "tag": "A SIGHT product",
+    "headline": "The core of your business.",
+    "desc": "Bring sales, inventory, finance, accounting, human resources and operations together in SIGHT CORE, our business management platform for entrepreneurs and companies.",
+    "sales": "Sales & point of sale",
+    "inventory": "Inventory & purchases",
+    "finance": "Finance & accounting",
+    "people": "Human resources & payroll",
+    "cta": "Discover SIGHT CORE",
+    "demo": "Request a demo",
+    "preview": "Public product preview · Fictional data",
+    "imageAlt": "SIGHT CORE business management platform with an illustrative dashboard"
   }
 }
