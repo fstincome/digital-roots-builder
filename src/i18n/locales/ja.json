@@ -15,7 +15,10 @@
     "myAccount": "マイアカウント",
     "team": "チーム",
     "techNews": "テックニュース",
-    "resources": "リソース"
+    "resources": "リソース",
+    "solutions": "ソリューション",
+    "publications": "出版・ニュース",
+    "company": "会社情報"
   },
   "hero": {
     "tag": "// SIGHT AFRICA — ブルンジ",
@@ -387,7 +390,8 @@
     "ctaGenerate": "QRコードを作成",
     "ctaScan": "QRコードをスキャン",
     "freeBadge": "無料・オンライン",
-    "cardDesc": "SIGHT Network のQRコードプラットフォームへ直接アクセス。"
+    "cardDesc": "SIGHT Network のQRコードプラットフォームへ直接アクセス。",
+    "navLabel": "QRコード"
   },
   "bitlibera": {
     "tag": "ビットコイン決済ソリューション",
@@ -401,7 +405,8 @@
     "ctaVisit": "BitLiberaを見る",
     "ctaPay": "My Satoshisで交換",
     "badge": "決済 · EAC",
-    "cardDesc": "BitLiberaのビットコイン決済プラットフォームへ直接アクセス。"
+    "cardDesc": "BitLiberaのビットコイン決済プラットフォームへ直接アクセス。",
+    "navLabel": "BitLibera"
   },
   "exchanger": {
     "tag": "無料ツール",
@@ -457,5 +462,19 @@
       "sound": "音楽と音",
       "knowledge": "知識と科学"
     }
+  },
+  "core": {
+    "name": "SIGHT CORE",
+    "tag": "SIGHTの製品",
+    "headline": "ビジネスの中心に。",
+    "desc": "販売、在庫、財務、会計、人事、業務をSIGHT COREに集約。起業家と企業のための業務管理プラットフォームです。",
+    "sales": "販売・POS",
+    "inventory": "在庫・購買",
+    "finance": "財務・会計",
+    "people": "人事・給与",
+    "cta": "SIGHT COREを見る",
+    "demo": "デモを依頼",
+    "preview": "公開製品プレビュー・架空のデータ",
+    "imageAlt": "ダッシュボードの例を表示するSIGHT CORE業務管理プラットフォーム"
   }
 }

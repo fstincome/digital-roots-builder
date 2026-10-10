@@ -15,7 +15,10 @@
     "myAccount": "Mein Konto",
     "team": "Team",
     "techNews": "Tech-News",
-    "resources": "Ressourcen"
+    "resources": "Ressourcen",
+    "solutions": "Lösungen",
+    "publications": "Publikationen",
+    "company": "Unternehmen"
   },
   "hero": {
     "tag": "// SIGHT AFRICA — BURUNDI",
@@ -387,7 +390,8 @@
     "ctaGenerate": "QR-Code erstellen",
     "ctaScan": "QR-Code scannen",
     "freeBadge": "Kostenlos · Online",
-    "cardDesc": "Direkt zur QR-Code-Plattform von SIGHT Network."
+    "cardDesc": "Direkt zur QR-Code-Plattform von SIGHT Network.",
+    "navLabel": "QR codes"
   },
   "bitlibera": {
     "tag": "Bitcoin-Zahlungslösung",
@@ -401,7 +405,8 @@
     "ctaVisit": "BitLibera entdecken",
     "ctaPay": "Mit My Satoshis tauschen",
     "badge": "Zahlungen · EAC",
-    "cardDesc": "Direkt zur Bitcoin-Zahlungsplattform BitLibera."
+    "cardDesc": "Direkt zur Bitcoin-Zahlungsplattform BitLibera.",
+    "navLabel": "BitLibera"
   },
   "exchanger": {
     "tag": "Kostenloses Tool",
@@ -457,5 +462,19 @@
       "sound": "Musik & Klänge",
       "knowledge": "Wissen & Wissenschaft"
     }
+  },
+  "core": {
+    "name": "SIGHT CORE",
+    "tag": "Ein SIGHT Produkt",
+    "headline": "Das Herz Ihres Unternehmens.",
+    "desc": "Vereinen Sie Vertrieb, Lager, Finanzen, Buchhaltung, Personal und Betriebsabläufe in SIGHT CORE, unserer Unternehmensplattform für Unternehmer und Unternehmen.",
+    "sales": "Vertrieb & Kasse",
+    "inventory": "Lager & Einkauf",
+    "finance": "Finanzen & Buchhaltung",
+    "people": "Personal & Gehaltsabrechnung",
+    "cta": "SIGHT CORE entdecken",
+    "demo": "Demo anfragen",
+    "preview": "Öffentliche Produktvorschau · Fiktive Daten",
+    "imageAlt": "SIGHT CORE Unternehmensplattform mit beispielhaftem Dashboard"
   }
 }

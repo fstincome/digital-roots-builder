@@ -15,7 +15,10 @@
     "myAccount": "Akaunti yangu",
     "team": "Timu",
     "techNews": "Habari za Teknolojia",
-    "resources": "Rasilimali"
+    "resources": "Rasilimali",
+    "solutions": "Suluhisho",
+    "publications": "Machapisho",
+    "company": "Kampuni"
   },
   "hero": {
     "tag": "// SIGHT AFRICA — BURUNDI",
@@ -387,7 +390,8 @@
     "ctaGenerate": "Tengeneza QR code",
     "ctaScan": "Changanua QR code",
     "freeBadge": "Bure · Mtandaoni",
-    "cardDesc": "Fikia moja kwa moja jukwaa la QR Codes la SIGHT Network."
+    "cardDesc": "Fikia moja kwa moja jukwaa la QR Codes la SIGHT Network.",
+    "navLabel": "QR codes"
   },
   "bitlibera": {
     "tag": "Suluhu ya malipo ya Bitcoin",
@@ -401,7 +405,8 @@
     "ctaVisit": "Gundua BitLibera",
     "ctaPay": "Badilisha na My Satoshis",
     "badge": "Malipo · EAC",
-    "cardDesc": "Fika moja kwa moja kwenye jukwaa la malipo ya Bitcoin la BitLibera."
+    "cardDesc": "Fika moja kwa moja kwenye jukwaa la malipo ya Bitcoin la BitLibera.",
+    "navLabel": "BitLibera"
   },
   "exchanger": {
     "tag": "Zana ya bure",
@@ -457,5 +462,19 @@
       "sound": "Muziki & Sauti",
       "knowledge": "Maarifa & Sayansi"
     }
+  },
+  "core": {
+    "name": "SIGHT CORE",
+    "tag": "Bidhaa ya SIGHT",
+    "headline": "Kiini cha biashara yako.",
+    "desc": "Unganisha mauzo, stoo, fedha, uhasibu, rasilimali watu na shughuli katika SIGHT CORE, jukwaa letu la usimamizi kwa wajasiriamali na kampuni.",
+    "sales": "Mauzo & sehemu ya mauzo",
+    "inventory": "Stoo & ununuzi",
+    "finance": "Fedha & uhasibu",
+    "people": "Rasilimali watu & mishahara",
+    "cta": "Gundua SIGHT CORE",
+    "demo": "Omba onyesho",
+    "preview": "Muonekano wa umma wa bidhaa · Data ya mfano",
+    "imageAlt": "Jukwaa la usimamizi wa biashara SIGHT CORE lenye dashibodi ya mfano"
   }
 }

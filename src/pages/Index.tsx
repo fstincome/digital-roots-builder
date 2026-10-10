@@ -11,6 +11,7 @@ import HeroSlideshow from "@/components/HeroSlideshow";
 import SEO from "@/components/SEO";
 import QrToolSection from "@/components/QrToolSection";
 import BitLiberaExchangerSection from "@/components/BitLiberaExchangerSection";
+import CoreProductSection from "@/components/CoreProductSection";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -172,6 +173,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <CoreProductSection />
 
       <BitLiberaExchangerSection />
 

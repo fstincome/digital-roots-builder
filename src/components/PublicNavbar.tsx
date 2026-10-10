@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, BookOpen, Compass } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import { supabase } from "@/integrations/supabase/client";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeToggle from "./ThemeToggle";
+import { groupPublicNavigation, type PublicMenuEntry } from "@/lib/publicNavigation";
 import sightLogo from "@/assets/sight-logo.png";
 
 const DEFAULT_ITEMS = [
@@ -27,13 +28,22 @@ const DEFAULT_ITEMS = [
 
 const PublicNavbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [resourcesOpen, setResourcesOpen] = useState(false);
+  const [openGroup, setOpenGroup] = useState<string | null>(null);
   const { user, isAdmin, isEditor } = useAuth();
   const location = useLocation();
   const { t } = useTranslation();
-  const [navItems, setNavItems] = useState(
-    DEFAULT_ITEMS.map(i => ({ label: t(i.label_key), href: i.path }))
-  );
+  const [menuEntries, setMenuEntries] = useState<PublicMenuEntry[]>(DEFAULT_ITEMS);
+  const navItems = groupPublicNavigation(menuEntries);
+  const isActive = (path: string) => location.pathname === path.split("#")[0];
+
+  useEffect(() => {
+    setMobileOpen(false);
+    setOpenGroup(null);
+    if (location.hash) {
+      const timer = window.setTimeout(() => document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: "instant", block: "start" }), 100);
+      return () => window.clearTimeout(timer);
+    }
+  }, [location.pathname, location.hash]);
 
   useEffect(() => {
     supabase
@@ -41,12 +51,10 @@ const PublicNavbar = () => {
       .select("label_key, path, is_active, position")
       .eq("is_active", true)
       .order("position")
-      .then(({ data }) => {
-        if (data && data.length) {
-          setNavItems(data.map((d: any) => ({ label: t(d.label_key), href: d.path })));
-        }
+       .then(({ data, error }) => {
+        if (!error && data) setMenuEntries(data);
       });
-  }, [t]);
+  }, []);
 
   return (
     <motion.nav
@@ -62,37 +70,25 @@ const PublicNavbar = () => {
           </span>
         </Link>
 
-        <div className="hidden 2xl:flex items-center gap-1">
-          {navItems.map((item) => (
-            item.href === "/ressources" ? (
-              <DropdownMenu key={item.href}>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="ghost" size="sm" className={location.pathname === "/ressources" || location.pathname === "/explorer" ? "text-primary" : "text-muted-foreground"}>
-                    {item.label}<ChevronDown size={14} />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="start">
-                  <DropdownMenuItem asChild><Link to="/ressources"><BookOpen size={16} className="mr-2" />{t("resources.title")}</Link></DropdownMenuItem>
-                  <DropdownMenuItem asChild><Link to="/explorer"><Compass size={16} className="mr-2" />{t("explore.title")}</Link></DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ) :
-            <Link
-              key={item.href}
-              to={item.href}
-              className={`rounded-full px-3 py-1.5 text-sm transition-colors duration-200 ${
-                location.pathname === item.href
-                  ? "bg-primary/10 text-primary font-medium"
-                  : "text-muted-foreground hover:bg-secondary hover:text-primary"
-              }`}
-            >
-              {item.label}
-            </Link>
+        <div className="hidden xl:flex items-center gap-1">
+          {navItems.map(item => item.children ? (
+            <DropdownMenu key={item.label_key}>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="sm" className={item.children.some(child => isActive(child.path)) ? "text-primary" : "text-muted-foreground"}>
+                  {t(item.label_key)}<ChevronDown size={14} />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                {item.children.map(child => <DropdownMenuItem key={child.path} asChild><Link to={child.path} aria-current={isActive(child.path) ? "page" : undefined}>{t(child.label_key)}</Link></DropdownMenuItem>)}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          ) : (
+            <Button key={item.path} variant="ghost" size="sm" className={isActive(item.path) ? "text-primary" : "text-muted-foreground"} asChild><Link to={item.path} aria-current={isActive(item.path) ? "page" : undefined}>{t(item.label_key)}</Link></Button>
           ))}
         </div>
 
 
-        <div className="hidden 2xl:flex items-center gap-2">
+        <div className="hidden xl:flex items-center gap-2">
           <ThemeToggle />
           <LanguageSwitcher />
           {user ? (
@@ -113,7 +109,7 @@ const PublicNavbar = () => {
           )}
         </div>
 
-        <div className="flex items-center gap-2 2xl:hidden">
+        <div className="flex items-center gap-2 xl:hidden">
           <ThemeToggle />
           <LanguageSwitcher />
           <Button variant="ghost" size="icon" aria-label="Menu" aria-expanded={mobileOpen} onClick={() => setMobileOpen(!mobileOpen)}>
@@ -128,32 +124,19 @@ const PublicNavbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="2xl:hidden mx-auto mt-2 max-w-7xl overflow-y-auto max-h-[calc(100dvh-6rem)] rounded-3xl border border-border bg-card/90 shadow-lg backdrop-blur-xl"
+            className="xl:hidden mx-auto mt-2 max-w-7xl overflow-y-auto max-h-[calc(100dvh-6rem)] rounded-3xl border border-border bg-card/90 shadow-lg backdrop-blur-xl"
           >
             <div className="px-5 py-4 flex flex-col gap-3">
-              {navItems.map((item) => (
-                item.href === "/ressources" ? (
-                  <div key={item.href}>
-                    <Button variant="ghost" className="w-full justify-between px-0 text-sm" aria-expanded={resourcesOpen} onClick={() => setResourcesOpen(!resourcesOpen)}>
-                      {item.label}<ChevronDown size={16} className={resourcesOpen ? "rotate-180" : ""} />
-                    </Button>
-                    {resourcesOpen && <div className="flex flex-col gap-3 border-l border-border pl-4 py-2">
-                      <Link to="/ressources" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>{t("resources.title")}</Link>
-                      <Link to="/explorer" className="text-sm text-muted-foreground" onClick={() => setMobileOpen(false)}>{t("explore.title")}</Link>
-                    </div>}
-                  </div>
-                ) :
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  onClick={() => setMobileOpen(false)}
-                  className={`text-sm py-2 ${
-                    location.pathname === item.href ? "text-primary font-medium" : "text-muted-foreground"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {navItems.map(item => item.children ? (
+                <div key={item.label_key}>
+                  <Button variant="ghost" className="w-full justify-between px-0 text-sm" aria-expanded={openGroup === item.label_key} aria-controls={`nav-${item.label_key}`} onClick={() => setOpenGroup(openGroup === item.label_key ? null : item.label_key)}>
+                    {t(item.label_key)}<ChevronDown size={16} className={openGroup === item.label_key ? "rotate-180" : ""} />
+                  </Button>
+                  {openGroup === item.label_key && <div id={`nav-${item.label_key}`} className="flex flex-col gap-1 border-l border-border pl-4 py-2">
+                    {item.children.map(child => <Button key={child.path} variant="ghost" className="justify-start whitespace-normal h-auto min-h-10 text-left" asChild><Link to={child.path} onClick={() => setMobileOpen(false)} className={isActive(child.path) ? "text-primary" : "text-muted-foreground"}>{t(child.label_key)}</Link></Button>)}
+                  </div>}
+                </div>
+              ) : <Button key={item.path} variant="ghost" className="justify-start px-0" asChild><Link to={item.path} onClick={() => setMobileOpen(false)} className={isActive(item.path) ? "text-primary" : "text-muted-foreground"}>{t(item.label_key)}</Link></Button>)}
               <div className="pt-2 border-t border-border">
                 {user ? (
                   <Button variant="hero" size="sm" className="w-full" asChild>
