@@ -434,7 +434,7 @@
   "resources": {
     "tag": "Strumenti",
     "title": "Risorse utili",
-    "desc": "Una selezione di 35 siti web davvero utili per studenti, imprenditori e team tech.",
+    "desc": "Una selezione di {{count}} siti web davvero utili per studenti, imprenditori e team tech.",
     "visit": "Visita il sito",
     "cat": {
       "archive": "Archivi & Riferimenti",
@@ -445,7 +445,11 @@
       "design": "Design & Creatività",
       "dev": "Sviluppo",
       "security": "Sicurezza & Diagnostica",
-      "sharing": "Comunicazione & Condivisione"
+      "sharing": "Comunicazione & Condivisione",
+      "research": "Ricerca scientifica",
+      "learning": "Libri & Formazione",
+      "media": "Media & Musica",
+      "tools": "Strumenti pratici"
     }
   },
   "explore": {

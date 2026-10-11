@@ -434,7 +434,7 @@
   "resources": {
     "tag": "Werkzeugkasten",
     "title": "Nützliche Ressourcen",
-    "desc": "Eine handverlesene Auswahl von 35 wirklich nützlichen Websites für Studierende, Gründer und Tech-Teams.",
+    "desc": "Eine handverlesene Auswahl von {{count}} wirklich nützlichen Websites für Studierende, Gründer und Tech-Teams.",
     "visit": "Seite besuchen",
     "cat": {
       "archive": "Archive & Referenz",
@@ -445,7 +445,11 @@
       "design": "Design & Kreatives",
       "dev": "Entwicklung",
       "security": "Sicherheit & Diagnose",
-      "sharing": "Kommunikation & Austausch"
+      "sharing": "Kommunikation & Austausch",
+      "research": "Wissenschaftliche Recherche",
+      "learning": "Bücher & Lernen",
+      "media": "Medien & Musik",
+      "tools": "Praktische Werkzeuge"
     }
   },
   "explore": {

@@ -471,7 +471,7 @@
   "resources": {
     "tag": "Toolbox",
     "title": "Useful resources",
-    "desc": "A hand-picked selection of 35 genuinely useful websites for students, entrepreneurs and tech teams.",
+    "desc": "A hand-picked selection of {{count}} genuinely useful websites for students, entrepreneurs and tech teams.",
     "visit": "Visit site",
     "cat": {
       "archive": "Archives & Reference",
@@ -482,7 +482,11 @@
       "design": "Design & Creative",
       "dev": "Development",
       "security": "Security & Diagnostics",
-      "sharing": "Communication & Sharing"
+      "sharing": "Communication & Sharing",
+      "research": "Scientific Research",
+      "learning": "Books & Learning",
+      "media": "Media & Music",
+      "tools": "Practical Tools"
     }
   },
   "explore": {

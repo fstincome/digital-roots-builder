@@ -434,7 +434,7 @@
   "resources": {
     "tag": "Zana",
     "title": "Rasilimali muhimu",
-    "desc": "Mkusanyo wa tovuti 35 zenye manufaa kweli kwa wanafunzi, wajasiriamali na timu za TEHAMA.",
+    "desc": "Mkusanyo wa tovuti {{count}} zenye manufaa kweli kwa wanafunzi, wajasiriamali na timu za TEHAMA.",
     "visit": "Tembelea tovuti",
     "cat": {
       "archive": "Nyaraka & Marejeleo",
@@ -445,7 +445,11 @@
       "design": "Muundo & Ubunifu",
       "dev": "Usanidi programu",
       "security": "Usalama & Uchunguzi",
-      "sharing": "Mawasiliano & Kushiriki"
+      "sharing": "Mawasiliano & Kushiriki",
+      "research": "Utafiti wa kisayansi",
+      "learning": "Vitabu & Mafunzo",
+      "media": "Vyombo vya habari & Muziki",
+      "tools": "Zana muhimu"
     }
   },
   "explore": {
