@@ -14,7 +14,7 @@ describe("Useful resources toolbox", () => {
   const items = resourceCategories.flatMap(category => category.items);
   const identities = new Set(items.map(item => resourceIdentity(item.url)));
   it("merges both supplementary collections without duplicate sites", () => {
-    expect(totalResources).toBe(93);
+    expect(totalResources).toBe(92);
     expect(identities.size).toBe(items.length);
     [...extraResourceCategories, ...toolboxCategories].flatMap(category => category.items).forEach(item => {
       expect(identities.has(resourceIdentity(item.url))).toBe(true);
