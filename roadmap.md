@@ -1,4 +1,6 @@
 # Tasks
+- [x] Correct SIGHT Core and BitLibera images for Vercel and verify their loading.
+- [x] Integrate the supplied toolbox websites into Resources without duplicates and verify all seven languages.
 - [x] Add the 50 exploration websites with localized descriptions and categories.
 - [x] Group useful resources and internet discoveries in the public menu.
 - [x] Verify both collections and navigation.

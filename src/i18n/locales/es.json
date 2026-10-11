@@ -434,7 +434,7 @@
   "resources": {
     "tag": "Caja de herramientas",
     "title": "Recursos útiles",
-    "desc": "Una selección de 35 sitios web realmente útiles para estudiantes, emprendedores y equipos técnicos.",
+    "desc": "Una selección de {{count}} sitios web realmente útiles para estudiantes, emprendedores y equipos técnicos.",
     "visit": "Visitar sitio",
     "cat": {
       "archive": "Archivos y referencia",
@@ -445,7 +445,11 @@
       "design": "Diseño y creatividad",
       "dev": "Desarrollo",
       "security": "Seguridad y diagnóstico",
-      "sharing": "Comunicación y uso compartido"
+      "sharing": "Comunicación y uso compartido",
+      "research": "Investigación científica",
+      "learning": "Libros y formación",
+      "media": "Medios y música",
+      "tools": "Herramientas prácticas"
     }
   },
   "explore": {
