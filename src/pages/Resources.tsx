@@ -60,11 +60,11 @@ const Resources = ({ collection = "resources" }: { collection?: "resources" | "e
     <>
       <SEO
         title={`${t(`${collection}.title`)} | SIGHT Africa`}
-        description={t(`${collection}.desc`)}
+        description={t(`${collection}.desc`, { count: totalResources })}
       />
       <PageBreadcrumb
         title={t(`${collection}.title`)}
-        subtitle={t(`${collection}.desc`)}
+        subtitle={t(`${collection}.desc`, { count: totalResources })}
         items={[{ label: t("nav.resources"), href: "/ressources" }, { label: t(`${collection}.title`) }]}
       />
 
