@@ -31,6 +31,10 @@ const categoryIcons = [
   Code2,
   ShieldCheck,
   Share2,
+  BookOpen,
+  BookOpen,
+  Music,
+  LayoutList,
 ];
 
 const fadeUp = {

@@ -1,5 +1,7 @@
 // Multilingual list of genuinely useful websites, grouped by category.
 // Page-level strings (tag, title, desc, cat.*) live in src/i18n/locales/*.json under "resources".
+import { extraResourceCategories } from "./resourceItemsExtra";
+import { toolboxCategories } from "./toolboxItems";
 
 export type Lang = "fr" | "en" | "es" | "de" | "it" | "ja" | "sw";
 
@@ -14,7 +16,7 @@ export interface ResourceCategory {
   items: ResourceItem[];
 }
 
-export const resourceCategories: ResourceCategory[] = [
+const baseResourceCategories: ResourceCategory[] = [
   {
     key: "archive",
     items: [
@@ -51,7 +53,7 @@ export const resourceCategories: ResourceCategory[] = [
     items: [
       {
         name: "Remove.bg",
-        url: "https://www.removebg.com",
+        url: "https://www.remove.bg",
         desc: {
           fr: "Supprimez l'arrière-plan de vos images en un clic.",
           en: "Remove image backgrounds in one click.",
@@ -516,6 +518,25 @@ export const resourceCategories: ResourceCategory[] = [
     ],
   },
 ];
+
+export function resourceIdentity(url: string): string {
+  const parsed = new URL(url);
+  return `${parsed.hostname.replace(/^www\./, "")}${parsed.pathname.replace(/\/$/, "")}`;
+}
+
+const seen = new Set<string>();
+export const resourceCategories: ResourceCategory[] = [];
+for (const category of [...baseResourceCategories, ...extraResourceCategories, ...toolboxCategories]) {
+  const items = category.items.filter(item => {
+    const identity = resourceIdentity(item.url);
+    if (seen.has(identity)) return false;
+    seen.add(identity);
+    return true;
+  });
+  const existing = resourceCategories.find(entry => entry.key === category.key);
+  if (existing) existing.items.push(...items);
+  else if (items.length) resourceCategories.push({ key: category.key, items });
+}
 
 export const totalResources = resourceCategories.reduce(
   (acc, cat) => acc + cat.items.length,
