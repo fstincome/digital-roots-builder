@@ -3,6 +3,7 @@ import { ArrowUpRight, BookOpen, CircleDollarSign } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import exchangerAsset from "@/assets/bitlibera-exchanger.png.asset.json";
+import { assetUrl } from "@/lib/assetUrl";
 
 const EXCHANGER_URL = "https://exchanger.bitlibera.com/";
 const DOCS_URL = "https://exchanger.bitlibera.com/docs";
@@ -59,7 +60,7 @@ const BitLiberaExchangerSection = () => {
             className="group order-1 lg:order-2 relative block overflow-hidden rounded-2xl border border-border bg-card hover:border-primary/50 transition-colors"
           >
             <img
-              src={exchangerAsset.url}
+              src={assetUrl(exchangerAsset.url)}
               alt={t("exchanger.imageAlt")}
               className="w-full aspect-[4/3] object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
               loading="lazy"

@@ -3,6 +3,7 @@ import { ArrowUpRight, Building2, Check, Play } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import corePreview from "@/assets/sight-core-preview.jpg.asset.json";
+import { assetUrl } from "@/lib/assetUrl";
 
 const CORE_URL = "https://www.core.sightnetwork.org/";
 
@@ -27,7 +28,7 @@ const CoreProductSection = () => {
             </div>
           </div>
           <a href={CORE_URL} target="_blank" rel="noopener noreferrer" aria-label={t("core.cta")} className="group block overflow-hidden rounded-lg border border-border bg-card transition-colors hover:border-primary/50">
-            <img src={corePreview.url} alt={t("core.imageAlt")} loading="lazy" className="aspect-video w-full object-cover" />
+            <img src={assetUrl(corePreview.url)} alt={t("core.imageAlt")} loading="lazy" className="aspect-video w-full object-cover" />
             <div className="flex items-center justify-between gap-4 p-5"><div><p className="font-semibold text-foreground">SIGHT CORE</p><p className="mt-1 text-xs text-muted-foreground">{t("core.preview")}</p></div><ArrowUpRight size={22} className="shrink-0 text-primary" /></div>
           </a>
         </motion.div>
