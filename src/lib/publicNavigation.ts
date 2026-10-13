@@ -26,6 +26,8 @@ export function groupPublicNavigation(entries: PublicMenuEntry[]): PublicNavigat
           { label_key: "core.name", path: "/services#sight-core" },
           { label_key: "bitlibera.navLabel", path: "/services#bitlibera" },
           { label_key: "qr.navLabel", path: "/services#qr-codes" },
+          { label_key: "lore.navLabel", path: "/services#sight-lore" },
+          { label_key: "signal.navLabel", path: "/services#sight-signal" },
         );
       }
       return [{ ...entry, label_key: definition.label_key, children }];
