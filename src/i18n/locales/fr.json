@@ -517,5 +517,25 @@
     "demo": "Demander une démo",
     "preview": "Aperçu public du produit · Données fictives",
     "imageAlt": "Plateforme de gestion SIGHT CORE avec un tableau de bord illustratif"
+  },
+  "lore": {
+    "navLabel": "SIGHT LORE",
+    "tag": "Un produit SIGHT",
+    "headline": "Le savoir qu'on ne t'a jamais raconté.",
+    "desc": "SIGHT LORE est notre plateforme de connaissances et d'histoires : des contenus qui transmettent le savoir autrement, enracinés dans nos réalités et ouverts sur le monde.",
+    "f1": "Histoires & savoirs inspirants",
+    "f2": "Contenus accessibles à tous",
+    "f3": "Une voix africaine assumée",
+    "cta": "Explorer SIGHT LORE"
+  },
+  "signal": {
+    "navLabel": "SIGHT SIGNAL",
+    "tag": "Un produit SIGHT",
+    "headline": "La fintech en Afrique de l'Est, décryptée.",
+    "desc": "SIGHT SIGNAL publie des analyses concises sur les paiements, la fintech et les entrepreneurs en Afrique de l'Est — depuis Bujumbura, pour comprendre avant tout le monde.",
+    "f1": "Analyses concises & actionnables",
+    "f2": "Paiements, mobile money, régulation",
+    "f3": "Un regard local, depuis Bujumbura",
+    "cta": "Lire SIGHT SIGNAL"
   }
 }
