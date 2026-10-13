@@ -5,6 +5,7 @@ import PageBreadcrumb from "@/components/PageBreadcrumb";
 import QrToolSection from "@/components/QrToolSection";
 import BitLiberaSection from "@/components/BitLiberaSection";
 import CoreProductSection from "@/components/CoreProductSection";
+import LoreSignalSections from "@/components/LoreSignalSections";
 
 const fadeUp = { hidden: { opacity: 0, y: 30 }, visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.5 } }) };
 
@@ -36,6 +37,8 @@ const Services = () => {
       <BitLiberaSection />
 
       <QrToolSection />
+
+      <LoreSignalSections />
 
       <section className="py-20">
         <div className="container">

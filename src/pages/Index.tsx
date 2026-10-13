@@ -12,6 +12,7 @@ import SEO from "@/components/SEO";
 import QrToolSection from "@/components/QrToolSection";
 import BitLiberaExchangerSection from "@/components/BitLiberaExchangerSection";
 import CoreProductSection from "@/components/CoreProductSection";
+import LoreSignalSections from "@/components/LoreSignalSections";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -179,6 +180,10 @@ const Index = () => {
       <BitLiberaExchangerSection />
 
       <QrToolSection />
+
+      <LoreSignalSections />
+
+
 
 
 

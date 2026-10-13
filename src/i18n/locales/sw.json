@@ -480,5 +480,25 @@
     "demo": "Omba onyesho",
     "preview": "Muonekano wa umma wa bidhaa · Data ya mfano",
     "imageAlt": "Jukwaa la usimamizi wa biashara SIGHT CORE lenye dashibodi ya mfano"
+  },
+  "lore": {
+    "navLabel": "SIGHT LORE",
+    "tag": "Bidhaa ya SIGHT",
+    "headline": "Maarifa ambayo hajawahi kukuambia mtu.",
+    "desc": "SIGHT LORE ni jukwaa letu la maarifa na hadithi: maudhui yanayopitisha ujuzi kwa njia tofauti, yaliyozama katika hali zetu na wazi kwa dunia.",
+    "f1": "Hadithi na maarifa yanayohamasisha",
+    "f2": "Maudhui yanayopatikana kwa wote",
+    "f3": "Sauti ya Kiafrika yenye kiburi",
+    "cta": "Gundua SIGHT LORE"
+  },
+  "signal": {
+    "navLabel": "SIGHT SIGNAL",
+    "tag": "Bidhaa ya SIGHT",
+    "headline": "Fintech ya Afrika Mashariki, imefichuliwa.",
+    "desc": "SIGHT SIGNAL huchapisha uchanganuzi mfupi kuhusu malipo, fintech na wajasiriamali katika Afrika Mashariki — kutoka Bujumbura, ili uelewe kabla ya wengine wote.",
+    "f1": "Uchanganuzi mfupi unaotumika",
+    "f2": "Malipo, pesa za simu, kanuni",
+    "f3": "Mtazamo wa ndani, kutoka Bujumbura",
+    "cta": "Soma SIGHT SIGNAL"
   }
 }
