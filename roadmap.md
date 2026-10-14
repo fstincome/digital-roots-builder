@@ -7,3 +7,4 @@
 - [x] Group related public navigation entries into submenus.
 - [x] Present SIGHT Core on Home and Services alongside existing products.
 - [x] Verify product links and grouped navigation.
+- [x] Add CHAZIZOU GROUP SPRL to the portfolio with blurred screenshot and 7-language translations.

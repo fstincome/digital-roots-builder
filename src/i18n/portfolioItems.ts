@@ -423,6 +423,44 @@ export const portfolioContent: Record<string, Partial<Record<PortfolioLang, Entr
         "Suluhu yetu ya malipo ya Bitcoin kwa Afrika Mashariki. BitLibera huunganisha Lightning Network na pochi za simu za ndani: wafanyabiashara, wafanyakazi huru na diaspora hupokea na kutuma thamani kwa sekunde, bila gharama kubwa za wapatanishi. Jukwaa hutoa malipo kwa QR code, ubadilishaji wa papo hapo kati ya satoshi na pochi za simu, uhamisho wa diaspora wa haraka, pamoja na API na webhooks za kuunganisha malipo ya Bitcoin katika programu zako. Ikiwa na mizizi Burundi, inafikia Jumuiya yote ya Afrika Mashariki na mafunzo ya vitendo ya kutunza fedha mwenyewe.",
     },
   },
+
+  "https://www.chazizzougroup.store": {
+    fr: {
+      title: "CHAZIZOU GROUP SPRL",
+      description:
+        "Plateforme de gestion des unités d'activité du groupe CHAZIZOU : pharmacies, alimentation et taxis. Chaque unité suit ses stocks, ses ventes et ses approvisionnements, tandis que le personnel et la trésorerie sont centralisés dans un espace sécurisé — véhicules, chauffeurs, contrats et versements des taxis y sont également gérés.",
+    },
+    en: {
+      title: "CHAZIZOU GROUP SPRL",
+      description:
+        "Management platform for CHAZIZOU Group's business units: pharmacies, food retail and taxis. Each unit tracks its stock, sales and supplies, while staff and treasury are brought together in a secure space — taxi vehicles, drivers, contracts and remittances are also managed centrally.",
+    },
+    es: {
+      title: "CHAZIZOU GROUP SPRL",
+      description:
+        "Plataforma de gestión de las unidades de negocio del grupo CHAZIZOU: farmacias, alimentación y taxis. Cada unidad controla sus existencias, ventas y aprovisionamientos, mientras que el personal y la tesorería se reúnen en un espacio seguro — los vehículos, conductores, contratos y remesas de taxis también se gestionan de forma centralizada.",
+    },
+    de: {
+      title: "CHAZIZOU GROUP SPRL",
+      description:
+        "Verwaltungsplattform für die Geschäftseinheiten der CHAZIZOU Group: Apotheken, Lebensmittel und Taxis. Jede Einheit verwaltet Lager, Verkäufe und Beschaffung, während Personal und Finanzen in einem sicheren Bereich zusammengeführt werden — auch Fahrzeuge, Fahrer, Verträge und Einzahlungen der Taxis werden zentral verwaltet.",
+    },
+    it: {
+      title: "CHAZIZOU GROUP SPRL",
+      description:
+        "Piattaforma di gestione delle unità operative del gruppo CHAZIZOU: farmacie, alimentari e taxi. Ogni unità monitora scorte, vendite e rifornimenti, mentre il personale e la tesoreria sono riuniti in uno spazio sicuro — veicoli, autisti, contratti e versamenti dei taxi sono anch'essi gestiti in modo centralizzato.",
+    },
+    ja: {
+      title: "CHAZIZOU GROUP SPRL",
+      description:
+        "CHAZIZOUグループの事業ユニット（薬局・食料品・タクシー）を統合管理するプラットフォーム。各ユニットは在庫・売上・仕入れを管理し、スタッフと資金は安全な一元管理スペースに集約。タクシーの車両・ドライバー・契約・売上の納入も一元的に管理します。",
+    },
+    sw: {
+      title: "CHAZIZOU GROUP SPRL",
+      description:
+        "Jukwaa la usimamizi wa vitengo vya biashara vya kikundi cha CHAZIZOU: famasi, vyakula na teksi. Kila kitengo kinafuatilia akiba, mauzo na vifaa vyake, huku wafanyakazi na hazina vikikusanywa katika eneo salama — magari, madereva, mikataba na malipo ya teksi pia yanasimamiwa kwa pamoja.",
+    },
+  },
 };
 
 
