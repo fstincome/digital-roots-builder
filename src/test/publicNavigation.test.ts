@@ -7,11 +7,11 @@ describe("public menu grouping", () => {
     const groups = groupPublicNavigation([item("/"), item("/bitcoin"), item("/blog"), item("/services"), item("/actualites-tech"), item("/ressources")]);
     expect(groups.map(group => group.label_key)).toEqual(["/", "nav.solutions", "nav.publications", "/ressources"]);
     expect(groups[1].children?.slice(0, 2).map(child => child.path)).toEqual(["/bitcoin", "/services"]);
-    expect(groups[3].children?.map(child => child.path)).toEqual(["/ressources", "/explorer"]);
+    expect(groups[3].children?.map(child => child.path)).toEqual(["/ressources", "/explorer", "/pays"]);
   });
   it("does not expose disabled parents, hidden pages or their shortcuts", () => {
     expect(groupPublicNavigation([])).toEqual([]);
-    const groups = groupPublicNavigation([item("/hebergement"), item("/programmes"), item("/explorer")]);
+    const groups = groupPublicNavigation([item("/hebergement"), item("/programmes"), item("/explorer"), item("/pays")]);
     expect(groups).toHaveLength(1);
     expect(groups[0].children?.map(child => child.path)).toEqual(["/hebergement"]);
   });
