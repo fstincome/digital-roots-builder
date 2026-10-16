@@ -9,19 +9,20 @@ import de from "./locales/de.json";
 import es from "./locales/es.json";
 import it from "./locales/it.json";
 import ja from "./locales/ja.json";
+import { countryTranslations } from "./countryTranslations";
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
-      en: { translation: en },
-      fr: { translation: fr },
-      sw: { translation: sw },
-      de: { translation: de },
-      es: { translation: es },
-      it: { translation: it },
-      ja: { translation: ja },
+      en: { translation: { ...en, countries: countryTranslations.en } },
+      fr: { translation: { ...fr, countries: countryTranslations.fr } },
+      sw: { translation: { ...sw, countries: countryTranslations.sw } },
+      de: { translation: { ...de, countries: countryTranslations.de } },
+      es: { translation: { ...es, countries: countryTranslations.es } },
+      it: { translation: { ...it, countries: countryTranslations.it } },
+      ja: { translation: { ...ja, countries: countryTranslations.ja } },
     },
     fallbackLng: "en",
     interpolation: { escapeValue: false },

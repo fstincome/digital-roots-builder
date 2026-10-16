@@ -15,7 +15,7 @@ const groupDefinitions = [
 
 export function groupPublicNavigation(entries: PublicMenuEntry[]): PublicNavigationGroup[] {
   const emitted = new Set<string>();
-  return entries.filter(entry => !["/programmes", "/explorer"].includes(entry.path)).flatMap(entry => {
+  return entries.filter(entry => !["/programmes", "/explorer", "/pays"].includes(entry.path)).flatMap(entry => {
     const definition = groupDefinitions.find(group => group.paths.includes(entry.path));
     if (definition) {
       if (emitted.has(definition.label_key)) return [];
@@ -36,6 +36,7 @@ export function groupPublicNavigation(entries: PublicMenuEntry[]): PublicNavigat
       return [{ ...entry, children: [
         { label_key: "resources.title", path: "/ressources" },
         { label_key: "explore.title", path: "/explorer" },
+         { label_key: "countries.title", path: "/pays" },
       ] }];
     }
     return [entry];

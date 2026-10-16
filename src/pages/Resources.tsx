@@ -73,6 +73,7 @@ const Resources = ({ collection = "resources" }: { collection?: "resources" | "e
           <nav aria-label={t("nav.resources")} className="mb-8 flex flex-wrap gap-2">
             <Button variant={collection === "resources" ? "secondary" : "ghost"} asChild><Link to="/ressources" aria-current={collection === "resources" ? "page" : undefined}>{t("resources.title")}</Link></Button>
             <Button variant={collection === "explore" ? "secondary" : "ghost"} asChild><Link to="/explorer" aria-current={collection === "explore" ? "page" : undefined}>{t("explore.title")}</Link></Button>
+            <Button variant="ghost" asChild><Link to="/pays">{t("countries.title")}</Link></Button>
           </nav>
           <div className="flex items-center gap-2 mb-12 text-xs uppercase tracking-widest text-primary">
             <Sparkles size={14} />
